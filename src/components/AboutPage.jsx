@@ -4,7 +4,7 @@ function AboutPage() {
   return (
     <div>
       <h2>Acerca de Nosotros</h2>
-      <p>Somos PetFashion, expertos en el cuidado y estética de tu mascota.</p>
+      <p>Somos una empresa familiar dedicada a prestar los servicios de peluquería canina que su mascota necesita. Nuestro equipo está conformado por un médico veterinario y una excelente estilista trabajando para usted.</p>
     </div>
   );
 }
