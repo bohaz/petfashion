@@ -3,7 +3,7 @@ import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
 import MyFooter from './Footer';
 import ListaDeServicios from './ListaDeServicios';
-import NuestrosTrabajos from './NuestrosTrabajos';
+import Trabajos from './Trabajos';
 
 function HomePage() {
   return (
@@ -12,7 +12,7 @@ function HomePage() {
       <p>Bienvenido a PetFashion, tu peluquería canina de confianza.</p>
       <AboutPage />
       <ListaDeServicios />
-      <NuestrosTrabajos />
+      <Trabajos />
       <ContactPage />
       <MyFooter />
     </div>
