@@ -1,7 +1,6 @@
 import React from 'react';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
-import MyFooter from './Footer';
 import ListaDeServicios from './ListaDeServicios';
 import Trabajos from './Trabajos';
 
@@ -14,7 +13,6 @@ function HomePage() {
       <ListaDeServicios />
       <Trabajos />
       <ContactPage />
-      <MyFooter />
     </div>
   );
 }
