@@ -66,12 +66,13 @@ export default function SearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Box sx={{ flexGrow: 1, display: 'flex' }}>
-            {/* Agrega los enlaces aquí */}
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
+            
             <Button color="inherit" component={Link} to="/">Home</Button>
             <Button color="inherit" component={Link} to="/about">Quiénes Somos</Button>
             <Button color="inherit" component={Link} to="/trabajos">Nuestros Trabajos</Button>
             <Button color="inherit" component={Link} to="/contact">Contáctanos</Button>
+            
           </Box>
           <Search>
             <SearchIconWrapper>
