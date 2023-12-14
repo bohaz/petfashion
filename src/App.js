@@ -7,6 +7,9 @@ import AboutPage from "./components/AboutPage";
 import ContactPage from "./components/ContactPage";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Banner from "./components/Banner";
+import SwipeableTextMobileStepper from "./components/Trabajos";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
@@ -18,10 +21,12 @@ function App() {
         
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+       
         <Route path="/servicios" element={<ListaDeServicios />} />
+        <Route path="/trabajos" element={<SwipeableTextMobileStepper />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
-    
+      <Footer />
     </Router>
   );
 }
