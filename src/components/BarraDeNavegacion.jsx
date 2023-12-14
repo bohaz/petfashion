@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
@@ -9,6 +9,7 @@ import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import Button from '@mui/material/Button';
+import MobileMenu from './MobileMenu';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -53,6 +54,16 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function SearchAppBar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const handleMobileMenuOpen = () => {
+    setMobileMenuOpen(true);
+  };
+
+  const handleMobileMenuClose = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -63,6 +74,7 @@ export default function SearchAppBar() {
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2 }}
+            onClick={handleMobileMenuOpen}
           >
             <MenuIcon />
           </IconButton>
@@ -72,7 +84,7 @@ export default function SearchAppBar() {
             <Button color="inherit" component={Link} to="/about">Quiénes Somos</Button>
             <Button color="inherit" component={Link} to="/trabajos">Nuestros Trabajos</Button>
             <Button color="inherit" component={Link} to="/contact">Contáctanos</Button>
-            
+
           </Box>
           <Search>
             <SearchIconWrapper>
@@ -85,6 +97,7 @@ export default function SearchAppBar() {
           </Search>
         </Toolbar>
       </AppBar>
+      <MobileMenu open={mobileMenuOpen} onClose={handleMobileMenuClose} />
     </Box>
   );
 }
