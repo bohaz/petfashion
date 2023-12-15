@@ -1,65 +1,52 @@
-
 import React from 'react';
 import {
   Footer,
-  FooterBrand,
-  FooterCopyright,
   FooterDivider,
   FooterIcon,
   FooterLink,
   FooterLinkGroup,
   FooterTitle,
 } from 'flowbite-react';
-import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
+import { BsFacebook, BsInstagram } from 'react-icons/bs';
+import { SiGooglemaps } from 'react-icons/si'; // Importando el icono de Google Maps
 
 function MyFooter() {
   return (
     <Footer container className="bg-gray-800 text-white">
       <div className="w-full py-8 px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-between">
+          {/* Sección de información y enlaces */}
           <div>
-            <FooterBrand
-              href="https://flowbite.com"
-              src="https://flowbite.com/docs/images/logo.svg"
-              alt="Flowbite Logo"
-              name="Flowbite"
-              className="text-white"
-            />
+            <FooterTitle title="Pet Fashion" className="text-gray-400" />
+            <FooterLinkGroup col>
+              <FooterLink href="about" className="hover:text-gray-300">Quienes somos</FooterLink>
+              <FooterLink href="servicios" className="hover:text-gray-300">Nuestros servicios</FooterLink>
+              <FooterLink href="trabajos" className="hover:text-gray-300">Nuestros trabajos</FooterLink>
+              <FooterLink href="contact" className="hover:text-gray-300">Contáctanos</FooterLink>
+            </FooterLinkGroup>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
-            <div>
-              <FooterTitle title="About" className="text-gray-400" />
-              <FooterLinkGroup col>
-                <FooterLink href="#" className="hover:text-gray-300">Flowbite</FooterLink>
-                <FooterLink href="#" className="hover:text-gray-300">Tailwind CSS</FooterLink>
-              </FooterLinkGroup>
-            </div>
-            <div>
-              <FooterTitle title="Follow us" className="text-gray-400" />
-              <FooterLinkGroup col>
-                <FooterLink href="#" className="hover:text-gray-300">Github</FooterLink>
-                <FooterLink href="#" className="hover:text-gray-300">Discord</FooterLink>
-              </FooterLinkGroup>
-            </div>
-            <div>
-              <FooterTitle title="Legal" className="text-gray-400" />
-              <FooterLinkGroup col>
-                <FooterLink href="#" className="hover:text-gray-300">Privacy Policy</FooterLink>
-                <FooterLink href="#" className="hover:text-gray-300">Terms &amp; Conditions</FooterLink>
-              </FooterLinkGroup>
+
+          {/* Sección de localización y redes sociales */}
+          <div>
+            <FooterTitle title="Visítanos" className="text-gray-400" />
+            <FooterLink href="#" className="hover:text-gray-300">
+            Calle Santa Luisa #51, Isla Negra
+            </FooterLink>
+            <div className="mt-4 flex space-x-6">
+              <FooterIcon href="#" icon={BsFacebook} className="text-xl hover:text-gray-300" />
+              <FooterIcon href="@pet_fashion17" icon={BsInstagram} className="text-xl hover:text-gray-300" />
+              <FooterIcon href="https://maps.app.goo.gl/RP3MHQ3pyWAoQ2Qq6" icon={SiGooglemaps} className="text-xl hover:text-gray-300" /> {/* Icono de Google Maps */}
             </div>
           </div>
         </div>
+
+        {/* Divider y derechos de autor */}
         <FooterDivider className="my-8 border-gray-700" />
-        <div className="w-full flex flex-col sm:flex-row justify-between items-center">
-          <FooterCopyright href="#" by="PetFashion" year={2023} className="text-gray-400"/>
-          <div className="mt-4 flex space-x-6 sm:mt-0">
-            <FooterIcon href="#" icon={BsFacebook} className="text-xl hover:text-gray-300" />
-            <FooterIcon href="#" icon={BsInstagram} className="text-xl hover:text-gray-300" />
-            <FooterIcon href="#" icon={BsTwitter} className="text-xl hover:text-gray-300" />
-            <FooterIcon href="#" icon={BsGithub} className="text-xl hover:text-gray-300" />
-            <FooterIcon href="#" icon={BsDribbble} className="text-xl hover:text-gray-300" />
-          </div>
+        <div>
+        <p className="text-gray-400 text-center mx-auto">
+  © 2023 Pet Fashion. Todos los derechos reservados.
+</p>
+
         </div>
       </div>
     </Footer>
