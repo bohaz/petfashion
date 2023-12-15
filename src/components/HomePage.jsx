@@ -7,7 +7,7 @@ import Trabajos from './Trabajos';
 
 function HomePage() {
   return (
-    <Box sx={{ padding: 3 }}>
+    <Box>
       <Typography variant="h3" gutterBottom textAlign="center">
         Bienvenido a PetFashion
       </Typography>
