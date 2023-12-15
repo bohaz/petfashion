@@ -8,9 +8,11 @@ import { faShieldDog } from '@fortawesome/free-solid-svg-icons';
 
 function ListaDeServicios() {
   const servicios = [
-    { nombre: "Baño Completo", descripcion: "Baño y secado completo.", precio: 10000 },
-    { nombre: "Corte de Pelo", descripcion: "Corte según raza y preferencia del cliente.", precio: 15000 },
-    { nombre: "Limpieza Dental", descripcion: "Limpieza completa y revisión dental.", precio: 8000 },
+    { nombre: "Baño Completo", descripcion: "Baño y secado completo.", precio: 15000 },
+    { nombre: "Baño Completo", descripcion: "Baño y secado completo.", precio: 20000 },
+    { nombre: "Corte de Pelo", descripcion: "Corte según raza y preferencia del cliente.", precio: 20000 },
+    { nombre: "Corte de Pelo", descripcion: "Corte según raza y preferencia del cliente.", precio: 25000 },
+    { nombre: "Corte de Uñas", descripcion: "Corte de uñas.", precio: 5000 },
   ];
 
   return (
