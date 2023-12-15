@@ -1,38 +1,40 @@
 import React from 'react';
 import { Grid, Paper, Typography, Box } from '@mui/material';
-import aboutImage from '../assets/casa-de-perro.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShieldDog } from '@fortawesome/free-solid-svg-icons';
+import { faPaw } from '@fortawesome/free-solid-svg-icons';
+import logo1 from '../assets/huella.png'; // Asegúrate de tener las rutas correctas
+import logo2 from '../assets/mascota.png';
+import logo3 from '../assets/perro.png';
 
 function AboutPage() {
+  const textos = [
+    "Somos una empresa familiar dedicada a prestar el servicio de peluquería canina que tu mascota necesita.",
+    "Nuestro equipo está conformado por un médico veterinario y una excelente estilista canina trabajando para usted.",
+    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  ];
+
   return (
-    <Box sx={{ maxWidth: 1200, margin: 'auto', padding: 2 }}>
-      <Typography variant="h4" gutterBottom textAlign="center">
+    <Box sx={{ padding: 2, backgroundColor: '#f2e9e3', pt: '5%', pb: '5%' }}>
+      <Typography variant="h3" component="h2" gutterBottom textAlign="center" sx={{ color: '#dd8ea4', fontWeight: '700', fontFamily: 'Poppins, sans-serif' }}>
         Acerca de Nosotros
       </Typography>
       <Box textAlign="center">
-        <FontAwesomeIcon icon={faShieldDog} style={{ fontSize: '50px' }} />
+        <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#31383f' }} />
       </Box>
-      <Grid container spacing={3} alignItems="center">
-        <Grid item md={6} xs={12} order={{ xs: 2, md: 1 }}>
-          <Paper elevation={3} sx={{ padding: 2 }}>
-            <Typography variant="body1" gutterBottom>
-              Somos una empresa familiar dedicada a prestar los servicios de peluquería canina que su mascota necesita. Nuestro equipo está conformado por un médico veterinario y una excelente estilista trabajando para usted.
-            </Typography>
-          </Paper>
-        </Grid>
-        <Grid item md={6} xs={12} order={{ xs: 1, md: 2 }}>
-          <Box
-            component="img"
-            src={aboutImage}
-            alt="Acerca de Nosotros"
-            sx={{
-              width: '100%',
-              height: 'auto',
-              borderRadius: 1,
-            }}
-          />
-        </Grid>
+
+      <Grid container spacing={3} justifyContent="center">
+        {[logo1, logo2, logo3].map((logo, index) => (
+          <Grid item xs={12} sm={4} key={index}>
+            <Box textAlign="center">
+              <img src={logo} alt={`Logo ${index + 1}`} style={{ width: '100%', maxWidth: '150px' }} />
+              <Paper elevation={3} sx={{ mt: 2, padding: 2, height: '100px', backgroundColor: '#fedd89' }}>
+                <Typography variant="body1">
+                {textos[index]}
+                </Typography>
+              </Paper>
+            </Box>
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );
