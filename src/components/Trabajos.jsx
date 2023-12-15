@@ -73,7 +73,7 @@ const images = [
 
 function SwipeableTextMobileStepper() {
   const settings = {
-    dots: true,
+    
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -83,7 +83,7 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ maxWidth: { xs: '350px', md: '500px' }, margin: 'auto', pb: '10%', pt: '5%' }}>
+    <Box sx={{ maxWidth: { xs: '320px', md: '500px' }, margin: 'auto', pb: '10%', pt: '5%' }}>
        <Typography
           variant="h3"
           component="h2"
