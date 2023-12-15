@@ -5,6 +5,7 @@ import {
 } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShieldDog } from '@fortawesome/free-solid-svg-icons';
+import contactImage from '../assets/contact.jpg';
 
 function Contact({ id }) {
   return (
@@ -15,21 +16,25 @@ function Contact({ id }) {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        pt: { xs: '19%', md: '8%' },
+        pt: { xs: '10%', md: '8%' },
         pb: '5%',
         backgroundColor: '#d0d0d0',
       }}
     >
-      <Box
-        sx={{
-          width: { xs: '90%', md: '70%' },
-          backgroundColor: '#fff',
-          padding: '2rem',
-          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-          borderRadius: '15px',
-          pt: { xs: 2, md: 4 },
-        }}
-      >
+      <Grid container spacing={2} sx={{ width: { xs: '95%', md: '70%' }, display: 'flex', alignItems: 'stretch' }}>
+        <Grid item xs={12} md={6} sx={{ display: 'flex' }}>
+          <Box
+            sx={{
+              backgroundColor: '#fff',
+              padding: '2rem',
+              boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+              borderRadius: '15px',
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+            }}
+          >
         <Typography
           variant="h4"
           component="h2"
@@ -78,7 +83,22 @@ function Contact({ id }) {
             </Grid>
           </Grid>
         </form>
-      </Box>
+        </Box>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Box
+            component="img"
+            src={contactImage}
+            alt="Imagen descriptiva"
+            sx={{
+              width: '100%',
+              borderRadius: '15px',
+              objectFit: 'cover',
+              height: '100%',
+            }}
+          />
+        </Grid>
+      </Grid>
     </Box>
   );
 }
