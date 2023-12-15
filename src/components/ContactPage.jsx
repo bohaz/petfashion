@@ -4,7 +4,7 @@ import {
   Box, Typography, TextField, Button, Grid,
 } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShieldDog } from '@fortawesome/free-solid-svg-icons';
+import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import contactImage from '../assets/contact.jpg';
 
 function Contact({ id }) {
@@ -18,7 +18,7 @@ function Contact({ id }) {
         alignItems: 'center',
         pt: { xs: '10%', md: '8%' },
         pb: '5%',
-        backgroundColor: '#d0d0d0',
+        backgroundColor: '#f2e9e3',
       }}
     >
       <Grid container spacing={2} sx={{ width: { xs: '95%', md: '70%' }, display: 'flex', alignItems: 'stretch' }}>
@@ -41,7 +41,7 @@ function Contact({ id }) {
           gutterBottom
           textAlign="center"
           sx={{
-            color: '#104579',
+            color: '#dd8ea4',
             fontWeight: '700',
             fontFamily: 'Poppins, sans-serif',
           }}
@@ -49,7 +49,7 @@ function Contact({ id }) {
           Contactanos
         </Typography>
         <Box textAlign="center" sx={{ marginBottom: 2 }} >
-        <FontAwesomeIcon icon={faShieldDog} style={{ fontSize: '50px' }} />
+        <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#31383f' }} />
         </Box>
         <form action="https://formspree.io/f/xyyaoqnq" method="POST">
           <Grid container spacing={2}>
@@ -72,9 +72,10 @@ function Contact({ id }) {
                   padding: '10px',
                   borderRadius: '20px',
                   fontWeight: 'bold',
+                  backgroundColor: '#dd8ea4',
                   '&:hover': {
                     backgroundColor: 'white',
-                    color: 'primary.main',
+                    color: '#dd8ea4',
                   },
                 }}
               >

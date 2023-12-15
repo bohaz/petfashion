@@ -102,7 +102,7 @@ export default function SearchAppBar() {
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2, color: 'black' }}
+            sx={{ mr: 2, color: '#dd8ea4' }}
             onClick={handleMobileMenuOpen}
           >
             <MenuIcon />

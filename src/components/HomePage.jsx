@@ -12,7 +12,7 @@ function HomePage() {
         Bienvenido a PetFashion
       </Typography>
       <Typography variant="h5" sx={{ textAlign: 'center', marginBottom: 4 }}>
-        Tu peluquería canina de confianza
+      Especialistas en estética canina.
       </Typography>
 
       <AboutPage />

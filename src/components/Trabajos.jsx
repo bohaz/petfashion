@@ -14,7 +14,7 @@ import image8 from '../assets/8.png';
 import image9 from '../assets/9.png';
 import image10 from '../assets/10.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShieldDog } from '@fortawesome/free-solid-svg-icons';
+import { faPaw } from '@fortawesome/free-solid-svg-icons';
 
 const images = [
   {
@@ -63,12 +63,22 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ padding: 2, maxWidth: { xs: '350px', md: '500px' }, margin: 'auto', pb: 4 }}>
-       <Typography variant="h4" gutterBottom textAlign="center" >
+    <Box sx={{ maxWidth: { xs: '350px', md: '500px' }, margin: 'auto', pb: '5%', pt: '5%' }}>
+       <Typography
+          variant="h4"
+          component="h2"
+          gutterBottom
+          textAlign="center"
+          sx={{
+            color: '#31383f',
+            fontWeight: '700',
+            fontFamily: 'Poppins, sans-serif',
+          }}
+        >
         Nuestros Trabajos
       </Typography>
       <Box textAlign="center" sx={{ marginBottom: 2 }}>
-        <FontAwesomeIcon icon={faShieldDog} style={{ fontSize: '50px' }} />
+      <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#31383f'}} />
       </Box>
       <Slider {...settings}>
         {images.map((image, index) => (
@@ -79,9 +89,12 @@ function SwipeableTextMobileStepper() {
                 elevation={3}
                 sx={{
                   margin: 'auto',
-                  marginBottom: 1,
+                  marginBottom: 2,
                   padding: 1,
-                  maxWidth: 'fit-content',
+                  maxWidth: '50%',
+                  borderRadius: '20px',
+                  backgroundColor: '#dd8ea4',
+                  color: 'white',
                 }}
               >
                 <Typography variant="h6" sx={{ fontWeight: 'bold' }}>{image.label}</Typography>

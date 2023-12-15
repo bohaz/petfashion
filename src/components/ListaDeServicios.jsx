@@ -1,7 +1,8 @@
 import React from "react";
 import { Typography, Table, TableBody, TableCell, TableHead, TableRow, Box } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShieldDog } from '@fortawesome/free-solid-svg-icons';
+import { faPaw } from '@fortawesome/free-solid-svg-icons';
+import backgroundImage from '../assets/background.jpg';
 import Paper from '@mui/material/Paper';
 
 function ListaDeServicios() {
@@ -29,22 +30,40 @@ function ListaDeServicios() {
     },
   ];
   
-
-  return (
-    <Box sx={{ margin: 3, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Typography variant="h3" textAlign="center" gutterBottom >
+ return (
+  <Box sx={{
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundAttachment: 'fixed',
+    backgroundSize: 'cover',
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    pb: '5%',
+    pt: '5%'
+  }}>
+      <Typography
+          variant="h4"
+          component="h2"
+          gutterBottom
+          textAlign="center"
+          sx={{
+            color: '#31383f',
+            fontWeight: '700',
+            fontFamily: 'Poppins, sans-serif',
+          }}
+        >
         Nuestros Servicios
       </Typography>
-      <FontAwesomeIcon icon={faShieldDog} style={{ fontSize: '50px' }} />
-      
-      <Paper elevation={3} sx={{ width: '90%', mt: 3 }}>
+      <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#31383f' }} />
 
+      <Paper elevation={3} sx={{ width: '90%', mt: 3 }}>
         <Table>
-          <TableHead sx={{ backgroundColor: '#1976d2' }}>
+          <TableHead sx={{ backgroundColor: '#dd8ea4' }}>
             <TableRow>
-              <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Servicio</TableCell>
-              <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Peso</TableCell>
-              <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Precio</TableCell>
+              <TableCell sx={{ color: '#31383f', fontWeight: 'bold' }}>Servicio</TableCell>
+              <TableCell sx={{ color: '#31383f', fontWeight: 'bold' }}>Peso</TableCell>
+              <TableCell sx={{ color: '#31383f', fontWeight: 'bold' }}>Precio</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -57,6 +76,11 @@ function ListaDeServicios() {
                 </TableRow>
               ))
             ))}
+            <TableRow>
+              <TableCell colSpan={3} sx={{ textAlign: 'center', fontStyle: 'italic', backgroundColor: '#e0e0e0' }}>
+                Los valores varían de acuerdo a la condición del pelaje de la mascota
+              </TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </Paper>
