@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { styled, alpha } from '@mui/material/styles';
+import { useScrollTrigger } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -41,7 +42,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   width: '100%',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
+
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     [theme.breakpoints.up('sm')]: {
@@ -52,6 +53,33 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
+
+function ElevationScroll(props) {
+  const { children } = props;
+
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+  });
+
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0,
+    sx: {
+      backgroundColor: 'white',
+      ...(trigger ? {
+        width: '70%', 
+        mt: '1%',
+        borderRadius: '30px',
+        transition: '0.3s',
+        transform: 'translateX(-21.5%)', 
+        backgroundColor: 'rgba(255, 255, 255, 0.7)',
+      } : {
+        height: '64px', 
+        borderRadius: '0px', 
+      })
+    },
+  });
+}
 
 export default function SearchAppBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -66,38 +94,41 @@ export default function SearchAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed">
+       <ElevationScroll>
+      <AppBar position="fixed" sx={{ backgroundColor: 'white !important' }}>
         <Toolbar>
           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2 }}
+            sx={{ mr: 2, color: 'black' }}
             onClick={handleMobileMenuOpen}
           >
             <MenuIcon />
           </IconButton>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, justifyContent: 'center' }}>
             
-            <Button color="inherit" component={Link} to="/">Home</Button>
-            <Button color="inherit" component={Link} to="/about">Quiénes Somos</Button>
-            <Button color="inherit" component={Link} to="/servicios">Servicios</Button>
-            <Button color="inherit" component={Link} to="/trabajos">Nuestros Trabajos</Button>
-            <Button color="inherit" component={Link} to="/contact">Contáctanos</Button>
+            <Button color="inherit" sx={{ color: 'black' }} component={Link} to="/">Home</Button>
+            <Button color="inherit" sx={{ color: 'black' }} component={Link} to="/about">Quiénes Somos</Button>
+            <Button color="inherit" sx={{ color: 'black' }} component={Link} to="/servicios">Servicios</Button>
+            <Button color="inherit" sx={{ color: 'black' }} component={Link} to="/trabajos">Nuestros Trabajos</Button>
+            <Button color="inherit" sx={{ color: 'black' }} component={Link} to="/contact">Contáctanos</Button>
 
           </Box>
           <Search>
             <SearchIconWrapper>
-              <SearchIcon />
+              <SearchIcon sx={{ color: 'black' }} />
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
+              sx={{ color: 'black' }}
             />
           </Search>
         </Toolbar>
       </AppBar>
+      </ElevationScroll>
       <MobileMenu open={mobileMenuOpen} onClose={handleMobileMenuClose} />
     </Box>
   );
