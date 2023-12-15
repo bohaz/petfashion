@@ -13,6 +13,8 @@ import image7 from '../assets/7.png';
 import image8 from '../assets/8.png';
 import image9 from '../assets/9.png';
 import image10 from '../assets/10.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShieldDog } from '@fortawesome/free-solid-svg-icons';
 
 const images = [
   {
@@ -24,27 +26,27 @@ const images = [
     imgPath: image4,
   },
   {
-    label: '',
+    label: 'Niña',
     imgPath: image5,
   },
   {
-    label: 'Goč, Serbia',
+    label: 'Pensi',
     imgPath: image6,
   },
   {
-    label: 'Goč, Serbia',
+    label: 'Loki',
     imgPath: image7,
   },
   {
-    label: 'Goč, Serbia',
+    label: 'Milo',
     imgPath: image8,
   },
   {
-    label: 'Goč, Serbia',
+    label: 'Maya',
     imgPath: image9,
   },
   {
-    label: 'Goč, Serbia',
+    label: 'Moa',
     imgPath: image10,
   },
 ];
@@ -61,36 +63,41 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
+    <Box sx={{ padding: 2, maxWidth: { xs: '350px', md: '500px' }, margin: 'auto', pb: 4 }}>
+       <Typography variant="h4" gutterBottom textAlign="center" >
+        Nuestros Trabajos
+      </Typography>
+      <Box textAlign="center" sx={{ marginBottom: 2 }}>
+        <FontAwesomeIcon icon={faShieldDog} style={{ fontSize: '50px' }} />
+      </Box>
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index}>
-            <Paper
-              square
-              elevation={0}
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                height: 50,
-                pl: 2,
-                bgcolor: 'background.default',
-              }}
-            >
-              <Typography>{image.label}</Typography>
-            </Paper>
+          <Box key={index} sx={{ textAlign: 'center' }}>
+            {image.label && (
+              <Paper
+                square
+                elevation={3}
+                sx={{
+                  margin: 'auto',
+                  marginBottom: 1,
+                  padding: 1,
+                  maxWidth: 'fit-content',
+                }}
+              >
+                <Typography variant="h6" sx={{ fontWeight: 'bold' }}>{image.label}</Typography>
+              </Paper>
+            )}
             <Box
               component="img"
               sx={{
-                height: 350,
-                display: 'block',
-                maxWidth: 400,
-                overflow: 'hidden',
+                height: 'auto',
                 width: '100%',
+                borderRadius: 2,
               }}
               src={image.imgPath}
               alt={image.label}
             />
-          </div>
+          </Box>
         ))}
       </Slider>
     </Box>
