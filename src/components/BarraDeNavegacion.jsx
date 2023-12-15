@@ -82,6 +82,7 @@ export default function SearchAppBar() {
             
             <Button color="inherit" component={Link} to="/">Home</Button>
             <Button color="inherit" component={Link} to="/about">Quiénes Somos</Button>
+            <Button color="inherit" component={Link} to="/servicios">Servicios</Button>
             <Button color="inherit" component={Link} to="/trabajos">Nuestros Trabajos</Button>
             <Button color="inherit" component={Link} to="/contact">Contáctanos</Button>
 
