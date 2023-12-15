@@ -1,40 +1,65 @@
 import React from "react";
-import Servicio from "./Servicio";
-import { Grid } from '@mui/material';
-import { Typography } from '@mui/material';
-import { Box } from '@mui/material';
+import { Typography, Table, TableBody, TableCell, TableHead, TableRow, Box } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShieldDog } from '@fortawesome/free-solid-svg-icons';
+import Paper from '@mui/material/Paper';
 
 function ListaDeServicios() {
+
   const servicios = [
-    { nombre: "Baño Completo", descripcion: "Baño y secado completo.", precio: 15000 },
-    { nombre: "Baño Completo", descripcion: "Baño y secado completo.", precio: 20000 },
-    { nombre: "Corte de Pelo", descripcion: "Corte según raza y preferencia del cliente.", precio: 20000 },
-    { nombre: "Corte de Pelo", descripcion: "Corte según raza y preferencia del cliente.", precio: 25000 },
-    { nombre: "Corte de Uñas", descripcion: "Corte de uñas.", precio: 5000 },
+    {
+      tipo: "Baño Completo",
+      detalles: [
+        { peso: "Hasta 10kg", precio: 15000 },
+        { peso: "10-20kg", precio: 20000 },
+      ],
+    },
+    {
+      tipo: "Corte de Pelo",
+      detalles: [
+        { peso: "Hasta 10kg", precio: 20000 },
+        { peso: "10-20kg", precio: 25000 },
+      ],
+    },
+    {
+      tipo: "Corte de Uñas",
+      detalles: [
+        { precio: 5000 },
+      ],
+    },
   ];
+  
 
   return (
-    <Box sx={{ margin: 3 }}>
-      <Typography variant="h3" textAlign="center" gutterBottom>
+    <Box sx={{ margin: 3, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <Typography variant="h3" textAlign="center" gutterBottom >
         Nuestros Servicios
       </Typography>
-      <Box textAlign="center">
-        <FontAwesomeIcon icon={faShieldDog} style={{ fontSize: '50px' }} />
-      </Box>
+      <FontAwesomeIcon icon={faShieldDog} style={{ fontSize: '50px' }} />
+      
+      <Paper elevation={3} sx={{ width: '90%', mt: 3 }}>
 
-      <Grid container spacing={2}>
-        {servicios.map((servicio, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <Servicio
-              nombre={servicio.nombre}
-              descripcion={servicio.descripcion}
-              precio={servicio.precio}
-            />
-          </Grid>
-        ))}
-      </Grid>
+        <Table>
+          <TableHead sx={{ backgroundColor: '#1976d2' }}>
+            <TableRow>
+              <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Servicio</TableCell>
+              <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Peso</TableCell>
+              <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Precio</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {servicios.map((servicio, index) => (
+              servicio.detalles.map((detalle, detalleIndex) => (
+                <TableRow key={`${index}-${detalleIndex}`} sx={{ '&:nth-of-type(odd)': { backgroundColor: '#f5f5f5' } }}>
+                  <TableCell>{detalleIndex === 0 ? servicio.tipo : ''}</TableCell>
+                  <TableCell>{detalle.peso || 'Todos los pesos'}</TableCell>
+                  <TableCell>${detalle.precio}</TableCell>
+                </TableRow>
+              ))
+            ))}
+          </TableBody>
+        </Table>
+      </Paper>
     </Box>
   );
 }

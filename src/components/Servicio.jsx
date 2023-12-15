@@ -1,9 +1,9 @@
 import React from "react";
-import { Card, CardContent, Typography } from '@mui/material';
+import { Card, CardContent, Typography, Chip } from '@mui/material';
 
-function Servicio({ nombre, descripcion, precio }) {
+function Servicio({ nombre, descripcion, precio, peso }) {
   return (
-    <Card sx={{ marginBottom: 2 }}>
+    <Card sx={{ marginBottom: 2, boxShadow: 3 }}>
       <CardContent>
         <Typography variant="h5" component="div">
           {nombre}
@@ -14,6 +14,9 @@ function Servicio({ nombre, descripcion, precio }) {
         <Typography variant="body2">
           Precio: ${precio}
         </Typography>
+        {peso && (
+          <Chip label={`Peso: ${peso} kg`} color="primary" sx={{ mt: 1 }} />
+        )}
       </CardContent>
     </Card>
   );
