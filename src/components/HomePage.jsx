@@ -1,4 +1,5 @@
 import React from 'react';
+import { Box, Typography } from '@mui/material';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
 import ListaDeServicios from './ListaDeServicios';
@@ -6,14 +7,19 @@ import Trabajos from './Trabajos';
 
 function HomePage() {
   return (
-    <div>
-      <h2>Página de Inicio</h2>
-      <p>Bienvenido a PetFashion, tu peluquería canina de confianza.</p>
+    <Box sx={{ padding: 3 }}>
+      <Typography variant="h3" gutterBottom textAlign="center">
+        Bienvenido a PetFashion
+      </Typography>
+      <Typography variant="h5" sx={{ textAlign: 'center', marginBottom: 4 }}>
+        Tu peluquería canina de confianza
+      </Typography>
+
       <AboutPage />
       <ListaDeServicios />
       <Trabajos />
       <ContactPage />
-    </div>
+    </Box>
   );
 }
 
