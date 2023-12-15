@@ -12,7 +12,7 @@ function Banner() {
       alignItems: 'center',
       padding: '5% 0',
       '@media (max-width:600px)': {
-        marginTop: '20px', // Ajusta el valor según tus necesidades
+        marginTop: '20px',
       },
     }}>
    

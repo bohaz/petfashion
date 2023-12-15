@@ -92,6 +92,15 @@ export default function SearchAppBar() {
     setMobileMenuOpen(false);
   };
 
+  const linkStyle = {
+    
+      color: '#dd8ea4',
+      fontWeight: '700',
+      fontFamily: 'Poppins, sans-serif',
+      fontSize: '0.9rem',
+   
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
        <ElevationScroll>
@@ -109,11 +118,11 @@ export default function SearchAppBar() {
           </IconButton>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, justifyContent: 'center' }}>
             
-            <Button color="inherit" sx={{ color: 'black' }} component={Link} to="/">Home</Button>
-            <Button color="inherit" sx={{ color: 'black' }} component={Link} to="/about">Quiénes Somos</Button>
-            <Button color="inherit" sx={{ color: 'black' }} component={Link} to="/servicios">Servicios</Button>
-            <Button color="inherit" sx={{ color: 'black' }} component={Link} to="/trabajos">Nuestros Trabajos</Button>
-            <Button color="inherit" sx={{ color: 'black' }} component={Link} to="/contact">Contáctanos</Button>
+            <Button sx={ linkStyle } component={Link} to="/">Home</Button>
+            <Button sx={ linkStyle } component={Link} to="/about">Quiénes Somos</Button>
+            <Button sx={ linkStyle } component={Link} to="/servicios">Servicios</Button>
+            <Button sx={ linkStyle } component={Link} to="/trabajos">Nuestros Trabajos</Button>
+            <Button sx={ linkStyle } component={Link} to="/contact">Contáctanos</Button>
 
           </Box>
           <Search>

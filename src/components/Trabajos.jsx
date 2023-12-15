@@ -13,6 +13,10 @@ import image7 from '../assets/7.png';
 import image8 from '../assets/8.png';
 import image9 from '../assets/9.png';
 import image10 from '../assets/10.png';
+import image11 from '../assets/11.png';
+import image12 from '../assets/12.png';
+import image13 from '../assets/13.png';
+import image14 from '../assets/14.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
 
@@ -49,6 +53,22 @@ const images = [
     label: 'Moa',
     imgPath: image10,
   },
+  {
+    label: 'Moa',
+    imgPath: image11,
+  },
+  {
+    label: 'Moa',
+    imgPath: image12,
+  },
+  {
+    label: 'Lipi',
+    imgPath: image13,
+  },
+  {
+    label: 'Chiqui',
+    imgPath: image14,
+  },
 ];
 
 function SwipeableTextMobileStepper() {
@@ -63,16 +83,17 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ maxWidth: { xs: '350px', md: '500px' }, margin: 'auto', pb: '5%', pt: '5%' }}>
+    <Box sx={{ maxWidth: { xs: '350px', md: '500px' }, margin: 'auto', pb: '10%', pt: '5%' }}>
        <Typography
-          variant="h4"
+          variant="h3"
           component="h2"
           gutterBottom
           textAlign="center"
           sx={{
-            color: '#31383f',
+            color: '#dd8ea4',
             fontWeight: '700',
             fontFamily: 'Poppins, sans-serif',
+            fontSize: { xs: 'h4.fontSize', sm: 'h3.fontSize' }
           }}
         >
         Nuestros Trabajos

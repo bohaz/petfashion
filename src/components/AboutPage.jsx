@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Paper, Typography, Box } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
-import logo1 from '../assets/huella.png'; // Asegúrate de tener las rutas correctas
+import logo1 from '../assets/huella.png';
 import logo2 from '../assets/mascota.png';
 import logo3 from '../assets/perro.png';
 
@@ -14,11 +14,11 @@ function AboutPage() {
   ];
 
   return (
-    <Box sx={{ padding: 2, backgroundColor: '#f2e9e3', pt: '5%', pb: '5%' }}>
-      <Typography variant="h3" component="h2" gutterBottom textAlign="center" sx={{ color: '#dd8ea4', fontWeight: '700', fontFamily: 'Poppins, sans-serif' }}>
+    <Box sx={{ padding: 2, backgroundColor: '#f2e9e3', pt: '5%', pb: '10%' }}>
+      <Typography variant="h3" component="h2" gutterBottom textAlign="center" sx={{ color: '#dd8ea4', fontWeight: '700', fontFamily: 'Poppins, sans-serif', fontSize: { xs: 'h4.fontSize', sm: 'h3.fontSize' } }}>
         Acerca de Nosotros
       </Typography>
-      <Box textAlign="center">
+      <Box textAlign="center" sx= {{mb: '4%'}} >
         <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#31383f' }} />
       </Box>
 

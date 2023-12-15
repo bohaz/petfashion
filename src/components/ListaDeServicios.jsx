@@ -39,18 +39,19 @@ function ListaDeServicios() {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    pb: '5%',
+    pb: '10%',
     pt: '5%'
   }}>
       <Typography
-          variant="h4"
+          variant="h3"
           component="h2"
           gutterBottom
           textAlign="center"
           sx={{
-            color: '#31383f',
+            color: '#dd8ea4',
             fontWeight: '700',
             fontFamily: 'Poppins, sans-serif',
+            fontSize: { xs: 'h4.fontSize', sm: 'h3.fontSize' }
           }}
         >
         Nuestros Servicios

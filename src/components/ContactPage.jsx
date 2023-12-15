@@ -17,7 +17,7 @@ function Contact({ id }) {
         justifyContent: 'center',
         alignItems: 'center',
         pt: { xs: '10%', md: '8%' },
-        pb: '5%',
+        pb: '10%',
         backgroundColor: '#f2e9e3',
       }}
     >
@@ -36,7 +36,7 @@ function Contact({ id }) {
             }}
           >
         <Typography
-          variant="h4"
+          variant="h3"
           component="h2"
           gutterBottom
           textAlign="center"
@@ -44,9 +44,10 @@ function Contact({ id }) {
             color: '#dd8ea4',
             fontWeight: '700',
             fontFamily: 'Poppins, sans-serif',
+            fontSize: { xs: 'h4.fontSize', sm: 'h3.fontSize' }
           }}
         >
-          Contactanos
+          Contáctanos
         </Typography>
         <Box textAlign="center" sx={{ marginBottom: 2 }} >
         <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#31383f' }} />
@@ -54,13 +55,13 @@ function Contact({ id }) {
         <form action="https://formspree.io/f/xyyaoqnq" method="POST">
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
-              <TextField fullWidth label="Full Name" name="user_name" required variant="outlined" />
+              <TextField fullWidth label="Nombre Completo" name="user_name" required variant="outlined" />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <TextField fullWidth label="Email Address" name="user_email" type="email" required variant="outlined" />
+              <TextField fullWidth label="Correo" name="user_email" type="email" required variant="outlined" />
             </Grid>
             <Grid item xs={12}>
-              <TextField fullWidth label="Write something" name="user_message" multiline rows={4} variant="outlined" />
+              <TextField fullWidth label="Escribe Algo..." name="user_message" multiline rows={4} variant="outlined" />
             </Grid>
             <Grid item xs={12}>
               <Button
