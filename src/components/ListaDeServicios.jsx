@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import backgroundImage from '../assets/background.jpg';
 import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 function ListaDeServicios() {
 
@@ -29,6 +31,12 @@ function ListaDeServicios() {
       ],
     },
   ];
+
+  const openWhatsApp = () => {
+    const whatsappNumber = '+56945570410';
+    const whatsappLink = `https://wa.me/${whatsappNumber}`;
+    window.open(whatsappLink, '_blank');
+  };
   
  return (
   <Box sx={{
@@ -85,6 +93,20 @@ function ListaDeServicios() {
           </TableBody>
         </Table>
       </Paper>
+      <Box sx={{ mt: 4, textAlign: 'center' }}>
+        <Typography variant="h6" sx={{ color: '#31383f', mb: 2 }}>
+          ¿Tienes dudas? No dudes en escribirnos
+        </Typography>
+        <Button 
+          variant="contained" 
+          color="success"
+          startIcon={<FontAwesomeIcon icon={faWhatsapp} />}
+          onClick={openWhatsApp}
+          sx={{ textTransform: 'none' }}
+        >
+          Contáctanos por WhatsApp
+        </Button>
+      </Box>
     </Box>
   );
 }
