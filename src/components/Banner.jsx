@@ -11,7 +11,11 @@ function Banner() {
       justifyContent: 'center',
       alignItems: 'center',
       padding: '5% 0',
+      '@media (max-width:600px)': {
+        marginTop: '20px', // Ajusta el valor según tus necesidades
+      },
     }}>
+   
       <img src={logo} alt="Logo de la empresa" style={{ height: '250px' }} />
     </Box>
   );
