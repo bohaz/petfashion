@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import {
   Box, Typography, TextField, Button, Grid,
 } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShieldDog } from '@fortawesome/free-solid-svg-icons';
 
 function Contact({ id }) {
   return (
@@ -25,7 +27,7 @@ function Contact({ id }) {
           padding: '2rem',
           boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
           borderRadius: '15px',
-          pt: { xs: 2, md: 6 },
+          pt: { xs: 2, md: 4 },
         }}
       >
         <Typography
@@ -34,37 +36,16 @@ function Contact({ id }) {
           gutterBottom
           textAlign="center"
           sx={{
-            mb: 2,
             color: '#104579',
             fontWeight: '700',
             fontFamily: 'Poppins, sans-serif',
-            '::after': {
-              content: '""',
-              display: 'block',
-              height: '1px',
-              width: '100%',
-              backgroundColor: 'primary.main',
-              marginTop: '0.5rem',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-            },
           }}
         >
-          <i className="fa-solid fa-envelope" />
-          {' '}
           Contactanos
         </Typography>
-        <Typography
-          sx={{
-            color: '#104579',
-            mb: 4,
-            fontSize: { xs: 'body1.fontSize', md: 'h6.fontSize' },
-            textAlign: 'center',
-          }}
-        >
-          I&apos;m always interested in hearing about new projects,
-          so if you&apos;d like to chat please get in touch.
-        </Typography>
+        <Box textAlign="center" sx={{ marginBottom: 2 }} >
+        <FontAwesomeIcon icon={faShieldDog} style={{ fontSize: '50px' }} />
+        </Box>
         <form action="https://formspree.io/f/xyyaoqnq" method="POST">
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
