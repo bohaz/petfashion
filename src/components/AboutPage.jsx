@@ -10,16 +10,16 @@ function AboutPage() {
   const textos = [
     "Somos una empresa familiar dedicada a prestar el servicio de peluquería canina que tu mascota necesita.",
     "Nuestro equipo está conformado por un médico veterinario y una excelente estilista canina trabajando para usted.",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    "No usamos bozal ni sedación. La idea principal es que tu mascota se sienta cómoda y segura."
   ];
 
   return (
     <Box sx={{ padding: 2, backgroundColor: '#f2e9e3', pt: '5%', pb: '10%' }}>
       <Typography variant="h3" component="h2" gutterBottom textAlign="center" sx={{ color: '#dd8ea4', fontWeight: '700', fontFamily: 'Poppins, sans-serif', fontSize: { xs: 'h4.fontSize', sm: 'h3.fontSize' } }}>
-        Acerca de Nosotros
+        Quienes somos
       </Typography>
       <Box textAlign="center" sx= {{mb: '4%'}} >
-        <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#31383f' }} />
+        <FontAwesomeIcon icon={faPaw} style={{ fontSize:  '50px', color: '#31383f' }} />
       </Box>
 
       <Grid container spacing={3} justifyContent="center">
