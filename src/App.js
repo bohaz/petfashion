@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ListaDeServicios from "./components/ListaDeServicios";
+import SearchAppBar from "./components/BarraDeNavegacion";
+import HomePage from "./components/HomePage";
+import AboutPage from "./components/AboutPage";
+import ContactPage from "./components/ContactPage";
+import WhatsAppButton from "./components/WhatsAppButton";
+import Banner from "./components/Banner";
+import SwipeableTextMobileStepper from "./components/Trabajos";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <SearchAppBar />
+      <Banner />
+      <WhatsAppButton />
+      <Routes>
+        
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+       
+        <Route path="/servicios" element={<ListaDeServicios />} />
+        <Route path="/trabajos" element={<SwipeableTextMobileStepper />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
