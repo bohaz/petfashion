@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider'; // Importa Divider para las líneas
+import Divider from '@mui/material/Divider';
+import CloseIcon from '@mui/icons-material/Close'; 
 
 function MobileMenu({ open, onClose }) {
   return (
@@ -20,6 +21,14 @@ function MobileMenu({ open, onClose }) {
         onClick={onClose}
         onKeyDown={onClose}
       >
+        
+        <Button
+          startIcon={<CloseIcon />}
+          onClick={onClose}
+          sx={{ alignSelf: 'flex-end', marginRight: '-7px', marginTop: '-10px', color: '#dd8ea4' }}
+        >
+        </Button>
+
         <Button color="inherit" component={Link} to="/" sx={buttonStyle}>Home</Button>
         <Divider variant="middle" sx={dividerStyle} />
         <Button color="inherit" component={Link} to="/about" sx={buttonStyle}>Quiénes Somos</Button>
@@ -34,19 +43,19 @@ function MobileMenu({ open, onClose }) {
   );
 }
 
-// Estilos adicionales
 const buttonStyle = {
   width: '100%',
   justifyContent: 'center',
   margin: '10px 0',
   '&:hover': {
-    backgroundColor: 'rgba(0, 0, 0, 0.08)', // Cambia el color al pasar el mouse
+    backgroundColor: 'rgba(0, 0, 0, 0.08)', 
   }
 };
 
 const dividerStyle = {
-  width: '80%', // Ancho de la línea divisora
-  margin: '10px 0'
+  width: '80%', 
+  margin: '10px 0',
+  backgroundColor: '#dd8ea4',
 };
 
 export default MobileMenu;
