@@ -2,7 +2,7 @@ import React from "react";
 import { Typography, Table, TableBody, TableCell, TableHead, TableRow, Box } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
-import backgroundImage from '../assets/background.jpg';
+import backgroundImage from '../assets/background1.jpg';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
@@ -40,16 +40,27 @@ function ListaDeServicios() {
   
  return (
   <Box sx={{
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundAttachment: 'fixed',
-    backgroundSize: 'cover',
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    pb: '10%',
-    pt: '5%'
-  }}>
+    position: 'relative',
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundAttachment: 'fixed',
+        backgroundSize: 'cover',
+        opacity: 0.7, // Ajusta la opacidad aquí
+        zIndex: -1,
+      },
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      pb: '10%',
+      pt: '5%'
+    }}>
       <Typography
           variant="h3"
           component="h2"
