@@ -9,13 +9,14 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import Banner from "./components/Banner";
 import SwipeableTextMobileStepper from "./components/Trabajos";
 import Footer from "./components/Footer";
-
+import ImportantMessagePopup from "./components/ImportantMessagePopup";
 
 function App() {
   return (
     <Router>
       <SearchAppBar />
       <Banner />
+      <ImportantMessagePopup />
       <WhatsAppButton />
       <Routes>
         
