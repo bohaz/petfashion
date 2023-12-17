@@ -28,7 +28,13 @@ function ImportantMessagePopup() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    setOpen(true);
+    // Temporizador para retrasar la apertura del diálogo
+    const timer = setTimeout(() => {
+      setOpen(true);
+    }, 3000); // 3000 milisegundos = 3 segundos
+
+    // Limpiar el temporizador si el componente se desmonta
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClose = () => {
