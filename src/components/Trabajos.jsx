@@ -90,7 +90,7 @@ function SwipeableTextMobileStepper() {
           gutterBottom
           textAlign="center"
           sx={{
-            color: '#dd8ea4',
+            color: '#31383f',
             fontWeight: '700',
             fontFamily: 'Poppins, sans-serif',
             fontSize: { xs: 'h4.fontSize', sm: 'h3.fontSize' }
@@ -99,7 +99,7 @@ function SwipeableTextMobileStepper() {
         Nuestros Trabajos
       </Typography>
       <Box textAlign="center" sx={{ marginBottom: 2 }}>
-      <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#31383f'}} />
+      <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#dd8ea4'}} />
       </Box>
       <Slider {...settings}>
         {images.map((image, index) => (
@@ -113,9 +113,9 @@ function SwipeableTextMobileStepper() {
                   marginBottom: 2,
                   padding: 1,
                   maxWidth: '50%',
-                  borderRadius: '20px',
-                  backgroundColor: '#dd8ea4',
-                  color: 'white',
+                  borderRadius: '30px',
+                  backgroundColor: '#fedd89',
+                  color: '#31383f',
                 }}
               >
                 <Typography variant="h6" sx={{ fontWeight: 'bold' }}>{image.label}</Typography>

@@ -67,7 +67,7 @@ function ListaDeServicios() {
           gutterBottom
           textAlign="center"
           sx={{
-            color: '#dd8ea4',
+            color: '#31383f',
             fontWeight: '700',
             fontFamily: 'Poppins, sans-serif',
             fontSize: { xs: 'h4.fontSize', sm: 'h3.fontSize' }
@@ -75,7 +75,7 @@ function ListaDeServicios() {
         >
         Nuestros Servicios
       </Typography>
-      <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#31383f' }} />
+      <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#dd8ea4' }} />
 
       <Paper elevation={3} sx={{ width: '90%', mt: 3 }}>
         <Table>
@@ -113,7 +113,7 @@ function ListaDeServicios() {
           color="success"
           startIcon={<FontAwesomeIcon icon={faWhatsapp} />}
           onClick={openWhatsApp}
-          sx={{ textTransform: 'none' }}
+          sx={{ textTransform: 'none', borderRadius: '30px', fontWeight: 'bold', '&:hover': { backgroundColor: '#4caf50' } }}
         >
           Contáctanos por WhatsApp
         </Button>

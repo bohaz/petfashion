@@ -41,7 +41,7 @@ function Contact({ id }) {
           gutterBottom
           textAlign="center"
           sx={{
-            color: '#dd8ea4',
+            color: '#31383f',
             fontWeight: '700',
             fontFamily: 'Poppins, sans-serif',
             fontSize: { xs: 'h4.fontSize', sm: 'h3.fontSize' }
@@ -50,7 +50,7 @@ function Contact({ id }) {
           Contáctanos
         </Typography>
         <Box textAlign="center" sx={{ marginBottom: 2 }} >
-        <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#31383f' }} />
+        <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#dd8ea4' }} />
         </Box>
         <form action="https://formspree.io/f/xyyaoqnq" method="POST">
           <Grid container spacing={2}>
@@ -71,7 +71,7 @@ function Contact({ id }) {
                 sx={{
                   width: '100%',
                   padding: '10px',
-                  borderRadius: '20px',
+                  borderRadius: '30px',
                   fontWeight: 'bold',
                   backgroundColor: '#dd8ea4',
                   '&:hover': {
