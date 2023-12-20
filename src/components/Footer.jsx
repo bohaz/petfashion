@@ -34,7 +34,7 @@ function MyFooter() {
             </FooterLink>
             <div className="mt-4 flex space-x-6">
               <FooterIcon href="#" icon={BsFacebook} className="text-xl hover:text-gray-300" />
-              <FooterIcon href="@pet_fashion17" icon={BsInstagram} className="text-xl hover:text-gray-300" />
+              <FooterIcon href="https://www.instagram.com/pet_fashion17?igshid=OGQ5ZDc2ODk2ZA==" icon={BsInstagram} className="text-xl hover:text-gray-300" />
               <FooterIcon href="https://maps.app.goo.gl/RP3MHQ3pyWAoQ2Qq6" icon={SiGooglemaps} className="text-xl hover:text-gray-300" /> {/* Icono de Google Maps */}
             </div>
           </div>
