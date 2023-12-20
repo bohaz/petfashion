@@ -19,6 +19,7 @@ import image13 from '../assets/13.png';
 import image14 from '../assets/14.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
+import Opiniones from './Opiniones';
 
 const images = [
   {
@@ -83,7 +84,7 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ maxWidth: { xs: '320px', md: '500px' }, margin: 'auto', pb: '10%', pt: '5%' }}>
+    <Box sx={{ pb: '10%', pt: '5%', p: '5%' }}>
        <Typography
           variant="h3"
           component="h2"
@@ -124,6 +125,8 @@ function SwipeableTextMobileStepper() {
             <Box
               component="img"
               sx={{
+                margin: 'auto',
+                maxWidth: { xs: '320px', md: '500px' },
                 height: 'auto',
                 width: '100%',
                 borderRadius: 2,
@@ -134,6 +137,7 @@ function SwipeableTextMobileStepper() {
           </Box>
         ))}
       </Slider>
+      <Opiniones />
     </Box>
   );
 }
