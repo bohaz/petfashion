@@ -5,6 +5,7 @@ import {
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PlaceIcon from '@mui/icons-material/Place';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 function Footer() {
   return (
@@ -31,6 +32,9 @@ function Footer() {
         </IconButton>
         <IconButton color="inherit" href="https://www.facebook.com/tuPerfilDeFacebook/" target="_blank">
           <FacebookIcon />
+        </IconButton>
+        <IconButton color="inherit" href="https://wa.me/+56945570410" target="_blank">
+          <WhatsAppIcon />
         </IconButton>
         <IconButton color="inherit" href="https://maps.app.goo.gl/RP3MHQ3pyWAoQ2Qq6" target="_blank">
           <PlaceIcon />
