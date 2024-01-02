@@ -51,7 +51,7 @@ function ListaDeServicios() {
         backgroundImage: `url(${backgroundImage})`,
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
-        opacity: 0.7,
+        opacity: 0.3,
         zIndex: -1,
       },
       width: '100%',
