@@ -36,8 +36,8 @@ function VideoButton({ videoId }) {
         startIcon={<Icon icon="mdi:video" style={{ fontSize: '24px' }} />}
         sx={{
           mt: 4, 
-          width: '30%',
-          borderRadius: '20px', 
+          width: '250px',
+          borderRadius: '30px', 
           padding: '10px 20px', 
           textTransform: 'none', 
           backgroundColor: '#dd8ea4', 
