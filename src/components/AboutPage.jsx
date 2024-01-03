@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import logo1 from '../assets/huella.png';
 import logo2 from '../assets/mascota.png';
 import logo3 from '../assets/perro.png';
+import VideoButton from './VideoButton';
 
 function AboutPage() {
   const textos = [
@@ -33,6 +34,7 @@ function AboutPage() {
         <Box textAlign="center" sx={{ mb: '4%' }}>
           <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#dd8ea4' }} />
         </Box>
+        
       </motion.div>
 
       <Grid container spacing={3} justifyContent="center">
@@ -55,6 +57,7 @@ function AboutPage() {
           </Grid>
         ))}
       </Grid>
+      <VideoButton videoId="9ey-M7MpWGA" />
     </Box>
   );
 }
