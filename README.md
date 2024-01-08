@@ -28,7 +28,7 @@
 
 # 🐩 Pet fashion App<a name="about-project"></a>
 
-Welcome to the GitHub repository of PetFashion, our professional and dedicated pet grooming salon. As a software developer, I have created this web application not only as a digital portal for our services but also as a reflection of our commitment to innovation and excellence. This platform represents the fusion of my passion for technological development and pet care, offering our clients an intuitive, informative, and engaging user experience.
+PetFashion is our professional and dedicated pet grooming salon. As a software developer, I have created this web application not only as a digital portal for our services but also as a reflection of our commitment to innovation and excellence. This platform represents the fusion of my passion for technological development and pet care, offering our clients an intuitive, informative, and engaging user experience.
 
 ## 🛠 Built With <a name="built-with"></a>
 
