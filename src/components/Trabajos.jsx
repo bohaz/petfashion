@@ -5,6 +5,8 @@ import Typography from '@mui/material/Typography';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import image1 from '../assets/1.png';
+import image2 from '../assets/2.png';
 import image3 from '../assets/3.png';
 import image4 from '../assets/4.png';
 import image5 from '../assets/5.png';
@@ -12,63 +14,37 @@ import image6 from '../assets/6.png';
 import image7 from '../assets/7.png';
 import image8 from '../assets/8.png';
 import image9 from '../assets/9.png';
-import image10 from '../assets/10.png';
-import image11 from '../assets/11.png';
-import image12 from '../assets/12.png';
-import image13 from '../assets/13.png';
-import image14 from '../assets/14.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import ReviewsComponent from './ReviewsComponent';
 
 const images = [
   {
-    label: 'Brutal',
+    imgPath: image1,
+  },
+  {
+    imgPath: image2,
+  },
+  {
     imgPath: image3,
   },
   {
-    label: 'Augusta',
     imgPath: image4,
   },
   {
-    label: 'Niña',
     imgPath: image5,
   },
   {
-    label: 'Pensi',
     imgPath: image6,
   },
   {
-    label: 'Loki',
     imgPath: image7,
   },
   {
-    label: 'Milo',
     imgPath: image8,
   },
   {
-    label: 'Maya',
     imgPath: image9,
-  },
-  {
-    label: 'Moa',
-    imgPath: image10,
-  },
-  {
-    label: 'Moa',
-    imgPath: image11,
-  },
-  {
-    label: 'Moa',
-    imgPath: image12,
-  },
-  {
-    label: 'Lipi',
-    imgPath: image13,
-  },
-  {
-    label: 'Chiqui',
-    imgPath: image14,
   },
 ];
 
