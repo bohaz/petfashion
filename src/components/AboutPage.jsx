@@ -57,7 +57,7 @@ function AboutPage() {
           </Grid>
         ))}
       </Grid>
-      <VideoButton videoId="9ey-M7MpWGA" />
+      <VideoButton videoId="6EK9DO9iZmw" />
     </Box>
   );
 }
