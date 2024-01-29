@@ -11,17 +11,17 @@ function ListaDeServicios() {
 
   const servicios = [
     {
-      tipo: "Baño Completo",
+      tipo: "Baño cosmético (Incluye: Deslanado, Vaciado glándulas anales y corte de uñas)",
       detalles: [
-        { peso: "Hasta 10kg", precio: 15000 },
-        { peso: "10-20kg", precio: 20000 },
+        { peso: "Hasta 10 Kg.", precio: 15000 },
+        { peso: "10-20 Kg.", precio: 20000 },
       ],
     },
     {
-      tipo: "Corte de Pelo",
+      tipo: "Corte y Baño (Incluye: Vaciado glándulas anales y corte de uñas)",
       detalles: [
-        { peso: "Hasta 10kg", precio: 20000 },
-        { peso: "10-20kg", precio: 25000 },
+        { peso: "Hasta 10 Kg.", precio: 20000 },
+        { peso: "10-20 Kg.", precio: 25000 },
       ],
     },
     {
@@ -36,6 +36,10 @@ function ListaDeServicios() {
     const whatsappNumber = '+56945570410';
     const whatsappLink = `https://wa.me/${whatsappNumber}`;
     window.open(whatsappLink, '_blank');
+  };
+  
+  const formatearPrecio = (precio) => {
+    return precio.toLocaleString('es-CL');
   };
   
  return (
@@ -82,8 +86,8 @@ function ListaDeServicios() {
           <TableHead sx={{ backgroundColor: '#dd8ea4' }}>
             <TableRow>
               <TableCell sx={{ color: '#31383f', fontWeight: 'bold' }}>Servicio</TableCell>
-              <TableCell sx={{ color: '#31383f', fontWeight: 'bold' }}>Peso</TableCell>
-              <TableCell sx={{ color: '#31383f', fontWeight: 'bold' }}>Precio</TableCell>
+              <TableCell sx={{ color: '#31383f', fontWeight: 'bold' }}>Peso Mascota</TableCell>
+              <TableCell sx={{ color: '#31383f', fontWeight: 'bold' }}>Valor</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -92,7 +96,7 @@ function ListaDeServicios() {
                 <TableRow key={`${index}-${detalleIndex}`} sx={{ '&:nth-of-type(odd)': { backgroundColor: '#f5f5f5' } }}>
                   <TableCell>{detalleIndex === 0 ? servicio.tipo : ''}</TableCell>
                   <TableCell>{detalle.peso || 'Todos los pesos'}</TableCell>
-                  <TableCell>${detalle.precio}</TableCell>
+                  <TableCell>CLP {formatearPrecio(detalle.precio)}</TableCell>
                 </TableRow>
               ))
             ))}
