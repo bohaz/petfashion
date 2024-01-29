@@ -11,14 +11,14 @@ function ListaDeServicios() {
 
   const servicios = [
     {
-      tipo: "Baño cosmético (Incluye: Deslanado, Vaciado glándulas anales y corte de uñas)",
+      tipo: "Baño cosmético (Incluye: Deslanado, Vaciado glándulas anales, limpieza de oídos y corte de uñas)",
       detalles: [
         { peso: "Hasta 10 Kg.", precio: 15000 },
         { peso: "10-20 Kg.", precio: 20000 },
       ],
     },
     {
-      tipo: "Corte y Baño (Incluye: Vaciado glándulas anales y corte de uñas)",
+      tipo: "Corte y Baño (Incluye: Vaciado glándulas anales, limpieza de oídos y corte de uñas)",
       detalles: [
         { peso: "Hasta 10 Kg.", precio: 20000 },
         { peso: "10-20 Kg.", precio: 25000 },
