@@ -47,7 +47,7 @@ function AboutPage() {
             >
               <Box textAlign="center">
               <img src={logo} alt={`Logo ${index + 1}`} style={{ maxWidth: '150px', margin: '0 auto' }} />
-                <Paper elevation={3} sx={{ mt: 2, padding: 2, height: '100px', backgroundColor: '#fedd89', maxWidth: '80%', margin: '0 auto' }}>
+                <Paper elevation={3} sx={{ mt: 2, padding: 2, height: 'auto', backgroundColor: '#fedd89', maxWidth: '80%', margin: '0 auto' }}>
                   <Typography variant="body1">
                     {textos[index]}
                   </Typography>
