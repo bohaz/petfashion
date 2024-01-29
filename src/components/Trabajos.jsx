@@ -72,7 +72,7 @@ function SwipeableTextMobileStepper() {
           fontSize: { xs: 'h4.fontSize', sm: 'h3.fontSize' }
         }}
       >
-        Nuestros Trabajos
+        Nuestros Clientes
       </Typography>
       <Box textAlign="center" sx={{ marginBottom: 2 }}>
         <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#dd8ea4'}} />
