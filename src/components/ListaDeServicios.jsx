@@ -55,7 +55,7 @@ function ListaDeServicios() {
         backgroundImage: `url(${backgroundImage})`,
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
-        opacity: 0.3,
+        
         zIndex: -1,
       },
       width: '100%',
@@ -71,7 +71,7 @@ function ListaDeServicios() {
           gutterBottom
           textAlign="center"
           sx={{
-            color: '#31383f',
+            color: 'white',
             fontWeight: '700',
             fontFamily: 'Poppins, sans-serif',
             fontSize: { xs: 'h4.fontSize', sm: 'h3.fontSize' }
@@ -79,7 +79,7 @@ function ListaDeServicios() {
         >
         Nuestros Servicios
       </Typography>
-      <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#dd8ea4' }} />
+      <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: 'white' }} />
 
       <Paper elevation={3} sx={{ width: '90%', mt: 3 }}>
         <Table>
@@ -109,7 +109,7 @@ function ListaDeServicios() {
         </Table>
       </Paper>
       <Box sx={{ mt: 4, textAlign: 'center' }}>
-        <Typography variant="h6" sx={{ color: '#31383f', mb: 2 }}>
+        <Typography variant="h6" sx={{ color: 'white', fontWeight: '700', mb: 2 }}>
           ¿Tienes dudas? No dudes en escribirnos
         </Typography>
         <Button 
