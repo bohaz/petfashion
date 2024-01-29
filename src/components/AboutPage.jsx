@@ -37,7 +37,7 @@ function AboutPage() {
         
       </motion.div>
 
-      <Grid container spacing={3} justifyContent="center">
+      <Grid container spacing={3} justifyContent="center" >
         {[logo1, logo2, logo3].map((logo, index) => (
           <Grid item xs={12} sm={4} key={index}>
             <motion.div
@@ -46,8 +46,8 @@ function AboutPage() {
               transition={{ duration: 0.5, delay: 0.1 * index }}
             >
               <Box textAlign="center">
-                <img src={logo} alt={`Logo ${index + 1}`} style={{ width: '100%', maxWidth: '150px' }} />
-                <Paper elevation={3} sx={{ mt: 2, padding: 2, height: '100px', backgroundColor: '#fedd89' }}>
+              <img src={logo} alt={`Logo ${index + 1}`} style={{ maxWidth: '150px', margin: '0 auto' }} />
+                <Paper elevation={3} sx={{ mt: 2, padding: 2, height: '100px', backgroundColor: '#fedd89', maxWidth: '80%', margin: '0 auto' }}>
                   <Typography variant="body1">
                     {textos[index]}
                   </Typography>
