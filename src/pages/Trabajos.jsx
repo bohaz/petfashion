@@ -15,7 +15,6 @@ import image8 from '../assets/8.png';
 import image9 from '../assets/9.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
-import ReviewsComponent from '../components/ReviewsComponent';
 
 const images = [
   {
@@ -95,7 +94,7 @@ function SwipeableTextMobileStepper() {
           </Box>
         ))}
       </Slider>
-      <ReviewsComponent />
+     
     </Box>
   );
 }
