@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ListaDeServicios from "./components/ListaDeServicios";
+import ListaDeServicios from "./pages/ListaDeServicios";
 import SearchAppBar from "./components/BarraDeNavegacion";
-import HomePage from "./components/HomePage";
-import AboutPage from "./components/AboutPage";
-import ContactPage from "./components/ContactPage";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Banner from "./components/Banner";
-import SwipeableTextMobileStepper from "./components/Trabajos";
+import SwipeableTextMobileStepper from "./pages/Trabajos";
 import Footer from "./components/Footer2";
 import ImportantMessagePopup from "./components/ImportantMessagePopup";
 
