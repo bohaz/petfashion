@@ -10,7 +10,7 @@ const TrustmaryWidget = () => {
       script.id = scriptId;
       script.src = "https://widget.trustmary.com/3Ss79-l0j";
       script.async = true;
-  
+     
       const container = document.getElementById("trustmary-widget-container");
       if (container) {
         container.appendChild(script);
