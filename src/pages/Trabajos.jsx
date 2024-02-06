@@ -1,9 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Grid from '@mui/material/Grid';
 import image1 from '../assets/1.png';
 import image2 from '../assets/2.png';
 import image3 from '../assets/3.png';
@@ -15,6 +13,7 @@ import image8 from '../assets/8.png';
 import image9 from '../assets/9.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
+import TrustmaryWidget from '../components/TrustmaryWidget';
 
 const images = [
   {
@@ -46,19 +45,9 @@ const images = [
   },
 ];
 
-function SwipeableTextMobileStepper() {
-  const settings = {
-    
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  };
-
+function ImageGallery() {
   return (
-    <Box sx={{ pb: '10%', pt: '5%', p: '5%' }}>
+    <Box sx={{ pb: '10%', pt: '5%', px: '5%' }}>
       <Typography
         variant="h3"
         component="h2"
@@ -74,29 +63,30 @@ function SwipeableTextMobileStepper() {
         Nuestros Clientes
       </Typography>
       <Box textAlign="center" sx={{ marginBottom: 2 }}>
-        <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#dd8ea4'}} />
+        <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#dd8ea4' }} />
       </Box>
-      <Slider {...settings}>
+      <Grid container spacing={4}>
         {images.map((image, index) => (
-          <Box key={index} sx={{ textAlign: 'center' }}>
+          <Grid item xs={12} sm={6} md={4} key={index}>
             <Box
               component="img"
               sx={{
                 margin: 'auto',
-                maxWidth: { xs: '320px', md: '500px' },
+                maxWidth: '100%',
                 height: 'auto',
-                width: '100%',
                 borderRadius: 2,
               }}
               src={image.imgPath}
-              alt=""
+              alt={`Image ${index + 1}`}
             />
-          </Box>
+          </Grid>
         ))}
-      </Slider>
-     
+      </Grid>
+  <TrustmaryWidget />
+
     </Box>
+    
   );
 }
 
-export default SwipeableTextMobileStepper;
+export default ImageGallery;
