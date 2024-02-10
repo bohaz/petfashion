@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
 import MobileMenu from './MobileMenu';
 import Typography from '@mui/material/Typography';
+import UserIcon from './UserIcon';
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -49,12 +50,10 @@ export default function SearchAppBar() {
   };
 
   const linkStyle = {
-    
       color: '#dd8ea4',
       fontWeight: '700',
       fontFamily: 'Poppins, sans-serif',
       fontSize: '1rem',
-   
   };
 
   return (
@@ -82,15 +81,18 @@ export default function SearchAppBar() {
               Pet Fashion
             </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, justifyContent: 'center' }}>
-            
             <Button sx={ linkStyle } component={Link} to="/">Home</Button>
             <Button sx={ linkStyle } component={Link} to="/about">Quiénes Somos</Button>
             <Button sx={ linkStyle } component={Link} to="/servicios">Servicios</Button>
             <Button sx={ linkStyle } component={Link} to="/trabajos">Nuestros Clientes</Button>
             <Button sx={ linkStyle } component={Link} to="/contact">Contáctanos</Button>
-
           </Box>
+          <IconButton
 
+            sx={{ ml: 2, color: '#dd8ea4', pt: '0'}}
+          >
+            <UserIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
       </ElevationScroll>

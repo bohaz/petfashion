@@ -10,10 +10,23 @@ import Banner from "./components/Banner";
 import SwipeableTextMobileStepper from "./pages/Trabajos";
 import Footer from "./components/Footer2";
 import ImportantMessagePopup from "./components/ImportantMessagePopup";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <Router>
+       <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <SearchAppBar />
       <Banner />
       <ImportantMessagePopup />
@@ -28,6 +41,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
+
     </Router>
   );
 }
