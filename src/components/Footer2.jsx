@@ -39,7 +39,7 @@ function Footer() {
         <IconButton color="inherit" href="https://maps.app.goo.gl/RP3MHQ3pyWAoQ2Qq6" target="_blank">
           <PlaceIcon />
         </IconButton>
-        
+
       </Box>
       <Typography variant="body2">
         ©

@@ -5,7 +5,6 @@ import ContactPage from './ContactPage';
 import ListaDeServicios from './ListaDeServicios';
 import Trabajos from './Trabajos';
 
-
 function HomePage() {
   return (
     <Box>
@@ -13,9 +12,9 @@ function HomePage() {
       <AboutPage />
       <ListaDeServicios />
       <Trabajos />
-      
+
       <ContactPage />
-      
+
     </Box>
   );
 }

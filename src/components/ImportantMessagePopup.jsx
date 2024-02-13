@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
@@ -14,7 +15,7 @@ const theme = createTheme({
       'Roboto',
       '"Helvetica Neue"',
       'Arial',
-      'sans-serif'
+      'sans-serif',
     ].join(','),
   },
   palette: {

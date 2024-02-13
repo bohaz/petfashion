@@ -1,4 +1,6 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Modal, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { toast } from 'react-toastify';
@@ -29,7 +31,6 @@ function Auth({ onClose }) {
       onClose();
       toast.success('¡Inicio de sesión exitoso!');
     } else {
-      console.error('Error en el inicio de sesión');
       toast.error('Error en el inicio de sesión');
     }
   };
@@ -39,7 +40,7 @@ function Auth({ onClose }) {
     const user = {
       user: { email, password, password_confirmation: passwordConfirmation },
     };
-    
+
     const response = await fetch('https://petfashion.onrender.com/users', {
       method: 'POST',
       headers: {
@@ -50,20 +51,19 @@ function Auth({ onClose }) {
 
     if (response.ok) {
       toast.success('¡Registro exitoso! Por favor, inicia sesión.');
-      setIsLogin(true); // Cambia el estado para mostrar el formulario de inicio de sesión
+      setIsLogin(true);
     } else {
-      console.error('Error en el registro');
       toast.error('Error en el registro');
     }
   };
 
   return (
-    <Modal open={true} onClose={onClose}>
+    <Modal open onClose={onClose}>
       <div className="fixed inset-0 flex items-center justify-center z-50">
         <div className="max-w-sm w-full p-6 bg-white rounded-md shadow-lg">
-        <IconButton
+          <IconButton
             onClick={onClose}
-            style={{ right: -310, top: -12, color: '#dd8ea4' }} 
+            style={{ right: -310, top: -12, color: '#dd8ea4' }}
           >
             <CloseIcon />
           </IconButton>
@@ -123,16 +123,14 @@ function Auth({ onClose }) {
                         className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                         placeholder="Confirmación de Contraseña"
                         value={passwordConfirmation}
-                        onChange={(e) =>
-                          setPasswordConfirmation(e.target.value)
-                        }
+                        onChange={(e) => setPasswordConfirmation(e.target.value)}
                       />
                     </div>
                   )}
                 </div>
                 <div>
                   <button
-                   style={{ backgroundColor: '#dd8ea4' }}
+                    style={{ backgroundColor: '#dd8ea4' }}
                     type="submit"
                     className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                   >
@@ -142,7 +140,8 @@ function Auth({ onClose }) {
                 <div className="text-sm text-center">
                   {isLogin ? (
                     <p>
-                      ¿No tienes una cuenta?{' '}
+                      ¿No tienes una cuenta?
+                      {' '}
                       <button
                         type="button"
                         className="font-medium text-blue-600 hover:text-blue-500"
@@ -153,7 +152,8 @@ function Auth({ onClose }) {
                     </p>
                   ) : (
                     <p>
-                      ¿Ya tienes una cuenta?{' '}
+                      ¿Ya tienes una cuenta?
+                      {' '}
                       <button
                         type="button"
                         className="font-medium text-blue-600 hover:text-blue-500"
@@ -172,5 +172,9 @@ function Auth({ onClose }) {
     </Modal>
   );
 }
+
+Auth.propTypes = {
+  onClose: PropTypes.func.isRequired,
+};
 
 export default Auth;
