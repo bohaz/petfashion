@@ -15,7 +15,7 @@ function Auth({ onClose }) {
 
     const user = { email, password };
 
-    const response = await fetch('http://localhost:3000/auth/login', {
+    const response = await fetch('https://petfashion.onrender.com/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -39,8 +39,8 @@ function Auth({ onClose }) {
     const user = {
       user: { email, password, password_confirmation: passwordConfirmation },
     };
-
-    const response = await fetch('http://localhost:3000/users', {
+    
+    const response = await fetch('https://petfashion.onrender.com/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
