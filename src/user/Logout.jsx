@@ -6,12 +6,11 @@ function Logout() {
     // Remover el token de localStorage
     localStorage.removeItem('token');
     toast.info('¡Sesión cerrada exitosamente!');
-    console.log('Sesión cerrada exitosamente');
   };
 
   return (
     <div>
-      <button onClick={handleLogout}>Cerrar Sesión</button>
+      <button type="button" onClick={handleLogout}>Cerrar Sesión</button>
     </div>
   );
 }

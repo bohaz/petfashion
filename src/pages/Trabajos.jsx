@@ -2,6 +2,8 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import image1 from '../assets/1.png';
 import image2 from '../assets/2.png';
 import image3 from '../assets/3.png';
@@ -11,8 +13,6 @@ import image6 from '../assets/6.png';
 import image7 from '../assets/7.png';
 import image8 from '../assets/8.png';
 import image9 from '../assets/9.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import TrustmaryWidget from '../components/TrustmaryWidget';
 
 const images = [
@@ -57,7 +57,7 @@ function ImageGallery() {
           color: '#31383f',
           fontWeight: '700',
           fontFamily: 'Poppins, sans-serif',
-          fontSize: { xs: 'h4.fontSize', sm: 'h3.fontSize' }
+          fontSize: { xs: 'h4.fontSize', sm: 'h3.fontSize' },
         }}
       >
         Nuestros Clientes
@@ -66,8 +66,10 @@ function ImageGallery() {
         <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#dd8ea4' }} />
       </Box>
       <Grid container spacing={4}>
-        {images.map((image, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+        {images.map((image) => (
+          <Grid item xs={12} sm={6} md={4} key={image.imgPath}>
+            {' '}
+
             <Box
               component="img"
               sx={{
@@ -77,15 +79,13 @@ function ImageGallery() {
                 borderRadius: 2,
               }}
               src={image.imgPath}
-              alt={`Image ${index + 1}`}
+              alt={`Image ${image.imgPath}`}
             />
           </Grid>
         ))}
       </Grid>
-  <TrustmaryWidget />
-
+      <TrustmaryWidget />
     </Box>
-    
   );
 }
 

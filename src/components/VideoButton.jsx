@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Button, Modal, Box } from '@mui/material';
 import { Icon } from '@iconify/react';
 
@@ -25,9 +26,9 @@ function VideoButton({ videoId }) {
     <Box
       sx={{
         display: 'flex',
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        height: '100%', 
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100%',
       }}
     >
       <Button
@@ -35,15 +36,15 @@ function VideoButton({ videoId }) {
         onClick={handleOpen}
         startIcon={<Icon icon="mdi:video" style={{ fontSize: '24px' }} />}
         sx={{
-          mt: 4, 
+          mt: 4,
           width: '250px',
-          borderRadius: '30px', 
-          padding: '10px 20px', 
-          textTransform: 'none', 
-          backgroundColor: '#dd8ea4', 
-          color: 'white', 
+          borderRadius: '30px',
+          padding: '10px 20px',
+          textTransform: 'none',
+          backgroundColor: '#dd8ea4',
+          color: 'white',
           ':hover': {
-            backgroundColor: '#bc6c9c', 
+            backgroundColor: '#bc6c9c',
           },
         }}
       >
@@ -64,11 +65,15 @@ function VideoButton({ videoId }) {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          ></iframe>
+          />
         </Box>
       </Modal>
     </Box>
   );
 }
+
+VideoButton.propTypes = {
+  videoId: PropTypes.string.isRequired,
+};
 
 export default VideoButton;

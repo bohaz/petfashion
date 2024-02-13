@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import PersonIcon from '@mui/icons-material/Person';
-import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew'; 
-import Auth from '../user/Auth'; 
+import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import { toast } from 'react-toastify';
+import Auth from '../user/Auth';
 
 function UserIcon() {
   const [showAuthForm, setShowAuthForm] = useState(false);
 
-  const isAuthenticated = () => {
-    return !!localStorage.getItem('token');
-  };
+  const isAuthenticated = () => !!localStorage.getItem('token');
 
   const handleLogout = () => {
     localStorage.removeItem('token');
@@ -20,10 +18,10 @@ function UserIcon() {
   return (
     <div>
       {isAuthenticated() ? (
-       
+
         <PowerSettingsNewIcon onClick={handleLogout} style={{ cursor: 'pointer' }} />
       ) : (
-       
+
         <>
           <PersonIcon onClick={() => setShowAuthForm(true)} style={{ cursor: 'pointer' }} />
           {showAuthForm && <Auth onClose={() => setShowAuthForm(false)} />}
