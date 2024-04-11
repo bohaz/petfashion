@@ -40,6 +40,7 @@ function App() {
         <Route path="/trabajos" element={<SwipeableTextMobileStepper />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+
       <Footer />
 
     </Router>
