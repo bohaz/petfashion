@@ -89,7 +89,6 @@ export default function SearchAppBar() {
               <Button sx={linkStyle} component={Link} to="/">Home</Button>
               <Button sx={linkStyle} component={Link} to="/about">Quiénes Somos</Button>
               <Button sx={linkStyle} component={Link} to="/servicios">Servicios</Button>
-              <Button sx={linkStyle} component={Link} to="/trabajos">Nuestros Clientes</Button>
               <Button sx={linkStyle} component={Link} to="/contact">Contáctanos</Button>
             </Box>
             <IconButton
