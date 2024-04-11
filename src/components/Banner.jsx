@@ -1,9 +1,15 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import logo from '../assets/Logo.png';
+import logo from '../assets/PfLogo.png';
 
 function Banner() {
+  const fadeIn = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: { duration: 0.9, delay: 0.5 },
+  };
   return (
     <Box sx={{
       width: '100%',
@@ -15,7 +21,13 @@ function Banner() {
       textAlign: 'center',
     }}
     >
-      <img src={logo} alt="Logo de la empresa" style={{ height: '250px', margin: '0 auto' }} />
+      <motion.div
+        initial={fadeIn.initial}
+        animate={fadeIn.animate}
+        transition={fadeIn.transition}
+      >
+        <img src={logo} alt="Logo de la empresa" style={{ height: '250px', margin: '0 auto' }} />
+      </motion.div>
       <Typography
         variant="h3"
         component="h2"
