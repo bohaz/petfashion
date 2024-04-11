@@ -4,6 +4,7 @@ import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
 import ListaDeServicios from './ListaDeServicios';
 import Trabajos from './Trabajos';
+import Visitanos from '../components/Visitanos';
 
 function HomePage() {
   return (
@@ -12,7 +13,7 @@ function HomePage() {
       <AboutPage />
       <ListaDeServicios />
       <Trabajos />
-
+      <Visitanos />
       <ContactPage />
 
     </Box>

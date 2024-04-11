@@ -5,9 +5,6 @@ import Grid from '@mui/material/Grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import image1 from '../assets/1.png';
-import image2 from '../assets/2.png';
-import image3 from '../assets/3.png';
-import image4 from '../assets/4.png';
 import image5 from '../assets/5.png';
 import image6 from '../assets/6.png';
 import image7 from '../assets/7.png';
@@ -18,15 +15,6 @@ import TrustmaryWidget from '../components/TrustmaryWidget';
 const images = [
   {
     imgPath: image1,
-  },
-  {
-    imgPath: image2,
-  },
-  {
-    imgPath: image3,
-  },
-  {
-    imgPath: image4,
   },
   {
     imgPath: image5,
@@ -47,7 +35,7 @@ const images = [
 
 function ImageGallery() {
   return (
-    <Box sx={{ pb: '10%', pt: '5%', px: '5%' }}>
+    <Box sx={{ pb: '10%', pt: '5%' }}>
       <Typography
         variant="h3"
         component="h2"
@@ -65,18 +53,18 @@ function ImageGallery() {
       <Box textAlign="center" sx={{ marginBottom: 2 }}>
         <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#dd8ea4' }} />
       </Box>
-      <Grid container spacing={4}>
+      <Grid container spacing={1}>
         {images.map((image) => (
-          <Grid item xs={12} sm={6} md={4} key={image.imgPath}>
+          <Grid item xs={12} sm={6} md={2} key={image.imgPath}>
             {' '}
 
             <Box
               component="img"
               sx={{
-                margin: 'auto',
+
                 maxWidth: '100%',
                 height: 'auto',
-                borderRadius: 2,
+
               }}
               src={image.imgPath}
               alt={`Image ${image.imgPath}`}
