@@ -58,6 +58,7 @@ function ListaDeServicios() {
         zIndex: -1,
       },
       width: '100%',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
