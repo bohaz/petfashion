@@ -25,8 +25,8 @@ function Instagram() {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      pb: '10%',
-      pt: '10%',
+      pb: '12%',
+      pt: '12%',
     }}
     >
       <Box
@@ -58,7 +58,7 @@ function Instagram() {
         Siguenos
         {' '}
         <Link
-          href="https://www.instagram.com/pet_fashion17/"
+          href="https://www.instagram.com/pet_fashion17?igsh=MWx3eHVvYThrdm9nMw=="
           target="_blank"
           rel="noopener noreferrer"
           sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}
