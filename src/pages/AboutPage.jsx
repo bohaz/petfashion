@@ -38,7 +38,7 @@ function AboutPage() {
 
   return (
     <Box sx={{
-      padding: 2, backgroundColor: '#f2e9e3', pt: '5%', pb: '10%',
+      padding: 2, backgroundImage: 'linear-gradient(135deg, #f2e9e3, #dd8ea4)', pt: '5%', pb: '10%',
     }}
     >
       <motion.div
