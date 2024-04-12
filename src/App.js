@@ -9,7 +9,7 @@ import ContactPage from './pages/ContactPage';
 import WhatsAppButton from './components/WhatsAppButton';
 import Banner from './components/Banner';
 import SwipeableTextMobileStepper from './pages/Trabajos';
-import Footer from './components/Footer2';
+import Footer from './components/Footer';
 import ImportantMessagePopup from './components/ImportantMessagePopup';
 import 'react-toastify/dist/ReactToastify.css';
 
