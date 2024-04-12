@@ -8,6 +8,12 @@ function Visitanos() {
   return (
     <Box sx={{
       position: 'relative',
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      pb: '10%',
+      pt: '10%',
       '&::before': {
         content: '""',
         position: 'absolute',
@@ -21,12 +27,7 @@ function Visitanos() {
         opacity: 0.6,
         zIndex: -1,
       },
-      width: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      pb: '10%',
-      pt: '10%',
+
     }}
     >
       <Box
