@@ -5,6 +5,8 @@ import ContactPage from './ContactPage';
 import ListaDeServicios from './ListaDeServicios';
 import Trabajos from './Trabajos';
 import Visitanos from '../components/Visitanos';
+import TrustmaryWidget from '../components/TrustmaryWidget';
+import Instagram from '../components/Instagram';
 
 function HomePage() {
   return (
@@ -12,7 +14,9 @@ function HomePage() {
 
       <AboutPage />
       <ListaDeServicios />
+      <Instagram />
       <Trabajos />
+      <TrustmaryWidget />
       <Visitanos />
       <ContactPage />
 
