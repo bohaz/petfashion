@@ -20,7 +20,7 @@ function BookingButton() {
         textTransform: 'none', borderRadius: '30px', fontWeight: 'bold', '&:hover': { backgroundColor: '#4caf50' }, mt: '20px',
       }}
     >
-      Agenda
+      Agenda Ahora
     </Button>
   );
 }
