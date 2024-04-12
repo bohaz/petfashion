@@ -25,8 +25,8 @@ function Visitanos() {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      pb: '7%',
-      pt: '7%',
+      pb: '10%',
+      pt: '10%',
     }}
     >
       <Box
