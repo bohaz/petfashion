@@ -17,7 +17,7 @@ function Banner() {
       backgroundColor: 'white',
       padding: '5% 0',
       '@media (max-width:600px)': {
-        marginTop: '20px',
+        marginTop: '35px',
       },
       textAlign: 'center',
     }}
