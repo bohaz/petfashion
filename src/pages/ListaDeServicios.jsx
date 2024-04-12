@@ -115,7 +115,7 @@ function ListaDeServicios() {
       </Paper>
       <Box sx={{ mt: 4, textAlign: 'center' }}>
         <Typography variant="h6" sx={{ color: 'white', fontWeight: '700', mb: 2 }}>
-          ¿Tienes dudas? No dudes en escribirnos
+          ¿Tienes dudas?
         </Typography>
         <Button
           variant="contained"
