@@ -6,7 +6,8 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 function BookingButton() {
   const openWhatsApp = () => {
     const whatsappNumber = '+56945570410';
-    const whatsappLink = `https://wa.me/${whatsappNumber}`;
+    const message = encodeURIComponent('Hola, 😊 en que podemos servirte?');
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${message}`;
     window.open(whatsappLink, '_blank');
   };
 
