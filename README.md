@@ -30,6 +30,9 @@
 
 PetFashion is our professional and dedicated pet grooming salon. As a software developer, I have created this web application not only as a digital portal for our services but also as a reflection of our commitment to innovation and excellence. This platform represents the fusion of my passion for technological development and pet care, offering our clients an intuitive, informative, and engaging user experience.
 
+![Petapp](https://github.com/bohaz/petfashion/assets/127757182/bdf9b24f-9c11-4014-b276-398c9ad1b781)
+
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
