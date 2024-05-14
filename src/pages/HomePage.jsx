@@ -7,6 +7,7 @@ import Trabajos from './Trabajos';
 import Visitanos from '../components/Visitanos';
 import TrustmaryWidget from '../components/TrustmaryWidget';
 import Instagram from '../components/Instagram';
+import Visit from '../components/Visit';
 
 function HomePage() {
   return (
@@ -18,6 +19,7 @@ function HomePage() {
       <Trabajos />
       <TrustmaryWidget />
       <Visitanos />
+      <Visit />
       <ContactPage />
 
     </Box>

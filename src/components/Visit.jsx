@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 
 function Visit() {
   const { ref, inView } = useInView({
-    triggerOnce: false, // Cambiado a false para que se repita cada vez que se llegue al componente
+    triggerOnce: false,
     threshold: 0.5,
   });
 
