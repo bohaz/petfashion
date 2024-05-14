@@ -5,6 +5,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import contactImage from '../assets/contact.jpg';
+import backgroundImage from '../assets/Huesos.png';
 
 function Contact() {
   return (
@@ -16,7 +17,10 @@ function Contact() {
         alignItems: 'center',
         pt: { xs: '10%', md: '8%' },
         pb: '10%',
-        backgroundColor: '#f2e9e3',
+        backgroundAttachment: 'fixed',
+        padding: 2,
+        backgroundImage: `url(${backgroundImage})`,
+        minHeight: '100vh',
       }}
     >
       <Grid container spacing={2} sx={{ width: { xs: '95%', md: '70%' }, display: 'flex', alignItems: 'stretch' }}>
