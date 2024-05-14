@@ -26,7 +26,7 @@ function Instagram() {
             href="https://www.instagram.com/pet_fashion17?igsh=MWx3eHVvYThrdm9nMw=="
             target="_blank"
             rel="noopener noreferrer"
-            className="text-fuchsia-400 underline hover:text-fuchsia-500"
+            className="text-fuchsia-300 underline hover:text-fuchsia-400"
           >
             @pet_fashion17
           </a>
