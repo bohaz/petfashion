@@ -52,7 +52,6 @@ function ListaDeServicios() {
         right: 0,
         bottom: 0,
         backgroundImage: `url(${backgroundImage})`,
-        backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
 
         zIndex: -1,
