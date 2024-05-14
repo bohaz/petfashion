@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import logo1 from '../assets/huella.png';
 import logo2 from '../assets/mascota.png';
 import logo3 from '../assets/perro.png';
+import backgroundImage from '../assets/Huesos.png';
 import VideoButton from '../components/VideoButton';
 
 function AboutPage() {
@@ -38,7 +39,10 @@ function AboutPage() {
 
   return (
     <Box sx={{
-      padding: 2, backgroundImage: 'linear-gradient(135deg, #f2e9e3, #dd8ea4)', pt: '5%', pb: '10%',
+      backgroundAttachment: 'fixed',
+      padding: 2,
+      backgroundImage: `url(${backgroundImage})`,
+      minHeight: '100vh',
     }}
     >
       <motion.div
