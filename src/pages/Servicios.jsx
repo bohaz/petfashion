@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import BookingButton from '../components/BookingButton';
 
 function Servicios() {
   const { ref, inView } = useInView({
@@ -15,7 +16,7 @@ function Servicios() {
         transition={{ duration: 0.5 }}
         className="relative z-10"
       >
-        <h1 className="font-bold mb-5 md:mb-10 text-4xl md:text-5xl xl:text-6xl">Nuestros Servicios</h1>
+        <h1 className="font-bold mb-5 md:mb-10 text-4xl md:text-5xl xl:text-6xl text-center">Nuestros Servicios</h1>
         <div className="flex flex-col gap-4">
           <table className="table-auto border-collapse">
             <thead>
@@ -66,6 +67,9 @@ function Servicios() {
               </tr>
             </tbody>
           </table>
+        </div>
+        <div className="flex justify-center mt-5">
+          <BookingButton />
         </div>
       </motion.div>
     </div>
