@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import ListaDeServicios from './pages/ListaDeServicios';
+import Servicios from './pages/Servicios';
 import SearchAppBar from './components/BarraDeNavegacion';
 import HomePage from './pages/HomePage';
 import About from './pages/About';
@@ -36,7 +36,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
 
-        <Route path="/servicios" element={<ListaDeServicios />} />
+        <Route path="/servicios" element={<Servicios />} />
         <Route path="/trabajos" element={<SwipeableTextMobileStepper />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
