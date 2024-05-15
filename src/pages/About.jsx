@@ -2,10 +2,17 @@ import React from 'react';
 import HuellaCorazon from '../assets/HuellaCorazon.png';
 import HuellaCruz from '../assets/HuellaCruz.png';
 import MedallaHuella from '../assets/MedallaHuella.png';
+import Huesos from '../assets/Huesos.png';
 
 function About() {
   return (
-    <div className="p-4 flex flex-col gap-5">
+    <div
+      className="p-4 flex flex-col gap-5"
+      style={{
+        backgroundImage: `url(${Huesos})`,
+        backgroundAttachment: 'fixed',
+      }}
+    >
       <h1 className="font-bold text-2xl text-center">Quiénes Somos</h1>
       <div className="flex flex-col items-center">
         <img className="w-52" src={MedallaHuella} alt="Huella" />
