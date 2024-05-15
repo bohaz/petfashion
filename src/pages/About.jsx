@@ -17,7 +17,6 @@ function About() {
       className="p-4 pt-10 pb-10 flex flex-col gap-5 items-center"
       style={{
         backgroundImage: `url(${Huesos})`,
-        backgroundAttachment: 'fixed',
       }}
       ref={ref}
     >
