@@ -4,7 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import ListaDeServicios from './pages/ListaDeServicios';
 import SearchAppBar from './components/BarraDeNavegacion';
 import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
+import About from './pages/About';
 import ContactPage from './pages/ContactPage';
 import WhatsAppButton from './components/WhatsAppButton';
 import Banner from './components/Banner';
@@ -34,7 +34,7 @@ function App() {
       <Routes>
 
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/about" element={<About />} />
 
         <Route path="/servicios" element={<ListaDeServicios />} />
         <Route path="/trabajos" element={<SwipeableTextMobileStepper />} />
