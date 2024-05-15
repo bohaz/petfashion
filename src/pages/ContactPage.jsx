@@ -5,7 +5,6 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import contactImage from '../assets/contact.jpg';
-import backgroundImage from '../assets/Huesos.png';
 
 function Contact() {
   return (
@@ -17,9 +16,9 @@ function Contact() {
         alignItems: 'center',
         pt: { xs: '10%', md: '8%' },
         pb: '10%',
-        backgroundAttachment: 'fixed',
+        backgroundColor: '#f2e9eb',
         padding: 2,
-        backgroundImage: `url(${backgroundImage})`,
+
         minHeight: '100vh',
       }}
     >
