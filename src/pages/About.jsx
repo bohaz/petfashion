@@ -3,6 +3,7 @@ import HuellaCorazon from '../assets/HuellaCorazon.png';
 import HuellaCruz from '../assets/HuellaCruz.png';
 import MedallaHuella from '../assets/MedallaHuella.png';
 import Huesos from '../assets/Huesos.png';
+import VideoButton from '../components/VideoButton';
 
 function About() {
   return (
@@ -35,6 +36,7 @@ function About() {
           se sienta cómoda y segura.
         </p>
       </div>
+      <VideoButton videoId="6EK9DO9iZmw" />
     </div>
   );
 }
