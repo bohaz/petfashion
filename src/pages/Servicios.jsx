@@ -49,12 +49,12 @@ function Servicios() {
               </tr>
             </tbody>
           </table>
-          <p className="bg-amber-200 rounded-tr-xl rounded-bl-xl p-3 m-2 md:text-lg md:w-1/2">El servicio de Corte y Baño incluye: Deslanado, Vaciado glándulas anales, limpieza de oídos y corte de uñas.</p>
+          <p className="bg-amber-200 rounded-tr-xl rounded-bl-xl p-3 m-2 md:text-lg md:w-1/2">El servicio de Corte y Baño incluye: Vaciado glándulas anales, limpieza de oídos y corte de uñas.</p>
 
           <table className="table-auto border-collapse shadow-lg">
             <thead>
               <tr>
-                <th className="text-center bg-pink-300 p-2 md:text-lg" colSpan="2">Servicio Solo Baño</th>
+                <th className="text-center bg-pink-300 p-2 md:text-lg" colSpan="2">Servicio Sólo Baño</th>
               </tr>
             </thead>
             <tbody>
@@ -75,7 +75,7 @@ function Servicios() {
               </tr>
             </tbody>
           </table>
-          <p className="bg-amber-200 rounded-tl-xl rounded-br-xl p-3 m-2 md:text-lg md:w-1/2 md:self-end">El servicio Solo Baño incluye: Vaciado glándulas anales, limpieza de oídos y corte de uñas</p>
+          <p className="bg-amber-200 rounded-tl-xl rounded-br-xl p-3 m-2 md:text-lg md:w-1/2 md:self-end">El servicio Sólo Baño incluye: Deslanado, Vaciado glándulas anales, limpieza de oídos y corte de uñas</p>
         </div>
         <div className="flex justify-center mt-5">
           <BookingButton />
