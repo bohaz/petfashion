@@ -8,20 +8,20 @@ function Cards() {
   return (
     <div className="flex flex-row gap-5 overflow-hidden items-center mt-10">
       <a href="http://localhost:3000/">
-        <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400">
+        <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl">
           <img className="w-52" src={Card4} alt="icono" />
           <h2 className="text-center text-gray-800">Antes de Agendar</h2>
         </div>
       </a>
-      <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400">
+      <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl">
         <img className="w-52" src={Card1} alt="icono" />
         <h2 className="text-center text-gray-800">Corte y Baño</h2>
       </div>
-      <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400">
+      <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl">
         <img className="w-52" src={Card2} alt="icono" />
         <h2 className="text-center text-gray-800">Corte de Uñas</h2>
       </div>
-      <div className="bg-amber-200 rounded-xl  p-4 border-4 border-amber-400">
+      <div className="bg-amber-200 rounded-xl  p-4 border-4 border-amber-400 shadow-xl">
         <img className="w-52" src={Card3} alt="icono" />
         <h2 className="text-center text-gray-800">Corte de Pelo</h2>
       </div>
