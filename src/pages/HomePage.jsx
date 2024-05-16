@@ -7,12 +7,14 @@ import TrustmaryWidget from '../components/TrustmaryWidget';
 import Instagram from '../components/Instagram';
 import About from './About';
 import Servicios from './Servicios';
+import Cards from '../components/Cards';
 
 function HomePage() {
   return (
     <Box>
 
       <About />
+      <Cards />
       <Servicios />
       <Instagram />
       <Trabajos />
