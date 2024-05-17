@@ -4,8 +4,6 @@ import { useInView } from 'react-intersection-observer';
 import HuellaCorazon from '../assets/Icono1.png';
 import HuellaCruz from '../assets/Icono2.png';
 import MedallaHuella from '../assets/Icono3.png';
-/* import VideoButton from '../components/VideoButton'; */
-/* import Cards from '../components/Cards'; */
 
 function About() {
   const { ref, inView } = useInView({
@@ -68,10 +66,6 @@ function About() {
           </p>
         </div>
       </motion.div>
-      {/* <VideoButton videoId="6EK9DO9iZmw" /> */}
-      <div>
-        {/* <Cards /> */}
-      </div>
     </div>
   );
 }
