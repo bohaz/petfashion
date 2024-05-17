@@ -29,7 +29,7 @@ function Cards() {
           <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl">
             <img className="w-60" src={Card4} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
-            <h2 className="text-center text-gray-800">Agenda de horas</h2>
+            <button className="text-gray-800" type="button">Agenda de horas</button>
           </div>
         </motion.div>
         <motion.div
@@ -41,7 +41,7 @@ function Cards() {
           <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl">
             <img className="w-60" src={Card1} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
-            <h2 className="text-center text-gray-800">Corte y Baño</h2>
+            <button className="text-gray-800" type="button">Corte y Baño</button>
           </div>
         </motion.div>
 
@@ -54,7 +54,7 @@ function Cards() {
           <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl">
             <img className="w-60" src={Card2} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
-            <h2 className="text-center text-gray-800">Servicio de Baño</h2>
+            <button className="text-gray-800" type="button">Servicio de Baño</button>
           </div>
         </motion.div>
         {/* <div className="bg-amber-200 rounded-xl  p-4 border-4 border-amber-400 shadow-xl">
