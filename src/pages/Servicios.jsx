@@ -1,87 +1,93 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import BookingButton from '../components/BookingButton';
-import backgroundImage from '../assets/background1.jpg';
+import { useNavigate } from 'react-router-dom';
+import Card1 from '../assets/Icono5.png';
+import Card2 from '../assets/Icono9.png';
+import Card4 from '../assets/Icono8.png';
+import Card5 from '../assets/arrow.svg';
 
 function Servicios() {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.5,
+    threshold: 0.3,
   });
+
+  const navigate = useNavigate();
+
+  const handleNavigate = (path) => {
+    navigate(path);
+  };
+
   return (
     <div
-      className="flex flex-col p-4 pt-10 pb-10 gap-5 items-center bg-cover bg-center bg-fixed"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-      }}
+      className="p-4 pb-10 pt-10 flex flex-col gap-5 items-center bg-contain bg-center bg-pink-100"
       ref={ref}
     >
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
-        transition={{ duration: 0.5 }}
-        className="relative z-10"
-      >
-        <h1 className="font-bold mb-5 md:mb-10 text-4xl md:text-5xl xl:text-6xl text-center">Nuestros Servicios</h1>
-        <div className="flex flex-col gap-4">
-          <table className="table-auto border-collapse shadow-lg w-full">
-            <thead>
-              <tr>
-                <th className="text-center md:text-lg p-2 bg-pink-300" colSpan="2">Servicio de Corte y Baño</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="bg-neutral-100 p-2 md:text-lg">0kg hasta 5kg</td>
-                <td className="bg-neutral-100 p-2 md:text-lg">$20.000</td>
-              </tr>
-              <tr>
-                <td className="bg-white p-2 md:text-lg">5,1kg hasta 10kg</td>
-                <td className="bg-white p-2 md:text-lg">$25.000</td>
-              </tr>
-              <tr>
-                <td className="bg-neutral-100 p-2 md:text-lg">10,1kg hasta 20kg</td>
-                <td className="bg-neutral-100 p-2 md:text-lg">$30.000</td>
-              </tr>
-              <tr>
-                <td className="bg-neutral-300 text-center font p-2 italic md:text-lg" colSpan="2">Los valores varían de acuerdo a la condición del pelaje de la mascota.</td>
-              </tr>
-            </tbody>
-          </table>
-          <p className="bg-amber-200 rounded-tr-xl rounded-bl-xl p-3 m-2 md:text-lg md:w-1/2">El servicio de Corte y Baño incluye: Deslanado, Vaciado glándulas anales, limpieza de oídos y corte de uñas.</p>
+      <h1 className="font-bold mb-5 md:mb-10 text-4xl md:text-5xl xl:text-6xl text-center">Nuestros Servicios</h1>
+      <div className="flex flex-col gap-5 items-center md:flex-row">
 
-          <table className="table-auto border-collapse shadow-lg">
-            <thead>
-              <tr>
-                <th className="text-center bg-pink-300 p-2 md:text-lg" colSpan="2">Servicio Solo Baño</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="bg-neutral-100 p-2 md:text-lg">0kg hasta 5kg</td>
-                <td className="bg-neutral-100 p-2 md:text-lg">$15.000</td>
-              </tr>
-              <tr>
-                <td className="bg-white p-2 md:text-lg">5,1kg hasta 10kg</td>
-                <td className="bg-white p-2 md:text-lg">$20.000</td>
-              </tr>
-              <tr>
-                <td className="bg-neutral-100 p-2 md:text-lg">10,1kg hasta 20kg</td>
-                <td className="bg-neutral-100 p-2 md:text-lg">$25.000</td>
-              </tr>
-              <tr>
-                <td className="bg-neutral-300 text-center p-2 italic md:text-lg" colSpan="2">Los valores varían de acuerdo a la condición del pelaje de la mascota.</td>
-              </tr>
-            </tbody>
-          </table>
-          <p className="bg-amber-200 rounded-tl-xl rounded-br-xl p-3 m-2 md:text-lg md:w-1/2 md:self-end">El servicio Solo Baño incluye: Vaciado glándulas anales, limpieza de oídos y corte de uñas</p>
-        </div>
-        <div className="flex justify-center mt-5">
-          <BookingButton />
-        </div>
-      </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="relative z-10"
+        >
+          <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl flex flex-col items-center">
+            <img className="w-60" src={Card1} alt="icono" />
+            <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
+            <button
+              className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              type="button"
+              onClick={() => handleNavigate('/CorteYBano')}
+            >
+              Corte y Baño
+            </button>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="relative z-10"
+        >
+          <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl flex flex-col items-center">
+            <img className="w-60" src={Card2} alt="icono" />
+            <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
+            <button
+              className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              type="button"
+              onClick={() => handleNavigate('/SoloBano')}
+            >
+              Servicio de Baño
+            </button>
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="relative z-10"
+        >
+
+          <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl flex flex-col items-center">
+            <img className="w-60" src={Card4} alt="icono" />
+            <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
+            <button
+              className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              type="button"
+              onClick={() => handleNavigate('/Servicios')}
+            >
+              Agenda de horas
+            </button>
+          </div>
+        </motion.div>
+
+      </div>
+
     </div>
+
   );
 }
 
