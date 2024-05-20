@@ -24,7 +24,7 @@ function SoloBano() {
         transition={{ duration: 0.5 }}
         className="relative z-10"
       >
-        <h1 className="font-bold mb-5 md:mb-10 text-4xl md:text-5xl xl:text-6xl text-center">Servicio Sólo Baño</h1>
+        <h1 className="font-bold mb-5 md:mb-10 text-4xl md:text-5xl xl:text-6xl text-center">Servicio de Baño</h1>
         <div className="flex flex-col gap-4">
           <table className="table-auto border-collapse shadow-lg w-full">
             <thead>
