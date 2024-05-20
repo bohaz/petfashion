@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useNavigate } from 'react-router-dom';
 import Card1 from '../assets/Icono5.png';
 import Card2 from '../assets/Icono9.png';
-/* import Card3 from '../assets/Icono7.png'; */
 import Card4 from '../assets/Icono8.png';
 import Card5 from '../assets/arrow.svg';
 
@@ -12,6 +12,12 @@ function Cards() {
     triggerOnce: false,
     threshold: 0.3,
   });
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/Servicios');
+  };
 
   return (
     <div
@@ -26,10 +32,10 @@ function Cards() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="relative z-10"
         >
-          <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl">
+          <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl flex flex-col items-center">
             <img className="w-60" src={Card4} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
-            <button className="text-gray-800" type="button">Agenda de horas</button>
+            <button className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300" type="button">Agenda de horas</button>
           </div>
         </motion.div>
         <motion.div
@@ -38,10 +44,16 @@ function Cards() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="relative z-10"
         >
-          <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl">
+          <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl flex flex-col items-center">
             <img className="w-60" src={Card1} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
-            <button className="text-gray-800" type="button">Corte y Baño</button>
+            <button
+              className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              type="button"
+              onClick={handleButtonClick}
+            >
+              Corte y Baño
+            </button>
           </div>
         </motion.div>
 
@@ -51,16 +63,18 @@ function Cards() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="relative z-10"
         >
-          <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl">
+          <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl flex flex-col items-center">
             <img className="w-60" src={Card2} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
-            <button className="text-gray-800" type="button">Servicio de Baño</button>
+            <button
+              className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300 mx-auto mt-4"
+              type="button"
+              onClick={handleButtonClick}
+            >
+              Servicio de Baño
+            </button>
           </div>
         </motion.div>
-        {/* <div className="bg-amber-200 rounded-xl  p-4 border-4 border-amber-400 shadow-xl">
-            <img className="w-52" src={Card3} alt="icono" />
-            <h2 className="text-center text-gray-800">Corte de </h2>
-          </div> */}
       </div>
 
     </div>
