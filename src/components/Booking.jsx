@@ -32,10 +32,14 @@ function Booking() {
         className="relative z-10"
       >
         <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl flex flex-col items-center">
-          <img className="w-20 m-auto mt-2" src={One} alt="icono" />
+          <img className="w-20 m-auto mt-1" src={One} alt="icono" />
           <p className="text-gray-800">
-            No usamos bozal ni sedación.
-            La idea principal es brindar BIENESTAR,
+            <span className="font-bold">No usamos bozal ni sedación.</span>
+            {' '}
+            La idea principal es brindar
+            {' '}
+            <span className="font-bold">BIENESTAR</span>
+            ,
             para lo cual la mascota debe tolerar la manipulación.
           </p>
         </div>
@@ -47,9 +51,10 @@ function Booking() {
         className="relative z-10"
       >
         <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl flex flex-col items-center">
-          <img className="w-20 m-auto mt-2" src={Two} alt="icono" />
+          <img className="w-20 m-auto mt-1" src={Two} alt="icono" />
           <p className="text-gray-800">
-            No recibimos mascotas con pulgas y/o garrapatas.
+            <span className="font-bold">No recibimos mascotas con pulgas y/o garrapatas.</span>
+            {' '}
             La mascota debe ponerse al día con su comprimido o pipeta antiparasitaria.
           </p>
         </div>
@@ -61,9 +66,10 @@ function Booking() {
         className="relative z-10"
       >
         <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl flex flex-col items-center">
-          <img className="w-20 m-auto mt-2" src={Three} alt="icono" />
+          <img className="w-20 m-auto mt-1" src={Three} alt="icono" />
           <p className="text-gray-800">
-            No rapamos mascotas.
+            <span className="font-bold">No rapamos mascotas.</span>
+            {' '}
             Nos enfocamos en prestar un servicio saludable acorde a la raza.
           </p>
         </div>
