@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import One from '../assets/one.svg';
 import Two from '../assets/two.svg';
 import Three from '../assets/three.svg';
+import BookingButton from './BookingButton';
 
 function Booking() {
   const { ref, inView } = useInView({
@@ -83,6 +84,7 @@ function Booking() {
         transition={{ duration: 0.5, delay: 0.5 }}
         className="relative z-10"
       >
+        <h2 className="font-bold mt-10 md:mb-10 text-4xl md:text-5xl xl:text-6xl text-center text-gray-800">Cómo Agendar?</h2>
         <div className="flex flex-col md:flex-row items-center justify-center mt-10 space-y-4 md:space-y-0 md:space-x-4">
           <div className="relative">
             <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold m-auto">
@@ -111,6 +113,9 @@ function Booking() {
             </div>
             <p className="text-gray-800 mt-2 text-center font-bold md:text-lg">Y ya está, es así de fácil.</p>
           </div>
+        </div>
+        <div className="flex justify-center mt-10">
+          <BookingButton />
         </div>
       </motion.div>
     </div>
