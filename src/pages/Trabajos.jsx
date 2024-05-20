@@ -4,12 +4,12 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 /* import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaw } from '@fortawesome/free-solid-svg-icons'; */
-import image1 from '../assets/1.png';
-import image5 from '../assets/5.png';
-import image6 from '../assets/6.png';
-import image7 from '../assets/7.png';
-import image8 from '../assets/8.png';
-import image9 from '../assets/9.png';
+import image1 from '../assets/workImages/1.png';
+import image5 from '../assets/workImages/5.png';
+import image6 from '../assets/workImages/6.png';
+import image7 from '../assets/workImages/7.png';
+import image8 from '../assets/workImages/8.png';
+import image9 from '../assets/workImages/9.png';
 
 const images = [
   {

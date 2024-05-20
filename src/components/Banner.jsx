@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import logo from '../assets/PfLogo2.png';
-import BookingButton from './BookingButton';
+/* import BookingButton from './BookingButton'; */
 
 function Banner() {
   const fadeIn = {
@@ -29,7 +29,7 @@ function Banner() {
       >
         <img src={logo} alt="Logo de la empresa" style={{ height: '250px', margin: '0 auto' }} />
       </motion.div>
-      <BookingButton />
+      {/* <BookingButton /> */}
 
       <Typography
         variant="h3"
