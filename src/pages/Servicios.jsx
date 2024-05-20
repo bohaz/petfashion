@@ -30,25 +30,6 @@ function Servicios() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="relative z-10"
-        >
-
-          <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl flex flex-col items-center">
-            <img className="w-60" src={Card4} alt="icono" />
-            <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
-            <button
-              className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
-              type="button"
-              onClick={() => handleNavigate('/Servicios')}
-            >
-              Agenda de horas
-            </button>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="relative z-10"
         >
@@ -80,6 +61,25 @@ function Servicios() {
               onClick={() => handleNavigate('/SoloBano')}
             >
               Servicio de Baño
+            </button>
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="relative z-10"
+        >
+
+          <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl flex flex-col items-center">
+            <img className="w-60" src={Card4} alt="icono" />
+            <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
+            <button
+              className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              type="button"
+              onClick={() => handleNavigate('/Servicios')}
+            >
+              Agenda de horas
             </button>
           </div>
         </motion.div>
