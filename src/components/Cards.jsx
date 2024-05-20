@@ -24,14 +24,16 @@ function Cards() {
       className="p-4 pb-10 pt-10 flex flex-col gap-5 items-center bg-contain bg-center bg-pink-100"
       ref={ref}
     >
-
+      <h1 className="font-bold mb-5 md:mb-10 text-4xl md:text-5xl xl:text-6xl text-center">Nuestros Servicios</h1>
       <div className="flex flex-col gap-5 items-center md:flex-row">
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="relative z-10"
         >
+
           <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl flex flex-col items-center">
             <img className="w-60" src={Card4} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
