@@ -9,6 +9,8 @@ import ContactPage from './pages/ContactPage';
 import WhatsAppButton from './components/WhatsAppButton';
 import Banner from './components/Banner';
 import SwipeableTextMobileStepper from './pages/Trabajos';
+import CorteYBano from './components/CorteYBano';
+import SoloBano from './components/SoloBano';
 import Footer from './components/Footer';
 import ImportantMessagePopup from './components/ImportantMessagePopup';
 import 'react-toastify/dist/ReactToastify.css';
@@ -39,6 +41,8 @@ function App() {
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/trabajos" element={<SwipeableTextMobileStepper />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/CorteYBano" element={<CorteYBano />} />
+        <Route path="/SoloBano" element={<SoloBano />} />
       </Routes>
 
       <Footer />
