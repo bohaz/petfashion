@@ -11,6 +11,7 @@ import Banner from './components/Banner';
 import SwipeableTextMobileStepper from './pages/Trabajos';
 import CorteYBano from './components/CorteYBano';
 import SoloBano from './components/SoloBano';
+import Booking from './components/Booking';
 import Footer from './components/Footer';
 import ImportantMessagePopup from './components/ImportantMessagePopup';
 import 'react-toastify/dist/ReactToastify.css';
@@ -43,6 +44,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/CorteYBano" element={<CorteYBano />} />
         <Route path="/SoloBano" element={<SoloBano />} />
+        <Route path="/Booking" element={<Booking />} />
       </Routes>
 
       <Footer />
