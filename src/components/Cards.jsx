@@ -15,8 +15,8 @@ function Cards() {
 
   const navigate = useNavigate();
 
-  const handleButtonClick = () => {
-    navigate('/Servicios');
+  const handleNavigate = (path) => {
+    navigate(path);
   };
 
   return (
@@ -35,7 +35,13 @@ function Cards() {
           <div className="bg-amber-200 rounded-xl p-4 border-4 border-amber-400 shadow-xl flex flex-col items-center">
             <img className="w-60" src={Card4} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
-            <button className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300" type="button">Agenda de horas</button>
+            <button
+              className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              type="button"
+              onClick={() => handleNavigate('/Servicios')}
+            >
+              Agenda de horas
+            </button>
           </div>
         </motion.div>
         <motion.div
@@ -50,7 +56,7 @@ function Cards() {
             <button
               className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
               type="button"
-              onClick={handleButtonClick}
+              onClick={() => handleNavigate('/Servicios')}
             >
               Corte y Baño
             </button>
@@ -69,7 +75,7 @@ function Cards() {
             <button
               className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300 mx-auto mt-4"
               type="button"
-              onClick={handleButtonClick}
+              onClick={() => handleNavigate('/Servicios')}
             >
               Servicio de Baño
             </button>
