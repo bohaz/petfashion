@@ -75,8 +75,39 @@ function Booking() {
             </p>
           </div>
         </motion.div>
+
+      </div>
+      <div className="flex flex-col md:flex-row items-center justify-center mt-10 space-y-4 md:space-y-0 md:space-x-4">
+        <div className="relative">
+          <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold m-auto">
+            1
+          </div>
+          <p className="text-gray-800 mt-2 text-center font-bold md:text-lg">Escríbenos Por Whatsapp</p>
+        </div>
+        <div className="h-0.5 w-10 bg-gray-400 md:w-0.5 md:h-10" />
+        <div className="relative">
+          <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold m-auto">
+            2
+          </div>
+          <p className="text-gray-800 mt-2 text-center font-bold md:text-lg">Te haremos algunas preguntas</p>
+        </div>
+        <div className="h-0.5 w-10 bg-gray-400 md:w-0.5 md:h-10" />
+        <div className="relative">
+          <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold m-auto">
+            3
+          </div>
+          <p className="text-gray-800 mt-2 text-center font-bold md:text-lg">Agendamos tu cita</p>
+        </div>
+        <div className="h-0.5 w-10 bg-gray-400 md:w-0.5 md:h-10" />
+        <div className="relative">
+          <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold m-auto">
+            4
+          </div>
+          <p className="text-gray-800 mt-2 text-center font-bold md:text-lg">Y ya está, es así de fácil.</p>
+        </div>
       </div>
     </div>
+
   );
 }
 
