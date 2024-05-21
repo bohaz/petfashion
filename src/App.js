@@ -7,7 +7,7 @@ import HomePage from './pages/HomePage';
 import About from './pages/About';
 import ContactPage from './pages/ContactPage';
 import WhatsAppButton from './components/WhatsAppButton';
-import Banner from './components/Banner';
+/* import Banner from './components/Banner'; */
 import SwipeableTextMobileStepper from './pages/Trabajos';
 import CorteYBano from './components/CorteYBano';
 import SoloBano from './components/SoloBano';
@@ -32,7 +32,7 @@ function App() {
         pauseOnHover
       />
       <SearchAppBar />
-      <Banner />
+      {/* <Banner /> */}
       <Banner2 />
       <ImportantMessagePopup />
       <WhatsAppButton />
