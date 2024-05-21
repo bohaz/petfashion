@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import One from '../assets/one.svg';
-import Two from '../assets/two.svg';
-import Three from '../assets/three.svg';
+import One from '../assets/svg icons/one.svg';
+import Two from '../assets/svg icons/two.svg';
+import Three from '../assets/svg icons/three.svg';
 import BookingButton from './BookingButton';
 
 function Booking() {

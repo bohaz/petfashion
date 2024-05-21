@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Card1 from '../assets/Icono5.png';
 import Card2 from '../assets/Icono9.png';
 import Card4 from '../assets/Icono8.png';
-import Card5 from '../assets/arrow.svg';
+import Card5 from '../assets/svg icons/arrow.svg';
 
 function Servicios() {
   const { ref, inView } = useInView({
