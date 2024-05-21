@@ -14,7 +14,7 @@ function Banner2() {
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
@@ -22,25 +22,30 @@ function Banner2() {
     cssEase: 'linear',
   };
   return (
-    <div className="slider-container">
+    <div className="relative">
+      <div className="absolute inset-0 bg-neutral-800 opacity-70 z-10" />
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-white">
+        <h1 className="text-2xl md:text-6xl font-bold text-pink-400">Pet fashion - Peluquería canina</h1>
+        <p className="text-2xl md:text-4xl">Especialistas en estética canina</p>
+      </div>
       <Slider {...settings}>
-        <div>
-          <img className="w-52" src={Pet1} alt="Pet1" />
+        <div className="flex items-stretch">
+          <img className="w-full h-auto" src={Pet1} alt="Pet1" />
         </div>
         <div>
-          <img className="w-52" src={Pet2} alt="Pet2" />
+          <img className="w-full h-auto" src={Pet2} alt="Pet2" />
         </div>
         <div>
-          <img className="w-52" src={Pet3} alt="Pet3" />
+          <img className="w-full h-auto" src={Pet3} alt="Pet3" />
         </div>
         <div>
-          <img className="w-52" src={Pet4} alt="Pet4" />
+          <img className="w-full h-auto" src={Pet4} alt="Pet4" />
         </div>
         <div>
-          <img className="w-52" src={Pet5} alt="Pet5" />
+          <img className="w-full h-auto" src={Pet5} alt="Pet5" />
         </div>
         <div>
-          <img className="w-52" src={Pet6} alt="Pet6" />
+          <img className="w-full h-auto" src={Pet6} alt="Pet6" />
         </div>
       </Slider>
     </div>
