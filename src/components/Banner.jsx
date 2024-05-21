@@ -10,7 +10,7 @@ import Pet4 from '../assets/workImages/7.png';
 import Pet5 from '../assets/workImages/8.png';
 import Pet6 from '../assets/workImages/9.png';
 
-function Banner2() {
+function Banner() {
   const settings = {
     dots: false,
     infinite: true,
@@ -52,4 +52,4 @@ function Banner2() {
   );
 }
 
-export default Banner2;
+export default Banner;
