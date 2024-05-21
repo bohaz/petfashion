@@ -1,50 +1,54 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { motion } from 'framer-motion';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import logo from '../assets/PfLogo2.png';
-/* import BookingButton from './BookingButton'; */
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Pet1 from '../assets/workImages/1.png';
+import Pet2 from '../assets/workImages/5.png';
+import Pet3 from '../assets/workImages/6.png';
+import Pet4 from '../assets/workImages/7.png';
+import Pet5 from '../assets/workImages/8.png';
+import Pet6 from '../assets/workImages/9.png';
 
 function Banner() {
-  const fadeIn = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    transition: { duration: 0.9, delay: 0.5 },
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: 'linear',
   };
   return (
-    <Box sx={{
-      width: '100%',
-      backgroundColor: 'white',
-      padding: '5% 0',
-      '@media (max-width:600px)': {
-        marginTop: '35px',
-      },
-      textAlign: 'center',
-    }}
-    >
-      <motion.div
-        initial={fadeIn.initial}
-        animate={fadeIn.animate}
-        transition={fadeIn.transition}
-      >
-        <img src={logo} alt="Logo de la empresa" style={{ height: '250px', margin: '0 auto' }} />
-      </motion.div>
-      {/* <BookingButton /> */}
-
-      <Typography
-        variant="h3"
-        component="h2"
-        gutterBottom
-        sx={{
-          color: '#dd8ea4', fontWeight: '700', fontFamily: 'Poppins, sans-serif', mt: '20px', fontSize: { xs: 'h5.fontSize', sm: 'h3.fontSize' },
-        }}
-      >
-        Pet fashion - Peluquería canina
-      </Typography>
-      <Typography variant="h5" sx={{ textAlign: 'center', fontSize: { xs: 'h6.fontSize', sm: 'h5.fontSize' } }}>
-        Especialistas en estética canina
-      </Typography>
-    </Box>
+    <div className="relative mt-16 pt-2 overflow-hidden">
+      <div className="absolute inset-0 bg-neutral-800 opacity-70 z-10" />
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-white">
+        <h1 className="text-2xl md:text-6xl font-bold text-pink-400">Pet fashion - Peluquería canina</h1>
+        <p className="text-xl md:text-4xl md:mt-6">Especialistas en estética canina</p>
+      </div>
+      <Slider {...settings}>
+        <div className="flex items-stretch">
+          <img className="w-full h-auto" src={Pet1} alt="Pet1" />
+        </div>
+        <div>
+          <img className="w-full h-auto" src={Pet2} alt="Pet2" />
+        </div>
+        <div>
+          <img className="w-full h-auto" src={Pet3} alt="Pet3" />
+        </div>
+        <div>
+          <img className="w-full h-auto" src={Pet4} alt="Pet4" />
+        </div>
+        <div>
+          <img className="w-full h-auto" src={Pet5} alt="Pet5" />
+        </div>
+        <div>
+          <img className="w-full h-auto" src={Pet6} alt="Pet6" />
+        </div>
+      </Slider>
+    </div>
   );
 }
 
