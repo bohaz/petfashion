@@ -21,18 +21,18 @@ function BarraDeNavegacion2() {
       <nav>
         <ul className="flex items-center justify-between">
           <li>
-            <img className="w-24 lg:w-32" src={Logo} alt="Logo" />
+            <img className="w-24 lg:w-28" src={Logo} alt="Logo" />
           </li>
-          <li className="hidden md:block">
+          <li className="hidden md:block text-pink-400 font-bold text-2xl">
             <Link to="/">Home</Link>
           </li>
-          <li className="hidden md:block">
+          <li className="hidden md:block text-pink-400 font-bold text-2xl">
             <Link to="/about">Acerca</Link>
           </li>
-          <li className="hidden md:block">
-            <Link to="/servicio">Servicio</Link>
+          <li className="hidden md:block text-pink-400 font-bold text-2xl">
+            <Link to="/servicios">Servicios</Link>
           </li>
-          <li className="hidden md:block">
+          <li className="hidden md:block text-pink-400 font-bold text-2xl">
             <Link to="/contact">Contáctanos</Link>
           </li>
           <li className="ml-60">
