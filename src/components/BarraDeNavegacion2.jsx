@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import Logo from '../assets/PfLogo2.png';
 import Menu from '../assets/svg icons/menu.svg';
@@ -8,6 +8,7 @@ import UserIcon from './UserIcon';
 
 function BarraDeNavegacion2() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleMobileMenuOpen = () => {
     setMobileMenuOpen(true);
@@ -15,6 +16,11 @@ function BarraDeNavegacion2() {
 
   const handleMobileMenuClose = () => {
     setMobileMenuOpen(false);
+  };
+
+  const handleLinkClick = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -25,37 +31,40 @@ function BarraDeNavegacion2() {
             <img className="w-24 lg:w-28" src={Logo} alt="Logo" />
           </li>
           <li className="hidden md:block text-pink-400 font-bold text-2xl">
-            <NavLink
-              exact
-              to="/"
-              className={({ isActive }) => (isActive ? 'underline' : '')}
+            <button
+              type="button"
+              onClick={() => handleLinkClick('/')}
+              className="text-pink-400 font-bold text-2xl"
             >
               Home
-            </NavLink>
+            </button>
           </li>
           <li className="hidden md:block text-pink-400 font-bold text-2xl">
-            <NavLink
-              to="/about"
-              className={({ isActive }) => (isActive ? 'underline' : '')}
+            <button
+              type="button"
+              onClick={() => handleLinkClick('/about')}
+              className="text-pink-400 font-bold text-2xl"
             >
               Acerca
-            </NavLink>
+            </button>
           </li>
           <li className="hidden md:block text-pink-400 font-bold text-2xl">
-            <NavLink
-              to="/servicios"
-              className={({ isActive }) => (isActive ? 'underline' : '')}
+            <button
+              type="button"
+              onClick={() => handleLinkClick('/servicios')}
+              className="text-pink-400 font-bold text-2xl"
             >
               Servicios
-            </NavLink>
+            </button>
           </li>
           <li className="hidden md:block text-pink-400 font-bold text-2xl">
-            <NavLink
-              to="/contact"
-              className={({ isActive }) => (isActive ? 'underline' : '')}
+            <button
+              type="button"
+              onClick={() => handleLinkClick('/contact')}
+              className="text-pink-400 font-bold text-2xl"
             >
               Contáctanos
-            </NavLink>
+            </button>
           </li>
           <li className="ml-60">
             <IconButton
