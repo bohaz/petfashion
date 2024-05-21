@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import Logo from '../assets/PfLogo2.png';
 import Menu from '../assets/svg icons/menu.svg';
@@ -16,6 +16,7 @@ function BarraDeNavegacion2() {
   const handleMobileMenuClose = () => {
     setMobileMenuOpen(false);
   };
+
   return (
     <div className="p-2 fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <nav>
@@ -24,16 +25,37 @@ function BarraDeNavegacion2() {
             <img className="w-24 lg:w-28" src={Logo} alt="Logo" />
           </li>
           <li className="hidden md:block text-pink-400 font-bold text-2xl">
-            <Link to="/">Home</Link>
+            <NavLink
+              exact
+              to="/"
+              className={({ isActive }) => (isActive ? 'underline' : '')}
+            >
+              Home
+            </NavLink>
           </li>
           <li className="hidden md:block text-pink-400 font-bold text-2xl">
-            <Link to="/about">Acerca</Link>
+            <NavLink
+              to="/about"
+              className={({ isActive }) => (isActive ? 'underline' : '')}
+            >
+              Acerca
+            </NavLink>
           </li>
           <li className="hidden md:block text-pink-400 font-bold text-2xl">
-            <Link to="/servicios">Servicios</Link>
+            <NavLink
+              to="/servicios"
+              className={({ isActive }) => (isActive ? 'underline' : '')}
+            >
+              Servicios
+            </NavLink>
           </li>
           <li className="hidden md:block text-pink-400 font-bold text-2xl">
-            <Link to="/contact">Contáctanos</Link>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => (isActive ? 'underline' : '')}
+            >
+              Contáctanos
+            </NavLink>
           </li>
           <li className="ml-60">
             <IconButton
