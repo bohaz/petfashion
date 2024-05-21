@@ -14,7 +14,7 @@ import Booking from './components/Booking';
 import Footer from './components/Footer';
 import ImportantMessagePopup from './components/ImportantMessagePopup';
 import 'react-toastify/dist/ReactToastify.css';
-import Banner from './components/Banner2';
+import Banner from './components/Banner';
 
 function App() {
   return (
