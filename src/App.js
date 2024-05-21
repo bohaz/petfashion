@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Servicios from './pages/Servicios';
-import SearchAppBar from './components/BarraDeNavegacion';
+/* import SearchAppBar from './components/BarraDeNavegacion'; */
 import HomePage from './pages/HomePage';
 import About from './pages/About';
 import ContactPage from './pages/ContactPage';
@@ -15,6 +15,7 @@ import Footer from './components/Footer';
 import ImportantMessagePopup from './components/ImportantMessagePopup';
 import 'react-toastify/dist/ReactToastify.css';
 import Banner from './components/Banner';
+import BarraDeNavegacion2 from './components/BarraDeNavegacion2';
 
 function App() {
   return (
@@ -30,7 +31,8 @@ function App() {
         draggable
         pauseOnHover
       />
-      <SearchAppBar />
+      {/* <SearchAppBar /> */}
+      <BarraDeNavegacion2 />
       <Banner />
       <ImportantMessagePopup />
       <WhatsAppButton />

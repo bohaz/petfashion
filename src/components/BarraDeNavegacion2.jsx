@@ -5,25 +5,30 @@ import Menu from '../assets/svg icons/menu.svg';
 
 function BarraDeNavegacion2() {
   return (
-    <nav className="p-2">
-      <ul className="flex items-center justify-between">
-        <li>
-          <img className="w-24" src={Logo} alt="Logo" />
-        </li>
-        <li className="hidden md:block">
-          <Link to="/inicio">Inicio</Link>
-        </li>
-        <li className="hidden md:block">
-          <Link to="/acerca">Acerca</Link>
-        </li>
-        <li className="hidden md:block">
-          <Link to="/contacto">Contacto</Link>
-        </li>
-        <li className="block md:hidden">
-          <img className="w-12" src={Menu} alt="Menu" />
-        </li>
-      </ul>
-    </nav>
+    <div className="p-2 fixed">
+      <nav>
+        <ul className="flex items-center justify-between">
+          <li>
+            <img className="w-24 lg:w-32" src={Logo} alt="Logo" />
+          </li>
+          <li className="hidden md:block">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="hidden md:block">
+            <Link to="/about">Acerca</Link>
+          </li>
+          <li className="hidden md:block">
+            <Link to="/servicio">Servicio</Link>
+          </li>
+          <li className="hidden md:block">
+            <Link to="/contact">Contáctanos</Link>
+          </li>
+          <li className="block md:hidden">
+            <img className="w-12" src={Menu} alt="Menu" />
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 }
 
