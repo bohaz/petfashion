@@ -31,16 +31,16 @@ function Banner2() {
           <img className="w-52" src={Pet2} alt="Pet2" />
         </div>
         <div>
-        <img className="w-52" src={Pet3} alt="Pet3" />
+          <img className="w-52" src={Pet3} alt="Pet3" />
         </div>
         <div>
-        <img className="w-52" src={Pet4} alt="Pet4" />
+          <img className="w-52" src={Pet4} alt="Pet4" />
         </div>
         <div>
-        <img className="w-52" src={Pet5} alt="Pet5" />
+          <img className="w-52" src={Pet5} alt="Pet5" />
         </div>
         <div>
-        <img className="w-52" src={Pet6} alt="Pet6" />
+          <img className="w-52" src={Pet6} alt="Pet6" />
         </div>
       </Slider>
     </div>
