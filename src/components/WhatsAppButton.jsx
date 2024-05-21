@@ -1,5 +1,5 @@
 import React from 'react';
-import whatsappButton from '../assets/whatsapp.svg';
+import whatsappButton from '../assets/svg icons/whatsapp.svg';
 
 function WhatsAppButton() {
   const whatsappNumber = '+56945570410';
