@@ -5,7 +5,7 @@ import Menu from '../assets/svg icons/menu.svg';
 
 function BarraDeNavegacion2() {
   return (
-    <div className="p-2 fixed">
+    <div className="p-2 fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <nav>
         <ul className="flex items-center justify-between">
           <li>
