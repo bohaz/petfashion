@@ -17,14 +17,15 @@ function Servicios() {
 
   const handleNavigate = (path) => {
     navigate(path);
+    window.scrollTo(0, 0);
   };
 
   return (
     <div
-      className="p-4 pb-10 pt-10 flex flex-col gap-5 items-center bg-contain bg-center bg-pink-100"
+      className="p-4 pb-10 pt-10 flex flex-col gap-5 items-center bg-contain bg-center bg-white"
       ref={ref}
     >
-      <h1 className="font-bold mb-5 md:mb-10 text-4xl md:text-5xl xl:text-6xl text-center">Nuestros Servicios</h1>
+      <h1 className="font-bold mb-5 md:mb-10 text-4xl md:text-5xl xl:text-6xl text-center text-gray-800 after:content-[''] after:block after:w-40 after:h-1 after:bg-pink-400 after:mt-2 after:mx-auto">Nuestros Servicios</h1>
       <div className="flex flex-col gap-5 items-center md:flex-row">
 
         <motion.div
