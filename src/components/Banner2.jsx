@@ -3,6 +3,12 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Pet1 from '../assets/workImages/1.png';
+import Pet2 from '../assets/workImages/5.png';
+import Pet3 from '../assets/workImages/6.png';
+import Pet4 from '../assets/workImages/7.png';
+import Pet5 from '../assets/workImages/8.png';
+import Pet6 from '../assets/workImages/9.png';
 
 function Banner2() {
   const settings = {
@@ -19,22 +25,22 @@ function Banner2() {
     <div className="slider-container">
       <Slider {...settings}>
         <div>
-          <h3>1</h3>
+          <img className="w-52" src={Pet1} alt="Pet1" />
         </div>
         <div>
-          <h3>2</h3>
+          <img className="w-52" src={Pet2} alt="Pet2" />
         </div>
         <div>
-          <h3>3</h3>
+        <img className="w-52" src={Pet3} alt="Pet3" />
         </div>
         <div>
-          <h3>4</h3>
+        <img className="w-52" src={Pet4} alt="Pet4" />
         </div>
         <div>
-          <h3>5</h3>
+        <img className="w-52" src={Pet5} alt="Pet5" />
         </div>
         <div>
-          <h3>6</h3>
+        <img className="w-52" src={Pet6} alt="Pet6" />
         </div>
       </Slider>
     </div>
