@@ -15,6 +15,7 @@ import Booking from './components/Booking';
 import Footer from './components/Footer';
 import ImportantMessagePopup from './components/ImportantMessagePopup';
 import 'react-toastify/dist/ReactToastify.css';
+import Banner2 from './components/Banner2';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       />
       <SearchAppBar />
       <Banner />
+      <Banner2 />
       <ImportantMessagePopup />
       <WhatsAppButton />
       <Routes>
