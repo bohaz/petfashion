@@ -7,7 +7,6 @@ import HomePage from './pages/HomePage';
 import About from './pages/About';
 import ContactPage from './pages/ContactPage';
 import WhatsAppButton from './components/WhatsAppButton';
-/* import Banner from './components/Banner'; */
 import SwipeableTextMobileStepper from './pages/Trabajos';
 import CorteYBano from './components/CorteYBano';
 import SoloBano from './components/SoloBano';
@@ -15,7 +14,7 @@ import Booking from './components/Booking';
 import Footer from './components/Footer';
 import ImportantMessagePopup from './components/ImportantMessagePopup';
 import 'react-toastify/dist/ReactToastify.css';
-import Banner2 from './components/Banner2';
+import Banner from './components/Banner2';
 
 function App() {
   return (
@@ -32,8 +31,7 @@ function App() {
         pauseOnHover
       />
       <SearchAppBar />
-      {/* <Banner /> */}
-      <Banner2 />
+      <Banner />
       <ImportantMessagePopup />
       <WhatsAppButton />
       <Routes>
