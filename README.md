@@ -108,8 +108,8 @@ To run the project, execute the following command:
 👤 **Ricardo Martínez**
 
 - GitHub: [@bohaz](https://github.com/bohaz)
-- Twitter: [@Ricardo29115571](https://twitter.com/Ricardo29115571)
 - LinkedIn: [Ricardo Martinez](https://www.linkedin.com/in/ricardomart%C3%ADnez%E2%88%B4/)
+- Portfolio: [Ricardo's Portfolio](https://ricardosportfolio.vercel.app/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
