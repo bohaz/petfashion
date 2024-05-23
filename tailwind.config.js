@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      shadows: ['"Shadows Into Light"', 'cursive'],
+    },
   },
   plugins: [],
 };
