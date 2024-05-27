@@ -6,12 +6,13 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import PlaceIcon from '@mui/icons-material/Place';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import Logo from '../assets/PfLogo2.png';
 
 function Footer() {
   return (
     <Box sx={{
-      backgroundColor: '#333',
-      color: 'white',
+      backgroundColor: 'white',
+      color: '#2E2F35',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -26,7 +27,7 @@ function Footer() {
         <Typography variant="body1" sx={{ mr: 2 }}>
           Encuentranos en
         </Typography>
-        <Divider orientation="vertical" flexItem sx={{ mx: 2, height: '35px', bgcolor: 'white' }} />
+        <Divider orientation="vertical" flexItem sx={{ mx: 2, height: '35px', bgcolor: '#2E2F35' }} />
         <IconButton color="inherit" href="https://www.instagram.com/pet_fashion17?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
           <InstagramIcon />
         </IconButton>
@@ -48,6 +49,7 @@ function Footer() {
         {' '}
         Pet Fashion - Todos los derechos reservados.
       </Typography>
+      <img className="w-24 lg:w-28" src={Logo} alt="Logo" />
     </Box>
   );
 }
