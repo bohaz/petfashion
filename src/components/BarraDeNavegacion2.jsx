@@ -5,6 +5,7 @@ import Logo from '../assets/PfLogo2.png';
 import Menu from '../assets/svg icons/menu.svg';
 import MobileMenu from './MobileMenu';
 import UserIcon from './UserIcon';
+import BookingButton from './BookingButton';
 
 function BarraDeNavegacion2() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,41 +32,41 @@ function BarraDeNavegacion2() {
             <img className="w-24 lg:w-28" src={Logo} alt="Logo" />
           </li>
           <div className="flex gap-4 items-center">
-            <li className="hidden md:block text-pink-400">
+            <li className="hidden md:block text-grayDarker text-2xl">
               <button
                 type="button"
                 onClick={() => handleLinkClick('/')}
-                className="text-pink-400 text-2xl"
               >
                 Home
               </button>
             </li>
-            <li className="hidden md:block text-pink-400">
+            <li className="hidden md:block text-grayDarker text-2xl">
               <button
                 type="button"
                 onClick={() => handleLinkClick('/about')}
-                className="text-pink-400 text-2xl"
               >
                 Acerca
               </button>
             </li>
-            <li className="hidden md:block text-pink-400">
+            <li className="hidden md:block text-grayDarker text-2xl">
               <button
                 type="button"
                 onClick={() => handleLinkClick('/servicios')}
-                className="text-pink-400 text-2xl"
               >
                 Servicios
               </button>
             </li>
-            <li className="hidden md:block text-pink-400">
+            <li className="hidden md:block text-grayDarker">
               <button
                 type="button"
                 onClick={() => handleLinkClick('/contact')}
-                className="text-pink-400 text-2xl"
+                className="text-grayDarker text-2xl"
               >
                 Contáctanos
               </button>
+            </li>
+            <li className="mt-1">
+              <BookingButton />
             </li>
             <li className="">
               <IconButton
