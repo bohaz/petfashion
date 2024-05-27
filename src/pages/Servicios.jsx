@@ -42,7 +42,7 @@ function Servicios() {
             <img className="w-60" src={Card1} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
             <button
-              className="text-grayDarker bg-white border-2 border-grayDark hover:bg-gray-100 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              className="text-grayDarker bg-white border-2 border-grayDark hover:bg-grayDark hover:text-white font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
               type="button"
               onClick={() => handleNavigate('/CorteYBano')}
             >
@@ -61,7 +61,7 @@ function Servicios() {
             <img className="w-60" src={Card2} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
             <button
-              className="text-grayDarker bg-white border-2 border-grayDark hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              className="text-grayDarker bg-white border-2 border-grayDark hover:bg-grayDark hover:text-white font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
               type="button"
               onClick={() => handleNavigate('/SoloBano')}
             >
@@ -80,7 +80,7 @@ function Servicios() {
             <img className="w-60" src={Card4} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
             <button
-              className="text-grayDarker bg-white border-2 border-grayDark hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              className="text-grayDarker bg-white border-2 border-grayDark hover:bg-grayDark hover:text-white font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
               type="button"
               onClick={() => handleNavigate('/Booking')}
             >
