@@ -23,7 +23,9 @@ function Visitanos() {
         <p className="text-xl md:text-3xl">Lunes - Sábado: 9:00 - 18:00</p>
         <p className="text-xl md:text-3xl">Domingo: Cerrado</p>
         <p className="text-xl md:text-3xl">Estamos ubicados en la Calle Santa Luisa #51, Isla Negra</p>
-        <BookingButton />
+        <div className="pt-4">
+          <BookingButton />
+        </div>
       </motion.div>
     </div>
 
