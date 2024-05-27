@@ -17,15 +17,11 @@ function Booking() {
       className="p-4 pb-10 pt-10 flex flex-col items-center bg-contain bg-center bg-white"
       ref={ref}
     >
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-        className="relative z-10"
-      >
-        <h1 className="font-bold mb-5 md:mb-10 text-4xl md:text-5xl xl:text-6xl text-center text-gray-800 after:content-[''] after:block after:w-40 after:h-1 after:bg-pink-400 after:mt-2 after:mx-auto">Antes de Agendar</h1>
-      </motion.div>
+      <h1 className="font-bold mb-5 md:mb-10 text-4xl md:text-5xl xl:text-6xl text-center text-gray-800">
+        Antes de
+        {' '}
+        <span className="font-shadows text-pink-400">Agendar</span>
+      </h1>
       <div className="p-4 pb-10 pt-10 flex flex-col gap-5 items-center bg-contain bg-center bg-white md:flex-row">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -84,7 +80,11 @@ function Booking() {
         transition={{ duration: 0.5, delay: 0.5 }}
         className="relative z-10"
       >
-        <h2 className="font-bold mt-10 md:mb-10 text-4xl md:text-5xl xl:text-6xl text-center text-gray-800 after:content-[''] after:block after:w-40 after:h-1 after:bg-pink-400 after:mt-2 after:mx-auto">Cómo Agendar?</h2>
+        <h2 className="font-bold mt-10 md:mb-10 text-4xl md:text-5xl xl:text-6xl text-center text-gray-800">
+          Cómo
+          {' '}
+          <span className="font-shadows text-pink-400">Agendar?</span>
+        </h2>
         <div className="flex flex-col md:flex-row items-center justify-center mt-10 space-y-4 md:space-y-0 md:space-x-4">
           <div className="relative">
             <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold m-auto">
