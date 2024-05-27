@@ -25,7 +25,7 @@ function Servicios() {
       className="p-4 pb-10 pt-10 flex flex-col gap-5 items-center bg-contain bg-center bg-white"
       ref={ref}
     >
-      <h1 className="font-bold mb-5 md:mb-20 text-4xl md:text-5xl xl:text-6xl text-center text-gray-800">
+      <h1 className="font-bold mb-5 md:mb-20 text-4xl md:text-5xl xl:text-6xl text-center text-grayDarker">
         Nuestros
         {' '}
         <span className="font-shadows text-teal-600">Servicios</span>
@@ -38,11 +38,11 @@ function Servicios() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="relative z-10"
         >
-          <div className="bg-orange-100 rounded-xl p-4 flex flex-col items-center">
+          <div className="bg-cream rounded-xl p-4 flex flex-col items-center">
             <img className="w-60" src={Card1} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
             <button
-              className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              className="text-grayDarker bg-white border-2 border-grayDark hover:bg-gray-100 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
               type="button"
               onClick={() => handleNavigate('/CorteYBano')}
             >
@@ -57,11 +57,11 @@ function Servicios() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="relative z-10"
         >
-          <div className="bg-green-100 rounded-xl p-4 flex flex-col items-center">
+          <div className="bg-customMint rounded-xl p-4 flex flex-col items-center">
             <img className="w-60" src={Card2} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
             <button
-              className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              className="text-grayDarker bg-white border-2 border-grayDark hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
               type="button"
               onClick={() => handleNavigate('/SoloBano')}
             >
@@ -76,11 +76,11 @@ function Servicios() {
           className="relative z-10"
         >
 
-          <div className="bg-stone-200 rounded-xl p-4 flex flex-col items-center">
+          <div className="bg-lavender rounded-xl p-4 flex flex-col items-center">
             <img className="w-60" src={Card4} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
             <button
-              className="text-gray-800 bg-amber-400 hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              className="text-grayDarker bg-white border-2 border-grayDark hover:bg-amber-300 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
               type="button"
               onClick={() => handleNavigate('/Booking')}
             >
