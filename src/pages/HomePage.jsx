@@ -2,19 +2,19 @@ import React from 'react';
 import { Box } from '@mui/material';
 import ContactPage from './ContactPage';
 import Visitanos from '../components/Visitanos';
-import TrustmaryWidget from '../components/TrustmaryWidget';
 import Instagram from '../components/Instagram';
-import About from './About';
+import About2 from './About2';
 import Servicios from './Servicios';
+import Opiniones from '../components/Opiniones';
 
 function HomePage() {
   return (
     <Box>
 
-      <About />
+      <About2 />
       <Servicios />
       <Instagram />
-      <TrustmaryWidget />
+      <Opiniones />
       <Visitanos />
       <ContactPage />
 

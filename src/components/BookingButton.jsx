@@ -17,7 +17,7 @@ function BookingButton() {
       startIcon={<FontAwesomeIcon icon={faWhatsapp} />}
       onClick={openWhatsApp}
       sx={{
-        textTransform: 'none', borderRadius: '30px', fontWeight: 'bold', '&:hover': { backgroundColor: '#4caf50' }, mt: '20px',
+        backgroundColor: '#FF6D2C', border: '2px solid #2E2F35', textTransform: 'none', borderRadius: '30px', fontWeight: 'bold', '&:hover': { backgroundColor: '#E65C24' },
       }}
     >
       Agenda Ahora

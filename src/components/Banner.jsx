@@ -26,7 +26,7 @@ function Banner() {
       <div className="absolute inset-0 bg-neutral-800 opacity-70 z-10" />
       <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-white">
         <h1 className="text-2xl md:text-6xl font-bold text-pink-400">Pet fashion - Peluquería canina</h1>
-        <p className="text-xl md:text-4xl md:mt-6">Especialistas en estética canina</p>
+        <p className="text-xl md:text-4xl md:mt-6 font-shadows font-bold">Especialistas en estética canina</p>
       </div>
       <Slider {...settings}>
         <div className="flex items-stretch">
