@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';
-import Card1 from '../assets/Icono5.png';
+import Card1 from '../assets/Icono6.png';
 import Card2 from '../assets/Icono9.png';
 import Card4 from '../assets/Icono8.png';
 import Card5 from '../assets/svg icons/arrow.svg';
