@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';
 import Card1 from '../assets/Icono6.png';
-import Card2 from '../assets/Icono9.png';
-import Card4 from '../assets/Icono8.png';
+import Card2 from '../assets/Icono8.png';
+import Card4 from '../assets/Icono9(2).png';
 import Card5 from '../assets/svg icons/arrow.svg';
 
 function Servicios() {
@@ -42,7 +42,7 @@ function Servicios() {
             <img className="w-60" src={Card1} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
             <button
-              className="text-grayDarker bg-white border-2 border-grayDark hover:bg-grayDark hover:text-white font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              className="text-grayDarker bg-white border-2 border-grayDark hover:outline hover:outline-tealDark outline-offset-4 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
               type="button"
               onClick={() => handleNavigate('/CorteYBano')}
             >
@@ -61,7 +61,7 @@ function Servicios() {
             <img className="w-60" src={Card2} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
             <button
-              className="text-grayDarker bg-white border-2 border-grayDark hover:bg-grayDark hover:text-white font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              className="text-grayDarker bg-white border-2 border-grayDark hover:outline hover:outline-tealDark outline-offset-4 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
               type="button"
               onClick={() => handleNavigate('/SoloBano')}
             >
@@ -80,7 +80,7 @@ function Servicios() {
             <img className="w-60" src={Card4} alt="icono" />
             <img className="w-10 animate-bounce m-auto mt-2" src={Card5} alt="icono" />
             <button
-              className="text-grayDarker bg-white border-2 border-grayDark hover:bg-grayDark hover:text-white font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
+              className="text-grayDarker bg-white border-2 border-grayDark hover:outline hover:outline-tealDark outline-offset-4 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-300"
               type="button"
               onClick={() => handleNavigate('/Booking')}
             >

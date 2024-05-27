@@ -5,6 +5,7 @@ import Visitanos from '../components/Visitanos';
 import Instagram from '../components/Instagram';
 import About2 from './About2';
 import Servicios from './Servicios';
+import Opiniones from '../components/Opiniones';
 
 function HomePage() {
   return (
@@ -13,6 +14,7 @@ function HomePage() {
       <About2 />
       <Servicios />
       <Instagram />
+      <Opiniones />
       <Visitanos />
       <ContactPage />
 

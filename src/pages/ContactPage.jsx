@@ -2,9 +2,8 @@ import React from 'react';
 import {
   Box, Typography, TextField, Button, Grid,
 } from '@mui/material';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaw } from '@fortawesome/free-solid-svg-icons';
 import contactImage from '../assets/contact.jpg';
+import ContsctaImage2 from '../assets/Icono4.png';
 
 function Contact() {
   return (
@@ -16,7 +15,7 @@ function Contact() {
         alignItems: 'center',
         pt: { xs: '10%', md: '8%' },
         pb: '10%',
-        backgroundColor: '#f2e9eb',
+        backgroundColor: '#FDF3EA',
         padding: 2,
 
         minHeight: '100vh',
@@ -42,16 +41,16 @@ function Contact() {
               gutterBottom
               textAlign="center"
               sx={{
-                color: '#31383f',
+                color: '#2E2F35',
                 fontWeight: '700',
-                fontFamily: 'Poppins, sans-serif',
+
                 fontSize: { xs: 'h4.fontSize', sm: 'h3.fontSize' },
               }}
             >
               Contáctanos
             </Typography>
-            <Box textAlign="center" sx={{ marginBottom: 2 }}>
-              <FontAwesomeIcon icon={faPaw} style={{ fontSize: '50px', color: '#dd8ea4' }} />
+            <Box sx={{ marginBottom: 2 }}>
+              <img className="w-32 md:w-44 m-auto" src={ContsctaImage2} alt="Contact" />
             </Box>
             <form action="https://formspree.io/f/xyyaoqnq" method="POST">
               <Grid container spacing={2}>
@@ -74,7 +73,8 @@ function Contact() {
                       padding: '10px',
                       borderRadius: '30px',
                       fontWeight: 'bold',
-                      backgroundColor: '#dd8ea4',
+                      border: '2px solid #2E2F35',
+                      backgroundColor: '#FF6D2C',
                       '&:hover': {
                         backgroundColor: 'white',
                         color: '#dd8ea4',
