@@ -17,6 +17,7 @@ module.exports = {
         lavender: '#EEECFF',
         orange: '#FF6D2C',
         navy: '#080B1D',
+        grayLight: '#D1C7BE',
       },
       fontFamily: {
         shadows: ['"Shadows Into Light"', 'cursive'],
