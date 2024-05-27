@@ -68,7 +68,7 @@ function BarraDeNavegacion2() {
             <li className="mt-1">
               <BookingButton />
             </li>
-            <li className="">
+            <li className="hidden">
               <IconButton
                 sx={{
                   color: '#dd8ea4',
