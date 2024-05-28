@@ -6,7 +6,7 @@ import HuellaCruz from '../assets/Icono2.png';
 import MedallaHuella from '../assets/Icono3.png';
 import Quotes from '../assets/svg icons/quotes.svg';
 
-function About2() {
+function About() {
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.3,
@@ -103,4 +103,4 @@ function About2() {
   );
 }
 
-export default About2;
+export default About;

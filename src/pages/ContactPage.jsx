@@ -3,7 +3,7 @@ import {
   Box, Typography, TextField, Button, Grid,
 } from '@mui/material';
 import contactImage from '../assets/contact.jpg';
-import ContsctaImage2 from '../assets/Icono4.png';
+import ContsctaImage2 from '../assets/Icono10.png';
 
 function Contact() {
   return (
@@ -50,7 +50,7 @@ function Contact() {
               Contáctanos
             </Typography>
             <Box sx={{ marginBottom: 2 }}>
-              <img className="w-32 md:w-44 m-auto" src={ContsctaImage2} alt="Contact" />
+              <img className="w-20 md:w-28 m-auto" src={ContsctaImage2} alt="Contact" />
             </Box>
             <form action="https://formspree.io/f/xyyaoqnq" method="POST">
               <Grid container spacing={2}>

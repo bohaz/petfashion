@@ -22,14 +22,16 @@ function Instagram() {
         <p className="text-xl md:text-3xl">
           Siguenos
           {' '}
-          <a
-            href="https://www.instagram.com/pet_fashion17?igsh=MWx3eHVvYThrdm9nMw=="
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-fuchsia-300 underline hover:text-fuchsia-400"
-          >
-            @pet_fashion17
-          </a>
+          <button type="button" className="">
+            <a
+              href="https://www.instagram.com/pet_fashion17?igsh=MWx3eHVvYThrdm9nMw=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange underline hover:text-grayLight"
+            >
+              @pet_fashion17
+            </a>
+          </button>
         </p>
 
       </motion.div>

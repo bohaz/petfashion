@@ -1,40 +1,17 @@
-/* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogActions from '@mui/material/DialogActions';
-import Button from '@mui/material/Button';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-// Tema personalizado
-const theme = createTheme({
-  typography: {
-    fontFamily: [
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-    ].join(','),
-  },
-  palette: {
-    primary: {
-      main: '#dd8ea4',
-    },
-  },
-});
+import Quotes from '../assets/svg icons/quotes.svg';
+import Simparica from '../assets/Simparica.png';
+import Bravecto from '../assets/Bravecto.png';
+import Nexgard from '../assets/Nexgard.webp';
 
 function ImportantMessagePopup() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    // Temporizador para retrasar la apertura del diálogo
     const timer = setTimeout(() => {
       setOpen(true);
-    }, 3000); // 3000 milisegundos = 3 segundos
+    }, 3000);
 
-    // Limpiar el temporizador si el componente se desmonta
     return () => clearTimeout(timer);
   }, []);
 
@@ -43,37 +20,38 @@ function ImportantMessagePopup() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-        sx={{
-          '& .MuiDialog-paper': {
-            backgroundColor: '#fff',
-            border: '2px solid #dd8ea4',
-            boxShadow: '5px 5px 10px rgba(0,0,0,0.1)',
-            borderRadius: '15px',
-            padding: '20px',
-          },
-        }}
-      >
-        <DialogTitle id="alert-dialog-title" sx={{ color: theme.palette.primary.main, textAlign: 'center', fontWeight: 'bold' }}>
-          ¡Importante!
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description" sx={{ color: '#333', margin: '20px', fontSize: '1rem' }}>
-            Recuerda mantener a tu mascota libre de pulgas, así nos ayudas a cuidar a otros perritos que vienen a la pelu. ¡Actualiza su comprimido o pipeta!
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions sx={{ justifyContent: 'center' }}>
-          <Button onClick={handleClose} color="primary" autoFocus sx={{ textTransform: 'none', fontSize: '1.2rem', fontWeight: 'bold' }}>
-            Entendido
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </ThemeProvider>
+    <div>
+      {open && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 p-2">
+          <div className="bg-cream border-2 border-tealDark shadow-lg rounded-lg p-6 max-w-md mx-auto">
+            <div className="text-center text-tealDark font-bold text-2xl mb-4" style={{ fontFamily: 'Shadows Into Light, cursive' }}>
+              ¡Importante!
+            </div>
+            <div className="relative p-6 md:text-lg rounded-xl text-center border-2 border-grayLight my-8">
+              <img className="absolute -top-4 left-6 w-10 bg-orange-100" src={Quotes} alt="Quotes" />
+              <p className="italic text-grayDark">
+                Recuerda mantener a tu mascota libre de pulgas, así nos ayudas a cuidar
+                a otros perritos que vienen a la pelu. ¡Actualiza su comprimido o pipeta!
+              </p>
+            </div>
+            <div className="flex mb-5 justify-center">
+              <img className="w-20 md:w-32" src={Simparica} alt="Simparica" />
+              <img className="w-20 md:w-32" src={Bravecto} alt="Bravecto" />
+              <img className="w-20 md:w-32" src={Nexgard} alt="Nexgard" />
+            </div>
+            <div className="flex justify-center">
+              <button
+                type="button"
+                onClick={handleClose}
+                className="bg-white text-grayDarker font-bold py-2 px-4 rounded-3xl border-2 border-grayDarker hover:outline hover:outline-grayDarker outline-offset-4  focus:outline-none focus:ring-opacity-75"
+              >
+                Entendido
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 

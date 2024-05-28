@@ -1,45 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useScrollTrigger } from '@mui/material';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
+import { useNavigate } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import Logo from '../assets/PfLogo2.png';
+import Menu from '../assets/svg icons/menu.svg';
 import MobileMenu from './MobileMenu';
 import UserIcon from './UserIcon';
+import BookingButton from './BookingButton';
 
-function ElevationScroll(props) {
-  const { children } = props;
-
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-  });
-
-  return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0,
-    sx: {
-      backgroundColor: 'white',
-      ...(trigger ? {
-        width: '70%',
-        mt: '1%',
-        borderRadius: '30px',
-        transition: '0.3s',
-        transform: 'translateX(-21.5%)',
-        backgroundColor: 'rgba(255, 255, 255, 0.7)',
-      } : {
-        height: '64px',
-        borderRadius: '0px',
-      }),
-    },
-  });
-}
-
-export default function SearchAppBar() {
+function BarraDeNavegacion() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleMobileMenuOpen = () => {
     setMobileMenuOpen(true);
@@ -49,57 +19,73 @@ export default function SearchAppBar() {
     setMobileMenuOpen(false);
   };
 
-  const linkStyle = {
-    color: '#dd8ea4',
-    fontWeight: '700',
-    fontFamily: 'Poppins, sans-serif',
-    fontSize: '1rem',
+  const handleLinkClick = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <ElevationScroll>
-        <AppBar position="fixed" sx={{ backgroundColor: 'white !important' }}>
-          <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              sx={{ mr: 2, color: '#dd8ea4' }}
-              onClick={handleMobileMenuOpen}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{
-                flexGrow: 1,
-                display: { xs: 'block', sm: 'none' },
-                color: '#dd8ea4',
-                fontWeight: '700',
-                fontFamily: 'Poppins, sans-serif',
-              }}
-            >
-              Pet Fashion
-            </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, justifyContent: 'center' }}>
-              <Button sx={linkStyle} component={Link} to="/">Home</Button>
-              <Button sx={linkStyle} component={Link} to="/about">Quiénes Somos</Button>
-              <Button sx={linkStyle} component={Link} to="/servicios">Servicios</Button>
-              <Button sx={linkStyle} component={Link} to="/contact">Contáctanos</Button>
-            </Box>
-            <IconButton
-              sx={{ ml: 2, color: '#dd8ea4', pt: '0' }}
-            >
-              <UserIcon />
-            </IconButton>
-          </Toolbar>
-        </AppBar>
-      </ElevationScroll>
+    <div className="p-2 fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+      <nav>
+        <ul className="flex items-center justify-between">
+          <li>
+            <img className="w-24 lg:w-28" src={Logo} alt="Logo" />
+          </li>
+          <div className="flex gap-4 items-center">
+            <li className="hidden md:block text-grayDarker text-2xl">
+              <button
+                type="button"
+                onClick={() => handleLinkClick('/')}
+              >
+                Home
+              </button>
+            </li>
+            <li className="hidden md:block text-grayDarker text-2xl">
+              <button
+                type="button"
+                onClick={() => handleLinkClick('/about')}
+              >
+                Acerca
+              </button>
+            </li>
+            <li className="hidden md:block text-grayDarker text-2xl">
+              <button
+                type="button"
+                onClick={() => handleLinkClick('/servicios')}
+              >
+                Servicios
+              </button>
+            </li>
+            <li className="hidden md:block text-grayDarker">
+              <button
+                type="button"
+                onClick={() => handleLinkClick('/contact')}
+                className="text-grayDarker text-2xl"
+              >
+                Contáctanos
+              </button>
+            </li>
+            <li className="mt-1">
+              <BookingButton />
+            </li>
+            <li className="hidden">
+              <IconButton
+                sx={{
+                  color: '#dd8ea4',
+                }}
+              >
+                <UserIcon />
+              </IconButton>
+            </li>
+            <li className="block md:hidden">
+              <button type="button" onClick={handleMobileMenuOpen}><img className="w-10" src={Menu} alt="Menu" /></button>
+            </li>
+          </div>
+        </ul>
+      </nav>
       <MobileMenu open={mobileMenuOpen} onClose={handleMobileMenuClose} />
-    </Box>
+    </div>
   );
 }
+
+export default BarraDeNavegacion;

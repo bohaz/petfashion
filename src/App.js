@@ -2,9 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Servicios from './pages/Servicios';
-/* import SearchAppBar from './components/BarraDeNavegacion'; */
 import HomePage from './pages/HomePage';
-import About2 from './pages/About2';
+import About2 from './pages/About';
 import ContactPage from './pages/ContactPage';
 import WhatsAppButton from './components/WhatsAppButton';
 import SwipeableTextMobileStepper from './pages/Trabajos';
@@ -15,7 +14,7 @@ import Footer from './components/Footer';
 import ImportantMessagePopup from './components/ImportantMessagePopup';
 import 'react-toastify/dist/ReactToastify.css';
 import Banner from './components/Banner';
-import BarraDeNavegacion2 from './components/BarraDeNavegacion2';
+import BarraDeNavegacion from './components/BarraDeNavegacion';
 
 function App() {
   return (
@@ -31,8 +30,8 @@ function App() {
         draggable
         pauseOnHover
       />
-      {/* <SearchAppBar /> */}
-      <BarraDeNavegacion2 />
+
+      <BarraDeNavegacion />
       <Banner />
       <ImportantMessagePopup />
       <WhatsAppButton />
