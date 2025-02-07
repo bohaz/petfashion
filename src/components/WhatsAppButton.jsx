@@ -3,7 +3,9 @@ import whatsappButton from '../assets/svg icons/whatsapp.svg';
 
 function WhatsAppButton() {
   const whatsappNumber = '+56945570410';
-  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+  const welcomeMessage = encodeURIComponent('¡Hola! Estoy interesado/a en sus servicios. ¿Me pueden dar más información?');
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${welcomeMessage}`;
+
   const iconStyle = {
     position: 'fixed',
     bottom: '20px',
