@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import IconButton from '@mui/material/IconButton';
 import Logo from '../assets/PfLogo2.png';
 import Menu from '../assets/svg icons/menu.svg';
 import MobileMenu from './MobileMenu';
-import UserIcon from './UserIcon';
 import BookingButton from './BookingButton';
 
 function BarraDeNavegacion() {
@@ -37,7 +35,7 @@ function BarraDeNavegacion() {
                 type="button"
                 onClick={() => handleLinkClick('/')}
               >
-                Home
+                Inicio
               </button>
             </li>
             <li className="hidden md:block text-grayDarker text-2xl">
@@ -45,7 +43,7 @@ function BarraDeNavegacion() {
                 type="button"
                 onClick={() => handleLinkClick('/about')}
               >
-                Acerca
+                Quiénes Somos
               </button>
             </li>
             <li className="hidden md:block text-grayDarker text-2xl">
@@ -67,15 +65,6 @@ function BarraDeNavegacion() {
             </li>
             <li className="mt-1">
               <BookingButton />
-            </li>
-            <li className="hidden">
-              <IconButton
-                sx={{
-                  color: '#dd8ea4',
-                }}
-              >
-                <UserIcon />
-              </IconButton>
             </li>
             <li className="block md:hidden">
               <button type="button" onClick={handleMobileMenuOpen}><img className="w-10" src={Menu} alt="Menu" /></button>
