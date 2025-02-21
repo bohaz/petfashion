@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Logo from '../assets/PfLogo2.png';
+import Logo from '../assets/Logo.png';
 import Menu from '../assets/svg icons/menu.svg';
 import MobileMenu from './MobileMenu';
 import BookingButton from './BookingButton';

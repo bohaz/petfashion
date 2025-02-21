@@ -6,7 +6,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import PlaceIcon from '@mui/icons-material/Place';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import Logo from '../assets/PfLogo2.png';
+import Logo from '../assets/Logo.png';
 
 function Footer() {
   return (
