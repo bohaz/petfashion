@@ -22,7 +22,7 @@ function Banner() {
     cssEase: 'linear',
   };
   return (
-    <div className="relative mt-16 md:mt-20 pt-2 overflow-hidden">
+    <div className="relative mt-24 md:mt-20 pt-2 overflow-hidden">
       <div className="absolute inset-0 bg-neutral-800 opacity-70 z-10" />
       <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-white">
         <h1 className="text-2xl md:text-6xl font-bold text-pink-400">Pet fashion - Peluquería canina</h1>
