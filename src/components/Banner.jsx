@@ -1,53 +1,44 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Pet1 from '../assets/workImages/1.png';
-import Pet2 from '../assets/workImages/5.png';
-import Pet3 from '../assets/workImages/6.png';
-import Pet4 from '../assets/workImages/7.png';
-import Pet5 from '../assets/workImages/8.png';
-import Pet6 from '../assets/workImages/9.png';
+import Pet1 from '../assets/Bannerimage.png';
 
 function Banner() {
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
-    cssEase: 'linear',
-  };
   return (
-    <div className="relative mt-24 md:mt-20 pt-2 overflow-hidden">
-      <div className="absolute inset-0 bg-neutral-800 opacity-70 z-10" />
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-white">
-        <h1 className="text-2xl md:text-6xl font-bold text-pink-400">Pet fashion - Peluquería canina</h1>
-        <p className="text-xl md:text-4xl md:mt-6 font-shadows font-bold">Especialistas en estética canina</p>
+    <div className="relative w-full h-auto md:h-[600px] bg-slate-100 py-16 mt-20">
+
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 px-4">
+
+        <div className="order-1 md:order-1 text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-gray-800">
+            Pet
+            {' '}
+            <span className="font-shadows text-teal-600">Fashion</span>
+            {' '}
+            - Peluquería canina
+          </h1>
+          <p className="mt-4 text-lg md:text-2xl text-gray-600">
+            Especialistas en estética canina
+          </p>
+          <div className="flex flex-col items-center justify-center mb-5">
+            <p className="text-xl">⭐⭐⭐⭐⭐</p>
+            {' '}
+
+            <p className="text-center text-gray-600">5,0 en Google Maps</p>
+            {' '}
+          </div>
+
+        </div>
+
+        {/* Imagen inclinada tipo tarjeta */}
+        <div className="order-2 md:order-2 flex justify-center">
+          <img
+            src={Pet1}
+            alt="Banner"
+            className="w-72 h-auto md:w-96
+                       md:mt-0
+                       rounded-lg shadow-2xl transform rotate-6"
+          />
+        </div>
       </div>
-      <Slider {...settings}>
-        <div className="flex items-stretch">
-          <img className="w-full h-auto" src={Pet1} alt="Pet1" />
-        </div>
-        <div>
-          <img className="w-full h-auto" src={Pet2} alt="Pet2" />
-        </div>
-        <div>
-          <img className="w-full h-auto" src={Pet3} alt="Pet3" />
-        </div>
-        <div>
-          <img className="w-full h-auto" src={Pet4} alt="Pet4" />
-        </div>
-        <div>
-          <img className="w-full h-auto" src={Pet5} alt="Pet5" />
-        </div>
-        <div>
-          <img className="w-full h-auto" src={Pet6} alt="Pet6" />
-        </div>
-      </Slider>
     </div>
   );
 }
