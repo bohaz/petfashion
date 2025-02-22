@@ -3,7 +3,7 @@ import Pet1 from '../assets/Bannerimage.png';
 
 function Banner() {
   return (
-    <div className="relative w-full h-auto md:h-[600px] bg-slate-100 py-16 mt-20">
+    <div className="relative w-full h-auto md:h-[520px] bg-slate-100 py-16 mt-20 lg:mt-28">
 
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 px-4">
 
@@ -18,7 +18,7 @@ function Banner() {
           <p className="mt-4 text-lg md:text-2xl text-gray-600">
             Especialistas en estética canina
           </p>
-          <div className="flex flex-col items-center justify-center mb-5">
+          <div className="flex flex-col items-center lg:items-start justify-center mb-5">
             <p className="text-xl">⭐⭐⭐⭐⭐</p>
             {' '}
 
