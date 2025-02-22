@@ -2,10 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';
-import Card1 from '../assets/Icono6.png';
-import Card2 from '../assets/Icono8.png';
-import Card4 from '../assets/Icono9.png';
-import Card5 from '../assets/svg icons/arrow.svg';
+import Card1 from '../assets/Corte.png';
+import Card2 from '../assets/Baño.png';
+import Card4 from '../assets/Agenda.png';
 
 function Servicios() {
   const { ref, inView } = useInView({
@@ -38,11 +37,11 @@ function Servicios() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="relative z-10"
         >
-          <div className="bg-cream rounded-xl p-4 flex flex-col items-center w-72 h-72">
-            <img className="w-28" src={Card1} alt="icono" />
-            <img className="w-10 animate-bounce m-auto mt-12" src={Card5} alt="icono" />
+          <div className="bg-cream rounded-xl flex flex-col items-center w-72 h-72">
+            <img className="w-full rounded-t-xl h-48" src={Card1} alt="icono" />
+
             <button
-              className="text-grayDarker bg-white border-2 border-grayDark hover:outline hover:outline-grayDark outline-offset-4 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-50 transition duration-300"
+              className="text-grayDarker mt-10 bg-white border-2 border-grayDark hover:outline hover:outline-grayDark outline-offset-4 font-semibold py-2 px-4 rounded-3xl shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-50 transition duration-300"
               type="button"
               onClick={() => handleNavigate('/CorteYBano')}
             >
@@ -57,11 +56,11 @@ function Servicios() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="relative z-10"
         >
-          <div className="bg-customMint rounded-xl p-4 flex flex-col items-center w-72 h-72">
-            <img className="w-28" src={Card2} alt="icono" />
-            <img className="w-10 animate-bounce m-auto mt-12" src={Card5} alt="icono" />
+          <div className="bg-customMint rounded-xl flex flex-col items-center w-72 h-72">
+            <img className="w-full rounded-t-xl h-48" src={Card2} alt="icono" />
+
             <button
-              className="text-grayDarker bg-white border-2 border-grayDark hover:outline hover:outline-grayDark outline-offset-4 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-50 transition duration-300"
+              className="text-grayDarker mt-10 bg-white border-2 border-grayDark hover:outline hover:outline-grayDark outline-offset-4 font-semibold py-2 px-4 rounded-3xl shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-50 transition duration-300"
               type="button"
               onClick={() => handleNavigate('/SoloBano')}
             >
@@ -76,11 +75,10 @@ function Servicios() {
           className="relative z-10"
         >
 
-          <div className="bg-lavender rounded-xl p-4 flex flex-col items-center w-72 h-72">
-            <img className="w-28" src={Card4} alt="icono" />
-            <img className="w-10 animate-bounce m-auto mt-12" src={Card5} alt="icono" />
+          <div className="bg-lavender rounded-xl flex flex-col items-center w-72 h-72">
+            <img className="w-full rounded-t-xl h-48" src={Card4} alt="icono" />
             <button
-              className="text-grayDarker bg-white border-2 border-grayDark hover:outline hover:outline-grayDark outline-offset-4 font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-50 transition duration-300"
+              className="text-grayDarker mt-10 bg-white border-2 border-grayDark hover:outline hover:outline-grayDark outline-offset-4 font-semibold py-2 px-4 rounded-3xl shadow-md focus:outline-none focus:ring-2 focus:ring-opacity-50 transition duration-300"
               type="button"
               onClick={() => handleNavigate('/Booking')}
             >
