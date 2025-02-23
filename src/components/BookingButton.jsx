@@ -1,27 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
+import BookingForm from './BookingForm';
+
+// Estilos para el modal
+const modalStyle = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  boxShadow: 24,
+  p: 4,
+  borderRadius: '10px',
+};
 
 function BookingButton() {
-  const openWhatsApp = () => {
-    const whatsappNumber = '+56945570410';
-    const whatsappLink = `https://wa.me/${whatsappNumber}`;
-    window.open(whatsappLink, '_blank');
-  };
+  const [open, setOpen] = useState(false);
 
   return (
-    <Button
-      variant="contained"
-      color="success"
-      startIcon={<FontAwesomeIcon icon={faWhatsapp} />}
-      onClick={openWhatsApp}
-      sx={{
-        backgroundColor: '#FF6D2C', border: '2px solid #2E2F35', textTransform: 'none', borderRadius: '30px', fontWeight: 'bold', '&:hover': { backgroundColor: '#E65C24' },
-      }}
-    >
-      Agenda Ahora
-    </Button>
+    <>
+      {/* Botón que abre el modal */}
+      <Button
+        variant="contained"
+        color="success"
+        startIcon={<FontAwesomeIcon icon={faWhatsapp} />}
+        onClick={() => setOpen(true)}
+        sx={{
+          backgroundColor: '#FF6D2C',
+          border: '2px solid #2E2F35',
+          textTransform: 'none',
+          borderRadius: '30px',
+          fontWeight: 'bold',
+          '&:hover': { backgroundColor: '#E65C24' },
+        }}
+      >
+        Agenda Ahora
+      </Button>
+
+      {/* Modal con el formulario */}
+      <Modal open={open} onClose={() => setOpen(false)}>
+        <Box sx={modalStyle}>
+          <BookingForm onClose={() => setOpen(false)} />
+        </Box>
+      </Modal>
+    </>
   );
 }
 
