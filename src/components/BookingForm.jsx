@@ -12,9 +12,9 @@ import Typography from '@mui/material/Typography';
 function BookingForm({ onClose }) {
   const { register, handleSubmit, reset } = useForm();
 
-  const serviceId = 'service_5ba4aea';
-  const templateId = 'template_vau954s';
-  const userId = 'VEdUEvObsOGRosT3B';
+  const serviceId = 'service_pryz19b';
+  const templateId = 'template_ta1tj2g';
+  const userId = 'x9kDizl6AGXIURnZS';
 
   const onSubmit = (data) => {
     const emailParams = {
