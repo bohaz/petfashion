@@ -11,8 +11,8 @@ function HomePage() {
   return (
     <Box>
 
-      <About />
       <Servicios />
+      <About />
       <Instagram />
       <Opiniones />
       <Visitanos />
