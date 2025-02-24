@@ -47,9 +47,9 @@ function MobileMenu({ open, onClose }) {
 
         <Button color="inherit" component={Link} to="/" sx={buttonStyle}>Inicio</Button>
         <Divider variant="middle" sx={dividerStyle} />
-        <Button color="inherit" component={Link} to="/about" sx={buttonStyle}>Quiénes Somos</Button>
-        <Divider variant="middle" sx={dividerStyle} />
         <Button color="inherit" component={Link} to="/servicios" sx={buttonStyle}>Servicios</Button>
+        <Divider variant="middle" sx={dividerStyle} />
+        <Button color="inherit" component={Link} to="/about" sx={buttonStyle}>Quiénes Somos</Button>
         <Divider variant="middle" sx={dividerStyle} />
         <Button color="inherit" component={Link} to="/contact" sx={buttonStyle}>Contáctanos</Button>
       </Box>
