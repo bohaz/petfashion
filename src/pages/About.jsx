@@ -65,8 +65,8 @@ function About() {
             <div className="relative p-6 md:text-lg rounded-xl text-center border-2 border-grayLight my-8 max-w-xl">
               <img className="absolute -top-4 left-6 w-10 bg-orange-100" src={Quotes} alt="Quotes" />
               <p className="italic text-grayDark">
-                Está conformado por un médico veterinario y
-                una excelente estilista canina trabajando para usted.
+                Está conformado por dos estilistas caninos con más de 5 años 
+                de experiencia trabajando para usted.
               </p>
             </div>
           </div>
