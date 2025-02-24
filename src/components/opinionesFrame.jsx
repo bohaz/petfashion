@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import Google from '../assets/svg icons/google.svg';
 
 function Opiniones() {
   const { ref, inView } = useInView({
