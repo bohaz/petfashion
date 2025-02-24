@@ -6,20 +6,28 @@ import Google from '../assets/svg icons/google.svg';
 function Opiniones() {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.5,
+    threshold: 0.2,
   });
 
   return (
-    <div className="bg-customMint p-2 pb-10 pt-10" ref={ref}>
-      <h1 className="font-bold mb-10 text-4xl md:text-5xl xl:text-6xl text-center text-grayDarker">
-        <span className="font-shadows text-tealDark font-bold md:mb-5 text-3xl md:text-4xl xl:text-5xl">Opiniones</span>
-        {' '}
-        de nuestros clientes
-      </h1>
+    <div className="bg-customMint px-2 py-20" ref={ref}>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="relative z-10"
+      >
+        <h1 className="font-bold mb-10 text-4xl md:text-5xl xl:text-6xl text-center text-grayDarker">
+          <span className="font-shadows text-tealDark font-bold md:mb-5 text-3xl md:text-4xl xl:text-5xl">Opiniones</span>
+          {' '}
+          de nuestros clientes
+        </h1>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         className="relative z-10"
       >
         <div className="flex items-center justify-center mb-5">
