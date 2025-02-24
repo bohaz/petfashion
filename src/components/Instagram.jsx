@@ -6,7 +6,7 @@ import background from '../assets/GroomingTools2.webp';
 function Instagram() {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.5,
+    threshold: 0.2,
   });
 
   return (
