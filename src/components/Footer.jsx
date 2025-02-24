@@ -28,10 +28,10 @@ function Footer() {
           Encuentranos en
         </Typography>
         <Divider orientation="vertical" flexItem sx={{ mx: 2, height: '35px', bgcolor: '#2E2F35' }} />
-        <IconButton color="inherit" href="https://www.instagram.com/pet_fashion17?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
+        <IconButton color="inherit" href="https://www.instagram.com/petfashiondogsalon?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
           <InstagramIcon />
         </IconButton>
-        <IconButton color="inherit" href="https://www.facebook.com/tuPerfilDeFacebook/" target="_blank">
+        <IconButton color="inherit" href="https://www.facebook.com/share/1A8Y6kmof8/" target="_blank">
           <FacebookIcon />
         </IconButton>
         <IconButton color="inherit" href="https://wa.me/+56945570410" target="_blank">
