@@ -7,7 +7,7 @@ import BookingButton from './BookingButton';
 function Visitanos() {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.5,
+    threshold: 0.2,
   });
 
   return (
