@@ -24,12 +24,12 @@ function Instagram() {
           {' '}
           <button type="button" className="">
             <a
-              href="https://www.instagram.com/pet_fashion17?igsh=MWx3eHVvYThrdm9nMw=="
+              href="https://www.instagram.com/petfashiondogsalon?igsh=MWx3eHVvYThrdm9nMw=="
               target="_blank"
               rel="noopener noreferrer"
               className="text-orange underline hover:text-grayLight"
             >
-              @pet_fashion17
+              petfashiondogsalon
             </a>
           </button>
         </p>
