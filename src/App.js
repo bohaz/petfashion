@@ -13,8 +13,8 @@ import Booking from './components/Booking';
 import Footer from './components/Footer';
 import ImportantMessagePopup from './components/ImportantMessagePopup';
 import 'react-toastify/dist/ReactToastify.css';
-import Banner from './components/Banner';
 import BarraDeNavegacion from './components/BarraDeNavegacion';
+import Banner from './components/Banner';
 
 function App() {
   return (
@@ -39,7 +39,6 @@ function App() {
 
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About2 />} />
-
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/trabajos" element={<SwipeableTextMobileStepper />} />
         <Route path="/contact" element={<ContactPage />} />
