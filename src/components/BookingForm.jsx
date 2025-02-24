@@ -2,49 +2,21 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import PropTypes from 'prop-types';
-import emailjs from 'emailjs-com';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import sendEmail from '../utils/sendEmail';
+import sendWhatsAppMessage from '../utils/sendWhatsApp';
 
 function BookingForm({ onClose }) {
   const { register, handleSubmit, reset } = useForm();
 
-  const serviceId = 'service_pryz19b';
-  const templateId = 'template_ta1tj2g';
-  const userId = 'x9kDizl6AGXIURnZS';
-
   const onSubmit = (data) => {
-    const emailParams = {
-      user_name: data.ownerName,
-      pet_name: data.petName,
-      user_email: data.email,
-      phone: data.phone,
-      message: 'Gracias por reservar en nuestra peluquería canina. Estas son nuestras condiciones...',
-    };
-
-    emailjs.send(serviceId, templateId, emailParams, userId)
-      .then(() => {
-        toast.success('Reserva realizada con éxito. Revisa tu correo 📩', {
-          position: 'top-center',
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-        });
-        reset();
-        onClose();
-      })
-      .catch((error) => {
-        console.error('Error al enviar correo:', error);
-        toast.error('Error al enviar la reserva. Inténtalo de nuevo ❌', {
-          position: 'top-center',
-          autoClose: 3000,
-        });
-      });
+    sendEmail(data, () => {
+      sendWhatsAppMessage(data);
+      reset();
+      onClose();
+    });
   };
 
   return (
