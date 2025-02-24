@@ -9,7 +9,7 @@ import Card4 from '../assets/Agenda.png';
 function Servicios() {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.3,
+    threshold: 0.2,
   });
 
   const navigate = useNavigate();
@@ -21,14 +21,21 @@ function Servicios() {
 
   return (
     <div
-      className="p-4 pb-10 pt-10 flex flex-col gap-5 items-center bg-contain bg-center bg-white"
+      className="p-4 py-20 flex flex-col gap-5 items-center bg-contain bg-center bg-white"
       ref={ref}
     >
-      <h1 className="font-bold mb-5 md:mb-20 text-4xl md:text-5xl xl:text-6xl text-center text-grayDarker">
-        Nuestros
-        {' '}
-        <span className="font-shadows text-teal-600">Servicios</span>
-      </h1>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="relative z-10"
+      >
+        <h1 className="font-bold mb-10 md:mb-20 text-4xl md:text-5xl xl:text-6xl text-center text-grayDarker">
+          Nuestros
+          {' '}
+          <span className="font-shadows text-teal-600">Servicios</span>
+        </h1>
+      </motion.div>
       <div className="flex flex-col gap-5 items-center md:flex-row">
 
         <motion.div
@@ -37,6 +44,7 @@ function Servicios() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="relative z-10"
         >
+
           <div className="bg-cream rounded-xl flex flex-col items-center w-72 h-72">
             <img className="w-full rounded-t-xl h-48" src={Card1} alt="icono" />
 
@@ -71,7 +79,7 @@ function Servicios() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
           className="relative z-10"
         >
 

@@ -13,10 +13,10 @@ function Contact() {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        pt: { xs: '10%', md: '8%' },
-        pb: '10%',
+        pt: { xs: '30%', md: '7rem' },
+        pb: { xs: '30%', md: '7rem' },
         backgroundColor: '#FDF3EA',
-        padding: 2,
+        paddingX: 2,
 
         minHeight: '100vh',
       }}

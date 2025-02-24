@@ -9,20 +9,14 @@ import Quotes from '../assets/svg icons/quotes.svg';
 function About() {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.3,
+    threshold: 0.2,
   });
 
   return (
     <div
-      className="p-4 pb-10 pt-10 flex flex-col gap-5 items-center bg-contain bg-center bg-cream"
+      className="p-4 py-20 flex flex-col gap-5 items-center bg-contain bg-center bg-cream"
       ref={ref}
     >
-
-      <h1 className="font-bold md:mb-20 text-4xl md:text-5xl xl:text-6xl text-center text-grayDarker">
-        Quiénes
-        {' '}
-        <span className="font-shadows text-tealDark">Somos</span>
-      </h1>
 
       <motion.div
         initial={{ opacity: 0, x: 20 }}
@@ -30,6 +24,11 @@ function About() {
         transition={{ duration: 0.5, delay: 0.1 }}
         className="relative z-10"
       >
+        <h1 className="font-bold md:mb-20 text-4xl md:text-5xl xl:text-6xl text-center text-grayDarker">
+          Quiénes
+          {' '}
+          <span className="font-shadows text-tealDark">Somos</span>
+        </h1>
         <div className="flex flex-col items-center md:flex-row md:mb-20 md:-ml-72">
           <img className="w-44 md:w-52" src={MedallaHuella} alt="Huella" />
           <div>

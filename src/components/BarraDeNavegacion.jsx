@@ -23,7 +23,7 @@ function BarraDeNavegacion() {
   };
 
   return (
-    <div className="p-2 fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+    <div className="p-2 lg:px-20 fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <nav>
         <ul className="flex items-center justify-between">
           <li>

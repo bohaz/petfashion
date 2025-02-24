@@ -3,7 +3,7 @@ import Pet1 from '../assets/Bannerimage.png';
 
 function Banner() {
   return (
-    <div className="relative w-full h-auto md:h-[520px] bg-slate-100 py-16 mt-20 lg:mt-28">
+    <div className="relative w-full h-auto md:h-[520px] bg-slate-100 mt-24 py-10 lg:pt-28">
 
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 px-4">
 
