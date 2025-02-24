@@ -5,7 +5,7 @@ import Visitanos from '../components/Visitanos';
 import Instagram from '../components/Instagram';
 import About from './About';
 import Servicios from './Servicios';
-import Opiniones from '../components/Opiniones';
+import OpinionesFrame from '../components/opinionesFrame';
 
 function HomePage() {
   return (
@@ -14,7 +14,7 @@ function HomePage() {
       <Servicios />
       <About />
       <Instagram />
-      <Opiniones />
+      <OpinionesFrame />
       <Visitanos />
       <ContactPage />
 
