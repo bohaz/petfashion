@@ -6,7 +6,6 @@ const sendWhatsAppMessage = (data) => {
                   + `*Mascota:* ${data.petName}\n`
                   + `*Correo:* ${data.email}\n`
                   + `*Teléfono:* ${data.phone}\n\n`
-                  + 'Por favor, continúa la conversación con el cliente.'
                   + 'Gracias por la información. En breve te atenderemos.';
 
   const encodedMessage = encodeURIComponent(message);
