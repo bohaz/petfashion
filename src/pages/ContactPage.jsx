@@ -1,9 +1,8 @@
 import React from 'react';
-import {
-  Box, Typography, TextField, Button, Grid,
-} from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import contactImage from '../assets/contact.jpg';
 import ContsctaImage2 from '../assets/Icono10.png';
+import ContactForm from '../components/ContactForm';
 
 function Contact() {
   return (
@@ -16,8 +15,7 @@ function Contact() {
         pt: { xs: '30%', md: '7rem' },
         pb: { xs: '30%', md: '7rem' },
         backgroundColor: '#FDF3EA',
-        paddingX: 2,
-
+        paddingX: 1,
         minHeight: '100vh',
       }}
     >
@@ -43,7 +41,6 @@ function Contact() {
               sx={{
                 color: '#2E2F35',
                 fontWeight: '700',
-
                 fontSize: { xs: 'h4.fontSize', sm: 'h3.fontSize' },
               }}
             >
@@ -52,42 +49,11 @@ function Contact() {
             <Box sx={{ marginBottom: 2 }}>
               <img className="w-20 md:w-28 m-auto" src={ContsctaImage2} alt="Contact" />
             </Box>
-            <form action="https://formspree.io/f/xyyaoqnq" method="POST">
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
-                  <TextField fullWidth label="Nombre Completo" name="user_name" required variant="outlined" />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField fullWidth label="Correo" name="user_email" type="email" required variant="outlined" />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField fullWidth label="Escribe Algo..." name="user_message" multiline rows={4} variant="outlined" />
-                </Grid>
-                <Grid item xs={12}>
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    sx={{
-                      width: '100%',
-                      padding: '10px',
-                      borderRadius: '30px',
-                      fontWeight: 'bold',
-                      border: '2px solid #2E2F35',
-                      backgroundColor: '#FF6D2C',
-                      '&:hover': {
-                        backgroundColor: 'white',
-                        color: '#dd8ea4',
-                      },
-                    }}
-                  >
-                    Enviar mensaje
-                  </Button>
-                </Grid>
-              </Grid>
-            </form>
+
+            <ContactForm />
           </Box>
         </Grid>
+
         <Grid item xs={12} md={6}>
           <Box
             component="img"
@@ -102,6 +68,30 @@ function Contact() {
           />
         </Grid>
       </Grid>
+      {/* 🔹 Sección de Google Maps */}
+      <Box
+        sx={{
+          width: '100%',
+          maxWidth: '1200px',
+          height: '400px',
+          mt: 4,
+          borderRadius: '10px',
+          overflow: 'hidden',
+        }}
+      >
+        <iframe
+          title="Ubicación Pet Fashion"
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.350296029345!2d-71.68051632500888!3d-33.44017909698497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966217447100a41f%3A0xc0fb58232a4b816c!2sPet%20fashion%20-%20Peluquer%C3%ADa%20canina!5e0!3m2!1ses!2scl!4v1740741394148!5m2!1ses!2scl"
+
+        />
+      </Box>
     </Box>
   );
 }
