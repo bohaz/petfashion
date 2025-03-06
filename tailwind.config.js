@@ -18,6 +18,7 @@ module.exports = {
         orange: '#FF6D2C',
         navy: '#080B1D',
         grayLight: '#D1C7BE',
+        softOrange: '#FF8C52',
       },
       fontFamily: {
         shadows: ['"Shadows Into Light"', 'cursive'],
