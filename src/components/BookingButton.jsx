@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,24 +20,25 @@ const modalStyle = {
   borderRadius: '10px',
 };
 
-function BookingButton() {
+function BookingButton({ sx = {}, color = 'success' }) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      {/* Botón que abre el modal */}
       <Button
         variant="contained"
-        color="success"
+        color={color}
         startIcon={<FontAwesomeIcon icon={faWhatsapp} />}
         onClick={() => setOpen(true)}
         sx={{
-          backgroundColor: '#FF6D2C',
-          border: '2px solid #2E2F35',
+          backgroundColor: sx.backgroundColor || '#FF6D2C',
+          color: sx.color || '#FFFFFF',
+          border: sx.border || '2px solid #2E2F35',
           textTransform: 'none',
           borderRadius: '30px',
           fontWeight: 'bold',
-          '&:hover': { backgroundColor: '#E65C24' },
+          '&:hover': { backgroundColor: sx.hoverBackgroundColor || '#E65C24' },
+          ...sx, // Permite sobrescribir cualquier estilo desde las props
         }}
       >
         Agenda Ahora
