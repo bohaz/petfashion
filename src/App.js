@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Servicios from './pages/Servicios';
 import HomePage from './pages/HomePage';
-import About2 from './pages/About';
+import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import WhatsAppButton from './components/WhatsAppButton';
 import SwipeableTextMobileStepper from './pages/Trabajos';
@@ -38,7 +38,7 @@ function App() {
       <Routes>
 
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<About2 />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/trabajos" element={<SwipeableTextMobileStepper />} />
         <Route path="/contact" element={<ContactPage />} />
