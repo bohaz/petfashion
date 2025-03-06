@@ -9,15 +9,20 @@ function Opiniones() {
   });
 
   useEffect(() => {
-    // Crear un script dinámico para cargar Tagembed
-    const script = document.createElement('script');
-    script.src = 'https://widget.tagembed.com/embed.min.js';
-    script.type = 'text/javascript';
-    script.async = true;
-    document.body.appendChild(script);
+    // Asegurar que el script no se cargue múltiples veces
+    if (!document.getElementById('tagembed-script')) {
+      const script = document.createElement('script');
+      script.id = 'tagembed-script';
+      script.src = 'https://widget.tagembed.com/embed.min.js';
+      script.type = 'text/javascript';
+      script.async = true;
+      script.onload = () => {
+      };
+
+      document.body.appendChild(script);
+    }
 
     return () => {
-      document.body.removeChild(script);
     };
   }, []);
 
@@ -44,8 +49,8 @@ function Opiniones() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="relative z-10"
       >
-
         <div
+          id="tagembed-widget"
           className="tagembed-widget"
           style={{ width: '100%', height: '100%' }}
           data-widget-id="2152636"
