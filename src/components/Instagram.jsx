@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import background from '../assets/GroomingTools2.webp';
+import Carousel from './Carousel';
 
 function Instagram() {
   const { ref, inView } = useInView({
@@ -10,29 +10,24 @@ function Instagram() {
   });
 
   return (
-    <div className="relative flex flex-col justify-center text-center font-bold p-3 h-96 text-white tracking-wide" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }} ref={ref}>
-      <div className="absolute inset-0 bg-neutral-800 opacity-80" />
+    <div className="relative flex flex-col justify-center text-center font-bold py-10 lg:py-24 px-4 text-grayDarker tracking-wide" ref={ref}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
         transition={{ duration: 0.5 }}
         className="relative z-10"
       >
-        <h1 className="text-2xl md:text-5xl mb-2">PetFashion está en Instagram</h1>
-        <p className="text-xl md:text-3xl">
-          Siguenos
+        <h1 className="text-2xl md:text-5xl mb-14">
+          Pet
           {' '}
-          <button type="button" className="">
-            <a
-              href="https://www.instagram.com/petfashiondogsalon?igsh=MWx3eHVvYThrdm9nMw=="
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-orange underline hover:text-grayLight"
-            >
-              petfashiondogsalon
-            </a>
-          </button>
-        </p>
+          <span className="font-shadows text-teal-400">Fashion</span>
+          {' '}
+          está en Instagram
+        </h1>
+
+        <div className="">
+          <Carousel />
+        </div>
 
       </motion.div>
     </div>
