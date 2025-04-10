@@ -5,7 +5,6 @@ import background from '../assets/GroomingTools2.webp';
 function Banner() {
   const location = useLocation();
 
-  // Definir mensajes dinámicos según la ruta actual
   const pageTitles = {
     '/': 'Peluquería Canina',
     '/about': 'Sobre Nosotros',
@@ -20,7 +19,6 @@ function Banner() {
     '/contact': 'Ponte en contacto con nosotros',
   };
 
-  // Si la ruta no está definida, usar el título por defecto
   const currentTitle = pageTitles[location.pathname] || 'Peluquería Canina';
   const currentSubtitle = pageSubtitles[location.pathname] || 'Especialistas en estética canina';
 
@@ -33,12 +31,12 @@ function Banner() {
         backgroundPosition: 'center',
       }}
     >
-      {/* Capa oscura para mejorar la visibilidad del texto */}
+
       <div className="absolute inset-0 bg-neutral-900 opacity-90" />
 
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 px-6 md:px-12 relative z-10">
         <div className="order-1 md:order-1 text-center md:text-left">
-          {/* Manteniendo Pet Fashion en el título y agregando el texto dinámico */}
+
           <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-white drop-shadow-lg">
             Pet
             {' '}

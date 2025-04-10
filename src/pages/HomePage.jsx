@@ -1,5 +1,4 @@
 import React from 'react';
-import { Box } from '@mui/material';
 import ContactPage from './ContactPage';
 import Visitanos from '../components/Visitanos';
 import Instagram from '../components/Instagram';
@@ -10,8 +9,7 @@ import CustomerSatisfactionStats from '../components/CustomerSatisfactionStats';
 
 function HomePage() {
   return (
-    <Box>
-
+    <>
       <Servicios />
       <AboutPreview />
       <Instagram />
@@ -19,8 +17,7 @@ function HomePage() {
       <OpinionesFrame />
       <Visitanos />
       <ContactPage />
-
-    </Box>
+    </>
   );
 }
 

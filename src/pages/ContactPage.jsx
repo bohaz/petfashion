@@ -71,7 +71,7 @@ function Contact() {
       {/* 🔹 Sección de Google Maps */}
       <Box
         sx={{
-          width: '100%',
+          width: '92%',
           maxWidth: '1200px',
           height: '400px',
           mt: 4,
