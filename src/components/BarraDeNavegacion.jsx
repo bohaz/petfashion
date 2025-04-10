@@ -41,7 +41,7 @@ function BarraDeNavegacion() {
             <li className="hidden md:block text-grayDarker text-2xl">
               <button
                 type="button"
-                onClick={() => handleLinkClick('/about')}
+                onClick={() => handleLinkClick('/sobre-nosotros')}
               >
                 Sobre Nosotros
               </button>
@@ -57,7 +57,7 @@ function BarraDeNavegacion() {
             <li className="hidden md:block text-grayDarker">
               <button
                 type="button"
-                onClick={() => handleLinkClick('/contact')}
+                onClick={() => handleLinkClick('/contacto')}
                 className="text-grayDarker text-2xl"
               >
                 Contacto

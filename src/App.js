@@ -38,10 +38,10 @@ function App() {
       <Routes>
 
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/sobre-nosotros" element={<AboutPage />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/trabajos" element={<SwipeableTextMobileStepper />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/contacto" element={<ContactPage />} />
         <Route path="/CorteYBano" element={<CorteYBano />} />
         <Route path="/SoloBano" element={<SoloBano />} />
         <Route path="/Booking" element={<Booking />} />

@@ -1,57 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Pet Fashion - La mejor peluquería canina con atención especializada y estilo para tu mascota. Reserva tu cita hoy.">
-    <meta name="keywords" content="peluquería canina, estética para perros, baño de mascotas, corte de pelo perros, Pet Fashion">
-    <meta name="author" content="Pet Fashion">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Pet Fashion - Peluquería Canina">
-    <meta property="og:description" content="Dale estilo a tu mascota con nuestros servicios de peluquería canina. Reserva tu cita ahora.">
-    <meta property="og:image" content="https://petfashiondogsalon.cl/og-image.jpg">
-    <meta property="og:url" content="https://petfashiondogsalon.cl">
-    <meta property="og:site_name" content="Pet Fashion">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Pet Fashion - La mejor peluquería canina con atención especializada y estilo para tu mascota. Reserva tu cita hoy.">
+  <meta name="keywords" content="peluquería canina, estética para perros, baño de mascotas, corte de pelo perros, Pet Fashion">
+  <meta name="author" content="Pet Fashion">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pet Fashion - Peluquería Canina">
-    <meta name="twitter:description" content="Dale estilo a tu mascota con nuestros servicios de peluquería canina. Reserva tu cita ahora.">
-    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://petfashiondogsalon.cl/" />
 
-    <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="google-site-verification=JzxxN1VS20oOkReibgI-_CVzDObau6fwsaZT1-3ujW4">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pet Fashion - Peluquería Canina">
+  <meta property="og:description" content="Dale estilo a tu mascota con nuestros servicios de peluquería canina. Reserva tu cita ahora.">
+  <meta property="og:image" content="https://petfashiondogsalon.cl/og-image.jpg">
+  <meta property="og:url" content="https://petfashiondogsalon.cl/">
+  <meta property="og:site_name" content="Pet Fashion">
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:locale:alternate" content="es_ES" />
 
-    <title>Pet Fashion - Peluquería Canina</title>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pet Fashion - Peluquería Canina">
+  <meta name="twitter:description" content="Dale estilo a tu mascota con nuestros servicios de peluquería canina. Reserva tu cita ahora.">
+  <meta name="twitter:image" content="https://petfashiondogsalon.cl/og-image.jpg">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png">
-    <link rel="canonical" href="https://petfashiondogsalon.cl" />
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="JzxxN1VS20oOkReibgI-_CVzDObau6fwsaZT1-3ujW4">
 
-    <!-- Preload Font -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"></noscript>
+  <!-- Apple Mobile Web App -->
+  <meta name="apple-mobile-web-app-title" content="Pet Fashion">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V18NVBCMMB"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-V18NVBCMMB');
-    </script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://petfashiondogsalon.cl/LogoBlanco.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://petfashiondogsalon.cl/LogoBlanco.png">
+  <link rel="apple-touch-icon" href="https://petfashiondogsalon.cl/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"></noscript>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PetStore",
+    "name": "Pet Fashion",
+    "image": "https://petfashiondogsalon.cl/og-image.jpg",
+    "url": "https://petfashiondogsalon.cl/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santiago",
+      "addressCountry": "CL"
+    },
+    "sameAs": [
+      "https://www.instagram.com/tu_usuario/",
+      "https://www.facebook.com/tu_usuario/"
+    ]
+  }
+  </script>
+
+  <title>Pet Fashion - Peluquería Canina</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V18NVBCMMB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V18NVBCMMB');
+  </script>
 </head>
 <body>
-    <noscript>Necesitas habilitar JavaScript para ejecutar esta aplicación.</noscript>
-    <div id="root"></div>
+  <noscript>Necesitas habilitar JavaScript para ejecutar esta aplicación.</noscript>
+  <div id="root"></div>
 </body>
 </html>
