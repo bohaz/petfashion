@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { ToastContainer } from 'react-toastify';
+
 import Servicios from './pages/Servicios';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -12,44 +14,44 @@ import SoloBano from './components/SoloBano';
 import Booking from './components/Booking';
 import Footer from './components/Footer';
 import ImportantMessagePopup from './components/ImportantMessagePopup';
-import 'react-toastify/dist/ReactToastify.css';
 import BarraDeNavegacion from './components/BarraDeNavegacion';
 import Banner from './components/Banner';
 
 function App() {
   return (
-    <Router>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
+    <HelmetProvider>
+      <Router>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
 
-      <BarraDeNavegacion />
-      <Banner />
-      <ImportantMessagePopup />
-      <WhatsAppButton />
-      <Routes>
+        <BarraDeNavegacion />
+        <Banner />
+        <ImportantMessagePopup />
+        <WhatsAppButton />
 
-        <Route path="/" element={<HomePage />} />
-        <Route path="/sobre-nosotros" element={<AboutPage />} />
-        <Route path="/servicios" element={<Servicios />} />
-        <Route path="/trabajos" element={<SwipeableTextMobileStepper />} />
-        <Route path="/contacto" element={<ContactPage />} />
-        <Route path="/CorteYBano" element={<CorteYBano />} />
-        <Route path="/SoloBano" element={<SoloBano />} />
-        <Route path="/Booking" element={<Booking />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/sobre-nosotros" element={<AboutPage />} />
+          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/trabajos" element={<SwipeableTextMobileStepper />} />
+          <Route path="/contacto" element={<ContactPage />} />
+          <Route path="/CorteYBano" element={<CorteYBano />} />
+          <Route path="/SoloBano" element={<SoloBano />} />
+          <Route path="/Booking" element={<Booking />} />
+        </Routes>
 
-      <Footer />
-
-    </Router>
+        <Footer />
+      </Router>
+    </HelmetProvider>
   );
 }
 

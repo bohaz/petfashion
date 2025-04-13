@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async'; // Asegúrate de tener esto instalado
 import Card1 from '../assets/Corte.png';
 import Card2 from '../assets/Baño.png';
 import Card4 from '../assets/Agenda.png';
@@ -33,6 +34,15 @@ function Servicios() {
 
   return (
     <div className="px-4 py-20 flex flex-col gap-5 items-center bg-contain bg-center bg-white" ref={ref}>
+      <Helmet>
+        <title>Servicios de Peluquería Canina | Pet Fashion</title>
+        <meta
+          name="description"
+          content="Descubre nuestros servicios de peluquería canina: corte, baño y agenda personalizada para tu mascota en Pet Fashion."
+        />
+        <link rel="canonical" href="https://www.petfashiondogsalon.cl/servicios" />
+      </Helmet>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
