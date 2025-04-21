@@ -18,11 +18,12 @@ const sendEmail = (data, onSuccess) => {
     .then(() => {
       toast.success('Reserva realizada con éxito. Revisa tu correo 📩', {
         position: 'top-center',
-        autoClose: 3000,
+        autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
+        icon: false,
       });
 
       onSuccess();
@@ -31,7 +32,7 @@ const sendEmail = (data, onSuccess) => {
       console.error('Error al enviar correo:', error);
       toast.error('Error al enviar la reserva. Inténtalo de nuevo ❌', {
         position: 'top-center',
-        autoClose: 3000,
+        autoClose: 5000,
       });
     });
 };
