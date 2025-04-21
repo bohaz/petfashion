@@ -34,7 +34,7 @@ function AboutPage() {
             {' '}
             <span className="font-shadows text-tealDark font-bold">Pet Fashion</span>
             {' '}
-            brindamos un servicio de estética
+            brindamos un servicio de peluquería
             canina profesional con amor, y respeto por cada mascota.
           </p>
         </motion.div>

@@ -50,22 +50,43 @@
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "PetStore",
-    "name": "Pet Fashion",
-    "image": "https://petfashiondogsalon.cl/og-image.jpg",
-    "url": "https://petfashiondogsalon.cl/",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Santiago",
-      "addressCountry": "CL"
-    },
-    "sameAs": [
-      "https://www.instagram.com/tu_usuario/",
-      "https://www.facebook.com/tu_usuario/"
-    ]
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Pet Fashion - Peluquería Canina",
+      "image": "https://petfashiondogsalon.cl/og-image.jpg",
+      "url": "https://petfashiondogsalon.cl/",
+      "description": "Peluquería canina en Isla Negra, especializada en corte, baño y estética para perros sin uso de bozal ni sedación. Atención personalizada con cita previa.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Isla Negra",
+        "addressLocality": "El Quisco",
+        "addressRegion": "Valparaíso",
+        "postalCode": "2700000",
+        "addressCountry": "CL"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Isla Negra, El Quisco, Algarrobo"
+      },
+      "service": [
+        {
+          "@type": "Service",
+          "name": "Peluquería Canina",
+          "description": "Servicio profesional de corte, baño y limpieza para perros pequeños, medianos y grandes. Atendemos en Isla Negra con cita previa."
+        },
+        {
+          "@type": "Service",
+          "name": "Baño para perros",
+          "description": "Baño completo con productos especializados, limpieza de oídos, corte de uñas y atención sin estrés ni sedación."
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/petfashiondogsalon/",
+        "https://www.facebook.com/pet_fashion17"
+      ]
+    }
+    
   </script>
 
   <title>Pet Fashion - Peluquería Canina</title>
