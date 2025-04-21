@@ -2,9 +2,11 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import PropTypes from 'prop-types';
+import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import MenuItem from '@mui/material/MenuItem';
 import sendEmail from '../utils/sendEmail';
 import sendWhatsAppMessage from '../utils/sendWhatsApp';
 
@@ -20,37 +22,79 @@ function BookingForm({ onClose }) {
   };
 
   return (
-    <>
+    <Box
+      sx={{
+        maxHeight: '90vh',
+        overflowY: 'auto',
+        paddingX: 2,
+        paddingY: 1,
+      }}
+    >
       <Typography variant="h6" component="h2" gutterBottom>
         Reserva tu cita
       </Typography>
       <form onSubmit={handleSubmit(onSubmit)}>
         <TextField
-          label="Nombre del propietario"
+          label="Tu nombre completo"
           fullWidth
           margin="normal"
           {...register('ownerName', { required: true })}
         />
         <TextField
-          label="Nombre de la mascota"
+          label="Nombre de tu perrito(a)"
           fullWidth
           margin="normal"
           {...register('petName', { required: true })}
+        />
+        <TextField
+          label="Número de WhatsApp"
+          type="tel"
+          fullWidth
+          margin="normal"
+          {...register('phone', { required: true })}
         />
         <TextField
           label="Correo electrónico"
           type="email"
           fullWidth
           margin="normal"
-          {...register('email', { required: true })}
+          {...register('email')}
         />
         <TextField
-          label="Número de teléfono"
-          type="tel"
+          select
+          label="¿Qué servicio necesita?"
           fullWidth
           margin="normal"
-          {...register('phone', { required: true })}
+          defaultValue=""
+          {...register('service', { required: true })}
+        >
+          <MenuItem value="">Selecciona un servicio</MenuItem>
+          <MenuItem value="Baño">Baño</MenuItem>
+          <MenuItem value="Corte y Baño">Corte y Baño</MenuItem>
+          <MenuItem value="Corte de uñas">Corte de uñas</MenuItem>
+          <MenuItem value="Otro">Otro</MenuItem>
+        </TextField>
+        <TextField
+          label="¿Cuándo te gustaría agendar?"
+          type="date"
+          fullWidth
+          margin="normal"
+          InputLabelProps={{ shrink: true }}
+          {...register('preferredDate')}
         />
+        <TextField
+          select
+          label="Tamaño aproximado de tu mascota"
+          fullWidth
+          margin="normal"
+          defaultValue=""
+          {...register('petSize')}
+        >
+          <MenuItem value="">Selecciona un tamaño</MenuItem>
+          <MenuItem value="Pequeño">Pequeño (hasta 7 kg)</MenuItem>
+          <MenuItem value="Mediano">Mediano (8-15 kg)</MenuItem>
+          <MenuItem value="Grande">Grande (más de 15 kg)</MenuItem>
+        </TextField>
 
         <Button
           type="submit"
@@ -69,7 +113,7 @@ function BookingForm({ onClose }) {
           Enviar reserva
         </Button>
       </form>
-    </>
+    </Box>
   );
 }
 
